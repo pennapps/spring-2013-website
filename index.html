@@ -26,10 +26,9 @@
 </head>
 <body>
   
-  <div class="icons2">
-    
+  <div class="icons2 horizontal">
   </div>
-  <div class='icons'>
+  <div class='icons horizontal'>
     <a class="end_opacity" target="_blank" href="https://www.facebook.com/pennapps">
       <div class="social_scale end_opacity" id="fb_social_scale">
         <div id="facebook"></div>
@@ -89,17 +88,17 @@
         ];
         var html = "";
         $.each(pennappses, function(index, pennapps) {
-            html += "<a target='_blank' href='"+pennapps[2]+"'>";
-            html += "<div class='pennapps_container'";
-              html += "<div class='pennapps' id='"+pennapps[0]+pennapps[1]+"'>";
-              html += "<div class='left'>";
-              html +=   "<span class='season'>"+pennapps[0]+"</span>";
-              html +=   "<span class='year'>"+pennapps[1]+"</span>";
-              html += "</div>";
-              html += "<div class='right'></div>";
-              html += "</div>";
-            html += "</div>";
-            html += "</a>";
+          html += "<a target='_blank' href='"+pennapps[2]+"'>";
+          html += "<div class='pennapps_container'";
+          html += "<div class='pennapps' id='"+pennapps[0]+pennapps[1]+"'>";
+          html += "<div class='left'>";
+          html +=   "<span class='season'>"+pennapps[0]+"</span>";
+          html +=   "<span class='year'>"+pennapps[1]+"</span>";
+          html += "</div>";
+          html += "<div class='right'></div>";
+          html += "</div>";
+          html += "</div>";
+          html += "</a>";
         });
         document.write(html);
 

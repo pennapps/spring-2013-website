@@ -55,13 +55,16 @@
     </div>
     <div class='sponsors'>
       <script type='text/javascript'>
-        var sponsors = ['venmo', 'facebook', 'twilio', 'twitter'];
+        // sponsors go ['name', 'background-color']
+        var sponsors = [['venmo', 'white'], ['facebook', '#2B579E'], ['twilio','white'], ['twitter', 'white']];
         $.each(sponsors, function(index, sponsor) {
-          document.writeln("<div data-sponsor='"+sponsor+"' style='background-image: url(img/"+sponsor+"_white.png)' class='sponsor'></div>");
+          document.writeln("<div data-bgcolor='"+sponsor[1]+"' data-sponsor='"+sponsor[0]+"' style='background-image: url(img/"+sponsor[0]+"_white.png)' class='sponsor'></div>");
         });
         $('.sponsor').hover(function() {
+          $(this).css('background-color', $(this).data('bgcolor'));
           $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_color.png)");
         }, function() {
+          $(this).css('background-color', '#ccc');
           $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_white.png)");
         });
       </script>

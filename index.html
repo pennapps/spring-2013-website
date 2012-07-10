@@ -8,6 +8,7 @@
   
   
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 </head>
 <body>
   
@@ -54,11 +55,15 @@
     </div>
     <div class='sponsors'>
       <script type='text/javascript'>
-        var sponsors = ['facebook', 'venmo', 'twilio'];
-        for (var i = 0, sponsor; sponsor = sponsors[i]; i++) {
-          document.writeln("<div class='sponsor' style=\"background: url('img/"+sponsor+"_white.png') no-repeat center\">"+sponsor+"</div>");
-        }
-        sponsors = document.getElementsByClassName('sponsor');
+        var sponsors = ['venmo', 'facebook', 'twilio', 'twitter'];
+        $.each(sponsors, function(index, sponsor) {
+          document.writeln("<div data-sponsor='"+sponsor+"' style='background-image: url(img/"+sponsor+"_white.png)' class='sponsor'></div>");
+        });
+        $('.sponsor').hover(function() {
+          $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_color.png)");
+        }, function() {
+          $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_white.png)");
+        });
       </script>
     </div>
   </div>

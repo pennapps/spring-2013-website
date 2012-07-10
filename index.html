@@ -187,10 +187,11 @@
             document.writeln("<div data-bgcolor='"+sponsor[1]+"' data-sponsor='"+sponsor[0]+"' style='background-image: url(img/"+sponsor[0]+"_white.png)' class='sponsor'></div>");
             document.writeln('</a>');
           });
-          $('.sponsor').hover(function() {
+          $('.sponsor').on('mouseenter touchstart', function() {
             $(this).css('background-color', $(this).data('bgcolor'));
             $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_color.png)");
-          }, function() {
+            });
+          $('.sponsor').on('mouseout touchend', function() {
             $(this).css('background-color', '#515151');
             $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_white.png)");
           });

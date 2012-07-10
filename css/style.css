@@ -3,13 +3,15 @@
   margin: 0 auto;
   margin-top: 50px;
 }
-.heading {
-  text-align: center;
+.heading h2 {
+  background: url('../img/separator.png') 0 center no-repeat;
+  text-align:center;
 }
 .heading span {
   padding: 12px;
   padding-right: 30px;
   padding-left: 30px;
   border-radius: 10px;
+  border: 2px solid #000;
   background-color: #eee;
 }

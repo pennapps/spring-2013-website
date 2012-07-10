@@ -17,6 +17,19 @@ Fix Date Colors
 
 Make left column the constant color?
 
+The gray coloring of the time machine images should all be consistent
+Fix the date colors in time machine so they are consistent
+The social media / email icons on the top right look kinda off
+The HTML / CSS (at least the parts I wrote) needs to be re-factored, a lot
+The launchrock needs to actually be the right launchrock
+We need a favicon
+Something about a new logo Amalia?
+When the signup button is hovered over, make it bigger
+Delay the transition of all images on hover
+Make mobile compatible
+See if we can use a more discrete slider on the right
+
+
 #------------------------------------------------------
 # Nice to haves
 

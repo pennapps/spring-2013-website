@@ -130,8 +130,8 @@
 #s2011:hover {background-image: url('../img/2011s_active.png');}
 
 	#s2011{
-		opacity:0.25;
-		filter:alpha(opacity=25); /* For IE8 and earlier */
+		opacity:0.45;
+		filter:alpha(opacity=45); /* For IE8 and earlier */
 	}
 	#s2011:hover {
 		opacity:1;

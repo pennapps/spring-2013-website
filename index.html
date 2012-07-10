@@ -56,7 +56,15 @@
     <div class='sponsors'>
       <script type='text/javascript'>
         // sponsors go ['name', 'background-color']
-        var sponsors = [['venmo', 'white'], ['facebook', '#2B579E'], ['twilio','white'], ['twitter', 'white']];
+        var sponsors = [
+          ['venmo', 'white'],
+          ['facebook', '#2B579E'],
+          ['twilio','white'],
+          ['google', 'white'],
+          ['github', 'white'],
+          ['a16z', 'white'],
+          ['mongodb', '#3C2919']
+        ];
         $.each(sponsors, function(index, sponsor) {
           document.writeln("<div data-bgcolor='"+sponsor[1]+"' data-sponsor='"+sponsor[0]+"' style='background-image: url(img/"+sponsor[0]+"_white.png)' class='sponsor'></div>");
         });

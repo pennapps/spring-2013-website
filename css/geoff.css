@@ -5,25 +5,28 @@
 }
 .heading h2 {
   text-align:center;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #bbb;
+  border-style: dashed;
   line-height:0.1em;
   margin:10px 0 20px;
 }
 .heading span {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-weight: 300;
   padding: 12px;
   padding-right: 30px;
   padding-left: 30px;
-  background-color: #eee;
-  border-radius:10px;
-  border: 1px solid #000;
+  background-color: #424242;
+  border-radius:5px;
 }
 .sponsors {
   margin-top: 40px;
 }
 .sponsor {
   /* set height and width here */
-  width: 150px;
-  height: 80px;
+  width: 220px;
+  height: 110px;
   /* everything else is taken care of */
   display: inline-block;
   background-color: #ccc;
@@ -32,7 +35,7 @@
   border-radius: 3px;
   margin: 10px;
   cursor: pointer;
-  background-size: 90%;
+  background-size: 70%;
 }
 .sponsor:hover {
   /* background-color: #222; */

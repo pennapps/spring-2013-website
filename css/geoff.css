@@ -85,7 +85,7 @@
 	padding-right:35px;
 	
 	float: left;
-	color: #424242;
+	color: #636363;
 	height: 75px;
 }
 
@@ -129,15 +129,6 @@
 #s2011 			 {background-image: url('../img/2011s.png');}
 #s2011:hover {background-image: url('../img/2011s_active.png');}
 
-	#s2011{
-		opacity:0.45;
-		filter:alpha(opacity=45); /* For IE8 and earlier */
-	}
-	#s2011:hover {
-		opacity:1;
-		filter:alpha(opacity=100); /* For IE8 and earlier */
-	}
-
 #f2010			 {background-position: 73px}
 #f2010 			 {background-image: url('../img/2010f.png');}
 #f2010:hover {background-image: url('../img/2010f_active.png');}
@@ -145,16 +136,6 @@
 #f2009			 {background-position: 4px}
 #f2009 			 {background-image: url('../img/2009f.png');}
 #f2009:hover {background-image: url('../img/2009f_active.png');}
-
-	#f2009{
-		opacity:0.28;
-		filter:alpha(opacity=28); /* For IE8 and earlier */
-	}
-	#f2009:hover {
-		opacity:1;
-		filter:alpha(opacity=100); /* For IE8 and earlier */
-	}
-
 	
 
 

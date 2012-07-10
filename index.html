@@ -12,28 +12,6 @@
   
   <script>
     $(document).ready(function() {
-      
-      // $('.signup').mouseenter(function(){
-      //   $(this).effect("size", { to: {width: 220,height: 220} }, 200);
-      // })
-      
-      $.each($('.pennapps'), function(i, pennapps){
-        $(pennapps).mouseenter(function(){
-          var left = $(this).find('.left')
-          // left.css({"opacity": "1.0"})
-          var id = $(this).attr('id')
-          if (id == "f2011" || id == "f2010"){
-            
-          }
-          else {
-            left.css({"color": "#FFFFFF"})
-          }
-        })
-        $(pennapps).mouseout(function(){
-          $(this).find('.left').css({"color": ""})
-        })
-      })
-      
       $('.egg').click(function(){
         var KICKASSVERSION='2.0';
         var s = document.createElement('script');
@@ -48,33 +26,26 @@
 </head>
 <body>
   
-  <div class='prev-container icons'>
-    <!-- <div id="hello" class='heading'>
-      <h2><span>Say Hello!</span></h2>
-    </div> -->
-    <div class="social_media">
-      <a target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
-        <div class="social_scale">
-          <div style="margin:0;padding:2px;"></div>
-          <div id="gmail"></div>
-        </div>
-      </a>
-      
-      <a target="_blank" href="http://twitter.com/pennapps">
-        <div class="social_scale">
-          <div style="margin:0;padding:1px;"></div>
-          <div id="twitter"></div>
-        </div>
-      </a>
-      
-      <a target="_blank" href="https://www.facebook.com/pennapps">
-        <div class="social_scale" id="fb_social_scale">
-          <div id="facebook"></div>
-        </div>
-      </a>
-    </div>
+  <div class="icons2">
+    
   </div>
-  
+  <div class='icons'>
+    <a class="end_opacity" target="_blank" href="https://www.facebook.com/pennapps">
+      <div class="social_scale end_opacity" id="fb_social_scale">
+        <div id="facebook"></div>
+      </div>
+    </a>
+    <a class="end_opacity" target="_blank" href="http://twitter.com/pennapps">
+      <div class="social_scale">
+        <div id="twitter"></div>
+      </div>
+    </a>
+    <a class="end_opacity" target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
+      <div class="social_scale end_opacity">
+        <div id="gmail"></div>
+      </div>
+    </a>
+  </div>
   
   <div class="top">
     <h1>PennApps 2012</h1>
@@ -118,6 +89,7 @@
         ];
         var html = "";
         $.each(pennappses, function(index, pennapps) {
+<<<<<<< HEAD
           html += "<a target='_blank' href='"+pennapps[2]+"'>";
           html += "<div class='pennapps' id='"+pennapps[0]+pennapps[1]+"'>";
           html += "<div class='left'>";
@@ -127,6 +99,19 @@
           html += "<div class='right'></div>";
           html += "</div>";
           html += "</a>";
+=======
+            html += "<a target='_blank' href='"+pennapps[2]+"'>";
+            html += "<div class='pennapps_container'";
+              html += "<div class='pennapps' id='"+pennapps[0]+pennapps[1]+"'>";
+              html += "<div class='left'>";
+              html +=   "<span class='season'>"+pennapps[0]+"</span>";
+              html +=   "<span class='year'>"+pennapps[1]+"</span>";
+              html += "</div>";
+              html += "<div class='right'></div>";
+              html += "</div>";
+            html += "</div>";
+            html += "</a>";
+>>>>>>> 882ff1a8e38e03b5cbc1d209035817a33d9233c2
         });
         document.write(html);
 

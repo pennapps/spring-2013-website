@@ -116,41 +116,41 @@
 	font-size: 30px;
 }
 
-#s2012			 {background-position: 56px}
-#s2012 			 {background-image: url('../img/2012s.png');}
-#s2012:hover {background-image: url('../img/2012s_active.png');}
+#Spring2012			 {background-position: 56px}
+#Spring2012 			 {background-image: url('../img/2012s.png');}
+#Spring2012:hover {background-image: url('../img/2012s_active.png');}
 
 
-#f2011			 {background-position: 54px}
-#f2011 			 {background-image: url('../img/2011f.png');}
-#f2011:hover {background-image: url('../img/2011f_active.png');}
+#Fall2011			 {background-position: 54px}
+#Fall2011 			 {background-image: url('../img/2011f.png');}
+#Fall2011:hover {background-image: url('../img/2011f_active.png');}
 
-#s2011			 {background-position: 130px}
-#s2011 			 {background-image: url('../img/2011s.png');}
-#s2011:hover {background-image: url('../img/2011s_active.png');}
+#Spring2011			 {background-position: 130px}
+#Spring2011 			 {background-image: url('../img/2011s.png');}
+#Spring2011:hover {background-image: url('../img/2011s_active.png');}
 
-	#s2011{
+	#Spring2011{
 		opacity:0.45;
 		filter:alpha(opacity=45); /* For IE8 and earlier */
 	}
-	#s2011:hover {
+	#Spring2011:hover {
 		opacity:1;
 		filter:alpha(opacity=100); /* For IE8 and earlier */
 	}
 
-#f2010			 {background-position: 73px}
-#f2010 			 {background-image: url('../img/2010f.png');}
-#f2010:hover {background-image: url('../img/2010f_active.png');}
+#Fall2010			 {background-position: 73px}
+#Fall2010 			 {background-image: url('../img/2010f.png');}
+#Fall2010:hover {background-image: url('../img/2010f_active.png');}
 
-#f2009			 {background-position: 4px}
-#f2009 			 {background-image: url('../img/2009f.png');}
-#f2009:hover {background-image: url('../img/2009f_active.png');}
+#Fall2009			 {background-position: 4px}
+#Fall2009 			 {background-image: url('../img/2009f.png');}
+#Fall2009:hover {background-image: url('../img/2009f_active.png');}
 
-	#f2009{
+	#Fall2009{
 		opacity:0.28;
 		filter:alpha(opacity=28); /* For IE8 and earlier */
 	}
-	#f2009:hover {
+	#Fall2009:hover {
 		opacity:1;
 		filter:alpha(opacity=100); /* For IE8 and earlier */
 	}

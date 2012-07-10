@@ -1,0 +1,15 @@
+.prev-container {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.heading {
+  text-align: center;
+}
+.heading span {
+  padding: 12px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 10px;
+  background-color: #eee;
+}

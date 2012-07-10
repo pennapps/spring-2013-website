@@ -6,36 +6,62 @@
 
 body {
 	text-align: center;
-	background-image: url(http://www.kerem.co/i/noise.png);
+	background-image: url(../img/noise.png);
 	margin: 0 auto;
 /*	margin-bottom: 100px;*/
 }
 
+::selection {
+	background: #70CBE2; /* Safari */
+	}
+::-moz-selection {
+	background: #70CBE2; /* Firefox */
+}
+
+
 /*-----------------------------------------------------*/
 /*- social media*/
 
-.social_media {
-	display: inline-block;
-}
-
-.social_scale {
-	margin: 0 auto;
-	margin-left:12px;
-	margin-right:12px;
-	display: inline-block;
+.icons2 {
+	padding:28px;
+	background-color: #000;
+	position: fixed;
+	right: 0;
+	top: 0px;	
+	margin-right:32px;
+	padding-bottom:125px;
 	
-	width:30px;
-	height: 30px;
-}
-#fb_social_scale {
-	width: 28px;
-	height: 28px;
+	-webkit-border-bottom-right-radius: 7px;
+	-webkit-border-bottom-left-radius: 7px;
+	-moz-border-radius-bottomright: 7px;
+	-moz-border-radius-bottomleft: 7px;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+	
+	opacity:.15;
+	filter:alpha(opacity=15); /* For IE8 and earlier */
 }
 
 .icons {
 	position: fixed;
-	right: -70px;
-	top: -30px;
+	right: 0;
+	top: 0px;	
+	margin-right:30px;
+	padding-bottom:30px;
+	
+}
+
+.social_scale {
+	margin-top:13px;
+	margin-left:12px;
+	margin-right:12px;
+	
+	width:35px;
+	height: 35px;
+}
+#fb_social_scale {
+	width: 35px;
+	height: 35px;
 }
 
 #gmail, #facebook, #twitter {
@@ -57,8 +83,8 @@ body {
 #twitter:hover {background-image:url('../img/twitter_social_active.png');}
 
 #gmail, #facebook, #twitter {
-	opacity:.8 !important;
-	filter:alpha(opacity=80) !important; /* For IE8 and earlier */
+	opacity:2.0 !important;
+	filter:alpha(opacity=200) !important; /* For IE8 and earlier */
 }
 
 #gmail:hover, #facebook:hover, #twitter:hover {
@@ -70,7 +96,7 @@ body {
 /*- top */
 
 .top {
-	margin-top: 2%;
+	margin-top:50px;
 }
 
 .top h1 {
@@ -130,7 +156,7 @@ body {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
-	
+		
 	/*http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.html*/
 	background-image: -ms-linear-gradient(bottom right, #B62F2F 0%, #B67042 200%);
 	background-image: -moz-linear-gradient(bottom right, #B62F2F 0%, #B67042 200%);
@@ -142,6 +168,11 @@ body {
 
 .circle:hover {
 	cursor: pointer;
+	
+	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 0.92);
+	-moz-box-shadow:    0px 0px 30px rgba(50, 50, 50, 0.92);
+	box-shadow:         0px 0px 30px rgba(50, 50, 50, 0.92);
+	
 
 	background-image: -ms-linear-gradient(bottom, #424242 0%, #5E5E5E 100%);
 	background-image: -moz-linear-gradient(bottom, #424242 0%, #5E5E5E 100%);
@@ -155,7 +186,7 @@ body {
 	color:white;
 	font-family: "Coolvetica";
 	font-weight: 300;
-	font-size: 30px;
+	font-size: 33px;
 	letter-spacing:1px
 }
 

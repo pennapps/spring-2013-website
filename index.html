@@ -12,28 +12,6 @@
   
   <script>
     $(document).ready(function() {
-      
-      // $('.signup').mouseenter(function(){
-      //   $(this).effect("size", { to: {width: 220,height: 220} }, 200);
-      // })
-      
-      $.each($('.pennapps'), function(i, pennapps){
-        $(pennapps).mouseenter(function(){
-          var left = $(this).find('.left')
-          // left.css({"opacity": "1.0"})
-          var id = $(this).attr('id')
-          if (id == "f2011" || id == "f2010"){
-            
-          }
-          else {
-            left.css({"color": "#FFFFFF"})
-          }
-        })
-        $(pennapps).mouseout(function(){
-          $(this).find('.left').css({"color": ""})
-        })
-      })
-      
       $('.egg').click(function(){
         var KICKASSVERSION='2.0';
         var s = document.createElement('script');
@@ -48,33 +26,26 @@
 </head>
 <body>
   
-  <div class='prev-container icons'>
-    <!-- <div id="hello" class='heading'>
-      <h2><span>Say Hello!</span></h2>
-    </div> -->
-    <div class="social_media">
-      <a target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
-        <div class="social_scale">
-          <div style="margin:0;padding:2px;"></div>
-          <div id="gmail"></div>
-        </div>
-      </a>
-      
-      <a target="_blank" href="http://twitter.com/pennapps">
-        <div class="social_scale">
-          <div style="margin:0;padding:1px;"></div>
-          <div id="twitter"></div>
-        </div>
-      </a>
-      
-      <a target="_blank" href="https://www.facebook.com/pennapps">
-        <div class="social_scale" id="fb_social_scale">
-          <div id="facebook"></div>
-        </div>
-      </a>
-    </div>
+  <div class="icons2">
+    
   </div>
-  
+  <div class='icons'>
+    <a class="end_opacity" target="_blank" href="https://www.facebook.com/pennapps">
+      <div class="social_scale end_opacity" id="fb_social_scale">
+        <div id="facebook"></div>
+      </div>
+    </a>
+    <a class="end_opacity" target="_blank" href="http://twitter.com/pennapps">
+      <div class="social_scale">
+        <div id="twitter"></div>
+      </div>
+    </a>
+    <a class="end_opacity" target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
+      <div class="social_scale end_opacity">
+        <div id="gmail"></div>
+      </div>
+    </a>
+  </div>
   
   <div class="top">
     <h1>PennApps 2012</h1>
@@ -107,61 +78,32 @@
       <h2><span>Time Machine</span></h2>
     </div>
     <div class="pennapses">
-      
-      <a target="_blank" href="http://2012s.pennapps.com/">
-        <div class="pennapps" id="s2012">
-          <div class="left">
-            <span class="season">Spring</span>
-            <span class="year">2012</span>
-          </div>
-          <div class="right">
-          </div>
-        </div>
-      </a>
+      <script type='text/javascript'>
+        // pennappses go ['season', 'year', 'link']
+        var pennappses = [
+          ['Spring', '2012', 'http://2012s.pennapps.com/'],
+          ['Fall', '2011', 'http://2011f.pennapps.com/'],
+          ['Spring', '2011', 'http://2011f.pennapps.com/'],
+          ['Fall', '2010', 'http://pennapps.com/2010'],
+          ['Fall', '2009', 'http://pennapps.com/2009']
+        ];
+        var html = "";
+        $.each(pennappses, function(index, pennapps) {
+            html += "<a target='_blank' href='"+pennapps[2]+"'>";
+            html += "<div class='pennapps_container'";
+              html += "<div class='pennapps' id='"+pennapps[0]+pennapps[1]+"'>";
+              html += "<div class='left'>";
+              html +=   "<span class='season'>"+pennapps[0]+"</span>";
+              html +=   "<span class='year'>"+pennapps[1]+"</span>";
+              html += "</div>";
+              html += "<div class='right'></div>";
+              html += "</div>";
+            html += "</div>";
+            html += "</a>";
+        });
+        document.write(html);
 
-      <a target="_blank" href="http://2011f.pennapps.com/">
-        <div class="pennapps" id="f2011">
-          <div class="left">
-            <span class="season">Fall</span>
-            <span class="year">2011</span>
-          </div>
-          <div class="right">
-          </div>
-        </div>
-      </a>
-      
-      <a target="_blank" href="http://2011f.pennapps.com/">
-        <div class="pennapps" id="s2011">
-          <div class="left">
-            <span class="season">Spring</span>
-            <span class="year">2011</span>
-          </div>
-          <div class="right">
-          </div>
-        </div>
-      </a>
-
-      <a target="_blank" href="http://pennapps.com/2010">
-        <div class="pennapps" id="f2010">
-          <div class="left">
-            <span class="season">Fall</span>
-            <span class="year">2010</span>
-          </div>
-          <div class="right">
-          </div>
-        </div>
-      </a>
-      
-      <a target="_blank" href="http://pennapps.com/2009">
-        <div class="pennapps" id="f2009">
-          <div class="left">
-            <span class="season">Fall</span>
-            <span class="year">2009</span>
-          </div>
-          <div class="right">
-          </div>
-        </div>
-      </a>
+      </script>
       
     </div><!--END PenAppses-->
     
@@ -181,11 +123,13 @@
             ['a16z', 'white', 'http://a16z.com'],
             ['mongodb', '#3C2919', 'http://mongodb.com']
           ];
+          var html = "";
           $.each(sponsors, function(index, sponsor) {
-            document.writeln('<a target="_blank" href="'+sponsor[2]+'">');
-            document.writeln("<div data-bgcolor='"+sponsor[1]+"' data-sponsor='"+sponsor[0]+"' style='background-image: url(img/"+sponsor[0]+"_white.png)' class='sponsor'></div>");
-            document.writeln('</a>');
+            html += '<a target="_blank" href="'+sponsor[2]+'">';
+            html += "<div data-bgcolor='"+sponsor[1]+"' data-sponsor='"+sponsor[0]+"' style='background-image: url(img/"+sponsor[0]+"_white.png)' class='sponsor'></div>";
+            html += '</a>';
           });
+          document.write(html);
           $('.sponsor').on('mouseenter touchstart', function() {
             $(this).css('background-color', $(this).data('bgcolor'));
             $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_color.png)");

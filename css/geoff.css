@@ -44,9 +44,8 @@
   /* everything else is taken care of */
   display: inline-block;
   background-color: #515151;
-	opacity:0.2;
-	filter:alpha(opacity=20); /* For IE8 and earlier */
-	
+  opacity:0.2;
+  filter:alpha(opacity=20); /* For IE8 and earlier */
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 3px;
@@ -58,6 +57,21 @@
 .sponsor:hover {
 	opacity:1.0;
 	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+.no-opacity {
+  opacity: 1.0;
+  filter:alpha(opacity=100); /* For IE8 and earlier */
+  height: 60px;
+  -webkit-transition: box-shadow 0.5s linear;
+  -moz-transition: box-shadow 0.5s linear;
+  -ms-transition: box-shadow 0.5s linear;
+  -o-transition: box-shadow 0.5s linear;
+  transition: box-shadow 0.5s linear;
+}
+.no-opacity:hover {
+     -moz-box-shadow: 0px 0px 25px #B62F2F;
+  -webkit-box-shadow: 0px 0px 25px #B62F2F;
+          box-shadow: 0px 0px 25px #B62F2F;
 }
 .square {
 	padding-bottom:90px

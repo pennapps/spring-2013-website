@@ -140,7 +140,7 @@
       </div>
       <div class='sponsors'>
         <script type='text/javascript'>
-          // sponsors go ['name', 'background-color', 'link']
+          // sponsors go ['name', 'background-color', 'link', 'default-bg-color', 'additonal classes']
           var sponsors = [
             ['venmo', 'white', 'http://venmo.com'],
             ['facebook', '#2B579E', 'http://facebook.com'],
@@ -150,7 +150,7 @@
             ['a16z', 'white', 'http://a16z.com'],
             ['mongodb', '#3C2919', 'http://mongodb.com'],
             ['allsponsors', 'white', ''],
-            ['sponsorpennapps', 'white', '', '#B62F2F']
+            ['sponsorpennapps', '#B62F2F', '', '#B62F2F', 'no-opacity']
           ];
           var html = "";
           $.each(sponsors, function(index, sponsor) {
@@ -158,8 +158,9 @@
               "data-link='"+sponsor[2]+"' "+
               "data-bgcolor='"+sponsor[1]+"' "+
               "data-sponsor='"+sponsor[0]+"' "+
-              "data-loadcolor='"+(sponsor[3] || '#515151')+"' "+
-              "style='background-image: url(img/"+sponsor[0]+"_white.png)' class='sponsor'></div>";
+              "data-loadcolor='"+(sponsor[3] || '#515151')+"' "+ //#515151 is the default
+              "style='background-image: url(img/"+sponsor[0]+"_white.png)' "+
+              "class='sponsor "+sponsor[4]+"'></div>";
           });
           document.write(html);
           $('.sponsor').each(function() {

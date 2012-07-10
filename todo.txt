@@ -13,9 +13,6 @@ Mobilize
 
 Learn more
 
-When the signup button is hovered over, make it bigger
-Delay the transition of all images on hover
-
 The launchrock needs to actually be the right launchrock
 We need a favicon
 Something about a new logo Amalia?

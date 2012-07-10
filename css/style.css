@@ -37,11 +37,20 @@ body {
 	font-family: "Lato";
 }
 
-.date {
+.row {
+	height:50px;
 }
 
 .signup {
 	margin-top:70px;
+}
+
+.row .date, .image_block {
+	display:inline-block;
+}
+
+.image_block {
+	padding-left:6px;
 }
 
 .circle {	

@@ -7,14 +7,6 @@
   
   
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Quicksand:300,400,700' rel='stylesheet' type='text/css'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('.circle').mouse(function(){
-        
-      })
-    });
-  </script>
 </head>
 <body>
   
@@ -33,6 +25,20 @@
     </div>
     <div class="social_media"></div>
   </div>
-    
+  <div class='prev-container'>
+    <div class='heading'>
+      <h2><span>Previous Sponsors</span></h2>
+    </div>
+    <div class='sponsors'>
+      <script type='text/javascript'>
+        var sponsors = ['facebook', 'venmo', 'twilio'];
+        for (var i = 0, sponsor; sponsor = sponsors[i]; i++) {
+          document.writeln("<div class='sponsor' style=\"background: url('img/"+sponsor+"_white.png') no-repeat center\">"+sponsor+"</div>");
+        }
+        sponsors = document.getElementsByClassName('sponsor');
+      </script>
+    </div>
+  </div>  
+  
 </body>
 </html>

@@ -99,3 +99,18 @@ body {
   border-radius:10px;
   border: 1px solid #000;
 }
+.sponsors {
+  margin-top: 40px;
+}
+.sponsor {
+  display: inline-block;
+  padding: 20px;
+  font-size: 20pt;
+  background-color: #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.sponsor:hover {
+  background-color: #222;
+  color: #eee;
+}

@@ -81,11 +81,11 @@ body {
 
 
 .prev-container {
+  width: 50%;
   margin: 0 auto;
   margin-top: 50px;
 }
 .heading h2 {
-  width:50%;
   text-align:center;
   border-bottom: 1px solid #000;
   line-height:0.1em;

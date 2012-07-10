@@ -1,7 +1,15 @@
+#previous_sponsors {
+	margin-top:130px;
+}
+
+
 .prev-container {
-  width: 50%;
+	
+/*  width: 60%;*/
   margin: 0 auto;
   margin-top: 50px;
+	min-width: 350px;
+	max-width:700px;
 }
 .heading h2 {
   text-align:center;
@@ -9,27 +17,37 @@
   border-style: dashed;
   line-height:0.1em;
   margin:10px 0 20px;
+	
+	margin-top:110px;
+	margin-bottom:80px;
+	
 }
 .heading span {
   font-family: "Lato", sans-serif;
+	font-size: 23px;
   color: #fff;
   font-weight: 300;
-  padding: 12px;
-  padding-right: 30px;
-  padding-left: 30px;
-  background-color: #424242;
+  padding: 11px;
+  padding-right: 40px;
+  padding-left: 40px;
+  background-color: #636363;
   border-radius:5px;
+
+/*	opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+*/
 }
-.sponsors {
-  margin-top: 40px;
-}
+
 .sponsor {
   /* set height and width here */
   width: 240px;
   height: 120px;
   /* everything else is taken care of */
   display: inline-block;
-  background-color: #ccc;
+  background-color: #515151;
+	opacity:0.2;
+	filter:alpha(opacity=20); /* For IE8 and earlier */
+	
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 3px;
@@ -37,9 +55,108 @@
   cursor: pointer;
   background-size: 70%;
 }
+
 .sponsor:hover {
-  /* background-color: #222; */
+	opacity:1.0;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
 }
 .square {
 	padding-bottom:90px
 }
+
+.pennapps {
+	margin: 0 auto;
+	margin-top:30px;
+	width: 670px;
+	height: 90px;
+	background-color: #fff;
+	border-radius:5px;
+}
+
+.pennapps:hover {
+	cursor: pointer;
+	color: #FFFFFF;
+/*	background-color: #EEEEEE;*/
+}
+
+.left {
+	border-radius:5px;
+	padding-top:17px;
+	padding-left:17px;
+	padding-right:35px;
+	
+	float: left;
+	color: #424242;
+	height: 75px;
+}
+
+.left:hover {
+/*	color: #FFFFFF;*/
+}
+
+.right {
+	margin-left:170px;
+/*	background-color: green;*/
+	padding-top:92px;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #EEEEEE;
+}
+
+.season {
+	font-family: 'Lato', sans-serif;	
+	font-weight: 300;
+	font-size: 30px;
+	letter-spacing: -2px;
+	
+}
+.year {
+	padding-left:5px;
+	font-family: 'Coolvetica', sans-serif;	
+	font-weight: 300;
+	font-size: 30px;
+}
+
+#s2012			 {background-position: 56px}
+#s2012 			 {background-image: url('../img/2012s.png');}
+#s2012:hover {background-image: url('../img/2012s_active.png');}
+
+
+#f2011			 {background-position: 54px}
+#f2011 			 {background-image: url('../img/2011f.png');}
+#f2011:hover {background-image: url('../img/2011f_active.png');}
+
+#s2011			 {background-position: 130px}
+#s2011 			 {background-image: url('../img/2011s.png');}
+#s2011:hover {background-image: url('../img/2011s_active.png');}
+
+	#s2011{
+		opacity:0.25;
+		filter:alpha(opacity=25); /* For IE8 and earlier */
+	}
+	#s2011:hover {
+		opacity:1;
+		filter:alpha(opacity=100); /* For IE8 and earlier */
+	}
+
+#f2010			 {background-position: 73px}
+#f2010 			 {background-image: url('../img/2010f.png');}
+#f2010:hover {background-image: url('../img/2010f_active.png');}
+
+#f2009			 {background-position: 4px}
+#f2009 			 {background-image: url('../img/2009f.png');}
+#f2009:hover {background-image: url('../img/2009f_active.png');}
+
+	#f2009{
+		opacity:0.28;
+		filter:alpha(opacity=28); /* For IE8 and earlier */
+	}
+	#f2009:hover {
+		opacity:1;
+		filter:alpha(opacity=100); /* For IE8 and earlier */
+	}
+
+	
+
+
+

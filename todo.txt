@@ -1,3 +1,20 @@
+Make Register Button in the same RED as the signup button for sponsors
+  And more, which is also gray
+
 Button transition to grey looks bad...
 
-Make Upenn an unobtrusive link
+Make signup buton grow quickly on mouse out and restore on exit
+
+Twilio Phone, call us
+
+Delay transition of all images
+
+Make the slider more discrete
+
+Mobilize
+
+Make the background somewhat transluscent like karem
+
+FIx Date Colors
+
+Make left column the constant color

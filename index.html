@@ -7,15 +7,76 @@
   <link rel="stylesheet" href="css/geoff.css" type="text/css" media="screen" title="no title" charset="utf-8">
   
   
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Quicksand:300,400,700|Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js'></script>
+  
+  <script>
+    $(document).ready(function() {
+      
+      // $('.signup').mouseenter(function(){
+      //   $(this).effect("size", { to: {width: 220,height: 220} }, 200);
+      // })
+      
+      $.each($('.pennapps'), function(i, pennapps){
+        $(pennapps).mouseenter(function(){
+          var left = $(this).find('.left')
+          // left.css({"opacity": "1.0"})
+          var id = $(this).attr('id')
+          if (id == "f2011" || id == "f2010"){
+            
+          }
+          else {
+            left.css({"color": "#FFFFFF"})
+          }
+        })
+        $(pennapps).mouseout(function(){
+          $(this).find('.left').css({"color": ""})
+        })
+      })
+      
+      $('.egg').click(function(){
+        var KICKASSVERSION='2.0';
+        var s = document.createElement('script');
+        s.type='text/javascript';
+        document.body.appendChild(s);
+        s.src='./js/kickass.js';
+        console.log('kcik')
+        void(0);
+      })
+    });
+  </script>
 </head>
 <body>
+  
+  <div class='prev-container icons'>
+    <!-- <div id="hello" class='heading'>
+      <h2><span>Say Hello!</span></h2>
+    </div> -->
+    <div class="social_media">
+      <a target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
+        <div class="social_scale">
+          <div id="gmail"></div>
+        </div>
+      </a>
+      <a target="_blank" href="https://www.facebook.com/pennapps">
+        <div class="social_scale">
+          <div id="facebook"></div>
+        </div>
+      </a>
+      <a target="_blank" href="http://twitter.com/pennapps">
+        <div class="social_scale">
+          <div id="twitter"></div>
+        </div>
+      </a>    
+    </div>
+  </div>
+  
   
   <div class="top">
     <h1>PennApps 2012</h1>
     <div class="subtext">
-      <h3 class="tagline">A 48-hour Hackathon @ The University of Pennsylvania</h2>
+      <h3 class="tagline">A 48-hour Hackathon <a href="http://upenn.edu" target="_blank" class="upenn">@ The University of Pennsylvania</a></h2>
       <div class="row">
         <h3 class="date">Fri Sept 14 - Sun Sept 16
           <div style="height:1px; font-size:1px">&nbsp;</div>
@@ -29,55 +90,157 @@
     </div>
     <div class="signup">
         <div class="circle">
-          <a href="http://launchrock.com/">          
+          <a target="_blank" href="http://launchrock.com/">          
             <div class="square">
               <div id="signup_now">Signup Now</div>
             </div>
           </a>
         </div>
     </div>
-    <div class="social_media">
-      <div class="social_scale">
-        <div id="gmail"></div>
-      </div>
-      <div class="social_scale">
-        <div id="facebook"></div>
-      </div>
-      <div class="social_scale">
-        <div id="twitter"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class='prev-container'>
-    <div class='heading'>
-      <h2><span>Previous Sponsors</span></h2>
-    </div>
-    <div class='sponsors'>
-      <script type='text/javascript'>
-        // sponsors go ['name', 'background-color']
-        var sponsors = [
-          ['venmo', 'white'],
-          ['facebook', '#2B579E'],
-          ['twilio','white'],
-          ['google', 'white'],
-          ['github', 'white'],
-          ['a16z', 'white'],
-          ['mongodb', '#3C2919']
-        ];
-        $.each(sponsors, function(index, sponsor) {
-          document.writeln("<div data-bgcolor='"+sponsor[1]+"' data-sponsor='"+sponsor[0]+"' style='background-image: url(img/"+sponsor[0]+"_white.png)' class='sponsor'></div>");
-        });
-        $('.sponsor').hover(function() {
-          $(this).css('background-color', $(this).data('bgcolor'));
-          $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_color.png)");
-        }, function() {
-          $(this).css('background-color', '#ccc');
-          $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_white.png)");
-        });
-      </script>
-    </div>
   </div>
   
+  <div class='prev-container'>
+    <div class='heading'>
+      <h2><span>Time Machine</span></h2>
+    </div>
+    <div class="pennapses">
+      
+      <a target="_blank" href="http://2012s.pennapps.com/">
+        <div class="pennapps" id="s2012">
+          <div class="left">
+            <span class="season">Spring</span>
+            <span class="year">2012</span>
+          </div>
+          <div class="right">
+          </div>
+        </div>
+      </a>
+
+      <a target="_blank" href="http://2011f.pennapps.com/">
+        <div class="pennapps" id="f2011">
+          <div class="left">
+            <span class="season">Fall</span>
+            <span class="year">2011</span>
+          </div>
+          <div class="right">
+          </div>
+        </div>
+      </a>
+      
+      <a target="_blank" href="http://2011f.pennapps.com/">
+        <div class="pennapps" id="s2011">
+          <div class="left">
+            <span class="season">Spring</span>
+            <span class="year">2011</span>
+          </div>
+          <div class="right">
+          </div>
+        </div>
+      </a>
+
+      <a target="_blank" href="http://pennapps.com/2010">
+        <div class="pennapps" id="f2010">
+          <div class="left">
+            <span class="season">Fall</span>
+            <span class="year">2010</span>
+          </div>
+          <div class="right">
+          </div>
+        </div>
+      </a>
+      
+      <a target="_blank" href="http://pennapps.com/2009">
+        <div class="pennapps" id="f2009">
+          <div class="left">
+            <span class="season">Fall</span>
+            <span class="year">2009</span>
+          </div>
+          <div class="right">
+          </div>
+        </div>
+      </a>
+      
+    </div><!--END PenAppses-->
+    
+    <div id="previous_sponsors" class='prev-container'>
+      <div class='heading'>
+        <h2><span>Previous Sponsors</span></h2>
+      </div>
+      <div class='sponsors'>
+        <script type='text/javascript'>
+          // sponsors go ['name', 'background-color']
+          var sponsors = [
+            ['venmo', 'white', 'http://venmo.com'],
+            ['facebook', '#2B579E', 'http://facebook.com'],
+            ['twilio','white', 'http://twilio.com'],
+            ['google', 'white', 'http://google.com'],
+            ['github', 'white', 'http://github.com'],
+            ['a16z', 'white', 'http://a16z.com'],
+            ['mongodb', '#3C2919', 'http://mongodb.com']
+          ];
+          $.each(sponsors, function(index, sponsor) {
+            document.writeln('<a target="_blank" href="'+sponsor[2]+'">');
+            document.writeln("<div data-bgcolor='"+sponsor[1]+"' data-sponsor='"+sponsor[0]+"' style='background-image: url(img/"+sponsor[0]+"_white.png)' class='sponsor'></div>");
+            document.writeln('</a>');
+          });
+          $('.sponsor').hover(function() {
+            $(this).css('background-color', $(this).data('bgcolor'));
+            $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_color.png)");
+          }, function() {
+            $(this).css('background-color', '#515151');
+            $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_white.png)");
+          });
+        </script>
+        <!-- TODO: and more... -->
+      </div>
+    </div>
+    
+    <div class="love">
+      Made lovingly in Philadelphia.
+    </div>  
+        
+    <div class="egg">
+    </div>
+    
+    <div id="preload">
+      <img src="img/2009f.png" width="672" height="92" alt="2009f">
+      <img src="img/2009f_active.png" width="672" height="92" alt="2009f Active">
+      <img src="img/2010f.png" width="769" height="92" alt="2010f">
+      <img src="img/2010f_active.png" width="769" height="92" alt="2010f Active">
+      <img src="img/2011f.png" width="670" height="92" alt="2011f">
+      <img src="img/2011f_active.png" width="670" height="92" alt="2011f Active">
+      <img src="img/2011s.png" width="642" height="92" alt="2011s">
+      <img src="img/2011s_active.png" width="642" height="92" alt="2011s Active">
+      <img src="img/2012s.png" width="925" height="92" alt="2012s">
+      <img src="img/2012s_active.png" width="925" height="92" alt="2012s Active">
+      <img src="img/a16z_color.jpeg" width="432" height="212" alt="A16z Color">
+      <img src="img/a16z_color.png" width="432" height="212" alt="A16z Color">
+      <img src="img/a16z_white.png" width="432" height="212" alt="A16z White">
+      <img src="img/calendar.png" width="23" height="25" alt="Calendar">
+      <img src="img/calendar_red.png" width="23" height="25" alt="Calendar Red">
+      <img src="img/egg.png" width="32" height="32" alt="Egg">
+      <img src="img/egg_light.png" width="32" height="32" alt="Egg Light">
+      <img src="img/facebook_color.png" width="1024" height="385" alt="Facebook Color">
+      <img src="img/facebook_social.png" width="380" height="380" alt="Facebook Social">
+      <img src="img/facebook_social_active.png" width="380" height="380" alt="Facebook Social Active">
+      <img src="img/facebook_white.png" width="1024" height="385" alt="Facebook White">
+      <img src="img/github_color.png" width="174" height="174" alt="Github Color">
+      <img src="img/github_white.png" width="174" height="174" alt="Github White">
+      <img src="img/gmail_social.png" width="100" height="100" alt="Gmail Social">
+      <img src="img/gmail_social_active.png" width="100" height="100" alt="Gmail Social Active">
+      <img src="img/google_color.png" width="1368" height="469" alt="Google Color">
+      <img src="img/google_white.png" width="1368" height="469" alt="Google White">
+      <img src="img/mongodb_color.png" width="217" height="90" alt="Mongodb Color">
+      <img src="img/mongodb_white.png" width="217" height="90" alt="Mongodb White">
+      <img src="img/separator.png" width="960" height="1" alt="Separator">
+      <img src="img/twilio_color.png" width="648" height="216" alt="Twilio Color">
+      <img src="img/twilio_white.png" width="648" height="216" alt="Twilio White">
+      <img src="img/twitter_social.png" width="100" height="100" alt="Twitter Social">
+      <img src="img/twitter_social_active.png" width="100" height="100" alt="Twitter Social Active">
+      <img src="img/twitter_social_gray.png" width="300" height="300" alt="Twitter Social Gray">
+      <img src="img/venmo_color.png" width="179" height="35" alt="Venmo Color">
+      <img src="img/venmo_white.png" width="179" height="35" alt="Venmo White">
+    </div>
+    
 </body>
 </html>

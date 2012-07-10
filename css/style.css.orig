@@ -12,30 +12,58 @@ body {
 }
 
 .top {
+<<<<<<< HEAD
+	margin-top: 5%;
+=======
 	margin-top: 4%;
+>>>>>>> old
 }
 
-.top h1 {
+.logo {
+	margin: 0 auto;
+	width: 550px;
+	text-align: left;
+	
+	/*	background: green;*/
+}
+
+.top .title {
 	font-size: 90px;
 	color: #424242;
 	font-family: 'Coolvetica', 'Helvetica Neue', sans-serif;
 }
 
+<<<<<<< HEAD
+.top .tagline {
+=======
 .subtext {
-	margin-top:30px;
+	margin-top:25px;
 }
 
 .subtext h3 {
 	margin-top:9px;
+>>>>>>> old
 	font-weight: 300;
 	color: #5C5C5C;
 }
 
+<<<<<<< HEAD
+.tagline { font-size: 19px;}
+
+.date {
+	margin-top:30px;
+	font-size: 30px;
+	color: #5C5C5C;
+	
+}
+
+=======
 .tagline, .date {
 	font-size: 22px;
 	font-weight: 400;
 	font-family: "Lato";
 }
+>>>>>>> old
 
 .date {
 }
@@ -81,11 +109,11 @@ body {
 
 
 .prev-container {
+  width: 50%;
   margin: 0 auto;
   margin-top: 50px;
 }
 .heading h2 {
-  width:50%;
   text-align:center;
   border-bottom: 1px solid #000;
   line-height:0.1em;

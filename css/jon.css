@@ -175,7 +175,6 @@ body {
 
 .circle:hover {
 	cursor: pointer;
-	
      -moz-box-shadow: 0px 0px 25px #B62F2F;
   -webkit-box-shadow: 0px 0px 25px #B62F2F;
           box-shadow: 0px 0px 25px #B62F2F;

@@ -62,11 +62,11 @@
   opacity: 1.0;
   filter:alpha(opacity=100); /* For IE8 and earlier */
   height: 60px;
-  -webkit-transition: box-shadow 0.5s linear;
-  -moz-transition: box-shadow 0.5s linear;
-  -ms-transition: box-shadow 0.5s linear;
-  -o-transition: box-shadow 0.5s linear;
-  transition: box-shadow 0.5s linear;
+  -webkit-transition: box-shadow 0.2s linear;
+  	 -moz-transition: box-shadow 0.2s linear;
+  		-ms-transition: box-shadow 0.2s linear;
+  		 -o-transition: box-shadow 0.2s linear;
+  			  transition: box-shadow 0.2s linear;
 }
 .no-opacity:hover {
      -moz-box-shadow: 0px 0px 25px #B62F2F;

@@ -89,17 +89,6 @@
         ];
         var html = "";
         $.each(pennappses, function(index, pennapps) {
-<<<<<<< HEAD
-          html += "<a target='_blank' href='"+pennapps[2]+"'>";
-          html += "<div class='pennapps' id='"+pennapps[0]+pennapps[1]+"'>";
-          html += "<div class='left'>";
-          html +=   "<span class='season'>"+pennapps[0]+"</span>";
-          html +=   "<span class='year'>"+pennapps[1]+"</span>";
-          html += "</div>";
-          html += "<div class='right'></div>";
-          html += "</div>";
-          html += "</a>";
-=======
             html += "<a target='_blank' href='"+pennapps[2]+"'>";
             html += "<div class='pennapps_container'";
               html += "<div class='pennapps' id='"+pennapps[0]+pennapps[1]+"'>";
@@ -111,7 +100,6 @@
               html += "</div>";
             html += "</div>";
             html += "</a>";
->>>>>>> 882ff1a8e38e03b5cbc1d209035817a33d9233c2
         });
         document.write(html);
 

@@ -18,3 +18,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+a:link, a:visited, a:active, a:hover {
+	text-decoration: none
+}

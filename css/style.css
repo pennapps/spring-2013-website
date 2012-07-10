@@ -7,43 +7,38 @@
 body {
 	text-align: center;
 	background-image: url(http://www.kerem.co/i/noise.png);
-	font-family: 'Lato', 'Helvetica Neue', sans-serif;
-	font-weight: 300;
+	max-width: 700px;
+	margin: 0 auto;
 }
 
 .top {
-	margin-top: 5%;
+	margin-top: 4%;
 }
 
-.logo {
-	margin: 0 auto;
-	width: 550px;
-	text-align: left;
-	
-	/*	background: green;*/
-}
-
-.top .title {
+.top h1 {
 	font-size: 90px;
 	color: #424242;
 	font-family: 'Coolvetica', 'Helvetica Neue', sans-serif;
 }
 
-.top .tagline {
+.subtext {
+	margin-top:25px;
+}
+
+.subtext h3 {
+	margin-top:9px;
 	font-weight: 300;
 	color: #5C5C5C;
 }
 
-.tagline { font-size: 19px;}
-
-.date {
-	margin-top:30px;
-	font-size: 30px;
-	color: #5C5C5C;
-	
+.tagline, .date {
+	font-size: 22px;
+	font-weight: 400;
+	font-family: "Lato";
 }
 
-
+.date {
+}
 
 .signup {
 	margin-top:70px;
@@ -66,44 +61,31 @@ body {
 
 .circle:hover {
 	cursor: pointer;
-	/* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
 
-	/* IE10 Consumer Preview */ 
-	background-image: -ms-linear-gradient(bottom right, #999999 0%, #BDBDBD 100%);
-
-	/* Mozilla Firefox */ 
-	background-image: -moz-linear-gradient(bottom right, #999999 0%, #BDBDBD 100%);
-
-	/* Opera */ 
-	background-image: -o-linear-gradient(bottom right, #999999 0%, #BDBDBD 100%);
-
-	/* Webkit (Safari/Chrome 10) */ 
-	background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #999999), color-stop(1, #BDBDBD));
-
-	/* Webkit (Chrome 11+) */ 
-	background-image: -webkit-linear-gradient(bottom right, #999999 0%, #BDBDBD 100%);
-
-	/* W3C Markup, IE10 Release Preview */ 
-	background-image: linear-gradient(to top left, #999999 0%, #BDBDBD 100%);
-	
-}
+	background-image: -ms-linear-gradient(bottom, #424242 0%, #5E5E5E 100%);
+	background-image: -moz-linear-gradient(bottom, #424242 0%, #5E5E5E 100%);
+	background-image: -o-linear-gradient(bottom, #424242 0%, #5E5E5E 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #424242), color-stop(1, #5E5E5E));
+	background-image: -webkit-linear-gradient(bottom, #424242 0%, #5E5E5E 100%);
+	background-image: linear-gradient(to top, #424242 0%, #5E5E5E 100%);}
 
 #signup_now {
 	padding-top: 80px;
 	color:white;
-	font-family: "Lato";
+	font-family: "Coolvetica";
 	font-weight: 300;
 	font-size: 30px;
+	letter-spacing:1px
 }
 
 
 
 .prev-container {
-  width: 50%;
   margin: 0 auto;
   margin-top: 50px;
 }
 .heading h2 {
+  width:50%;
   text-align:center;
   border-bottom: 1px solid #000;
   line-height:0.1em;

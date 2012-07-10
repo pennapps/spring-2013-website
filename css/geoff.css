@@ -84,9 +84,7 @@
 	margin-top:30px;
 	border-radius:5px;
 	background-color: #fff;
-}
-
-.pennapps_container:hover {
+	cursor: pointer;
 }
 
 .pennapps:hover {
@@ -100,7 +98,7 @@
 	padding-top:17px;
 	padding-left:17px;
 	padding-right:35px;
-	
+        pointer-events: none;	
 	float: left;
 	color: #636363;
 	height: 75px;
@@ -137,25 +135,15 @@
 }
 */
 #Spring2012			 {background-position: 20px}
-#Spring2012 			 {background-image: url('../img/2012s.png');}
-#Spring2012:hover {background-image: url('../img/2012s_active.png');}
 #Spring2012:hover > .left {color:white}
 
 #Fall2011			 {background-position: 54px}
-#Fall2011 			 {background-image: url('../img/2011f.png');}
-#Fall2011:hover {background-image: url('../img/2011f_active.png');}
 
 #Spring2011			 {background-position: 105px}
-#Spring2011 			 {background-image: url('../img/2011s.png');}
-#Spring2011:hover {background-image: url('../img/2011s_active.png');}
 #Spring2011:hover > .left {color:white}
 
 
 #Fall2010			 {background-position: 73px}
-#Fall2010 			 {background-image: url('../img/2010f.png');}
-#Fall2010:hover {background-image: url('../img/2010f_active.png');}
 
 #Fall2009			 {background-position: -20px}
-#Fall2009 			 {background-image: url('../img/2009f.png');}
-#Fall2009:hover {background-image: url('../img/2009f_active.png');}
 #Fall2009:hover > .left {color:white}

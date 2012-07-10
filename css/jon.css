@@ -1,3 +1,7 @@
+.hide {
+	display:none;
+}
+
 @font-face {
 	font-family: Coolvetica;
 	src: url('coolvetica.ttf'),
@@ -20,83 +24,109 @@ body {
 
 
 /*-----------------------------------------------------*/
-/*- social media*/
+/* Icons 																						 */
+	.icons_row, .icons_column {
+		background-color: rgba(70,70,70, 0.2); /* use rgba here */-
 
-.icons2 {
-	padding:28px;
-	background-color: #464646;
-	position: fixed;
-	right: 0;
-	top: 0px;	
-	margin-right:32px;
-	padding-bottom:125px;
+		-webkit-border-bottom-right-radius: 7px;
+		-webkit-border-bottom-left-radius: 7px;
+		-moz-border-radius-bottomright: 7px;
+		-moz-border-radius-bottomleft: 7px;
+		border-bottom-right-radius: 7px;
+		border-bottom-left-radius: 7px;
+	}
+
+	/*-----------------------------------------------------*/
+	/* Rows 																						 */
+	.horizontal_bar {
+		top:-55px;
+		position:fixed;
+		width: 100%;
+		height:50px;
+	}
+
+	.icons_row {
+		position:fixed;
+		display:inline-block;
+		margin: 0 auto;
 	
-	-webkit-border-bottom-right-radius: 7px;
-	-webkit-border-bottom-left-radius: 7px;
-	-moz-border-radius-bottomright: 7px;
-	-moz-border-radius-bottomleft: 7px;
-	border-bottom-right-radius: 7px;
-	border-bottom-left-radius: 7px;
+		padding-bottom:9px;
+	}
+
+	.social_scale_row {
+		display:inline-block;
+		margin-top:7px;
+		margin-left:12px;
+		margin-right:12px;
 	
-	opacity:.15;
-	filter:alpha(opacity=15); /* For IE8 and earlier */
-}
+		width:35px;
+		height: 35px;
+	}
 
-.icons {
-	position: fixed;
-	right: 0;
-	top: 0px;	
-	margin-right:30px;
-	padding-bottom:30px;
+	/*-----------------------------------------------------*/
+	/* Columns 																						 */
 	
-}
-
-.social_scale {
-	margin-top:13px;
-	margin-left:12px;
-	margin-right:12px;
+	.icons_column {
+		top: -153px;	
+		
+		position: fixed;
+		right: 0;
+		margin-right:30px;
+		padding-bottom:9px;
 	
-	width:35px;
-	height: 35px;
-}
-#fb_social_scale {
-	width: 35px;
-	height: 35px;
-}
+	}
 
-#gmail, #facebook, #twitter {
-	margin: 0 auto;
-	text-align:center;
-	background-repeat:no-repeat;
-	background-size: 100%;
-	width:100%;
-	height: 100%;
-}
+	.social_scale_col {	
+		margin-top:13px;
+		margin-left:12px;
+		margin-right:12px;
+	
+		width:35px;
+		height: 35px;
+	}
+	
+	/*-----------------------------------------------------*/
+	/* Individual																					 */
+	
+	#fb_social_scale {
+		width: 35px;
+		height: 35px;
+	}
 
-#gmail 			 {background-image:url('../img/gmail_social.png');}
-#gmail:hover {background-image:url('../img/gmail_social_active.png');}
+	#gmail, #facebook, #twitter {
+		margin: 0 auto;
+		text-align:center;
+		background-repeat:no-repeat;
+		background-size: 100%;
+		width:100%;
+		height: 100%;
+		z-index:100;
+	}
 
-#facebook 			{background-image:url('../img/facebook_social.png');}
-#facebook:hover {background-image:url('../img/facebook_social_active.png');}
+	#gmail 			 {background-image:url('../img/gmail_social.png');}
+	#gmail:hover {background-image:url('../img/gmail_social_active.png');}
 
-#twitter 			 {background-image:url('../img/twitter_social.png');}
-#twitter:hover {background-image:url('../img/twitter_social_active.png');}
+	#facebook 			{background-image:url('../img/facebook_social.png');}
+	#facebook:hover {background-image:url('../img/facebook_social_active.png');}
 
-#gmail, #facebook, #twitter {
-	opacity:2.0 !important;
-	filter:alpha(opacity=200) !important; /* For IE8 and earlier */
-}
+	#twitter 			 {background-image:url('../img/twitter_social.png');}
+	#twitter:hover {background-image:url('../img/twitter_social_active.png');}
 
-#gmail:hover, #facebook:hover, #twitter:hover {
-	opacity:1 !important;
-	filter:alpha(opacity=100) !important; /* For IE8 and earlier */
-}
+	#gmail, #facebook, #twitter {
+/*		opacity:.95;
+		filter:alpha(opacity=95) !important; /* For IE8 and earlier */
+*/	}
+
+	#gmail:hover, #facebook:hover, #twitter:hover {
+		opacity:1 !important;
+		filter:alpha(opacity=100) !important; /* For IE8 and earlier */
+	}
 
 /*-----------------------------------------------------*/
-/*- top */
+/* top */
 
 .top {
-	margin-top:50px;
+	margin-top:90px;
 }
 
 .top h1 {
@@ -148,7 +178,7 @@ body {
 
 .image_block:hover {
 	cursor: pointer;
-	background-image:url('../img/calendar_red.png');
+	background-image:url('../img/calendar_red.png');  
 }
 
 .circle {	
@@ -165,12 +195,12 @@ body {
 	background-image: -webkit-linear-gradient(bottom right, #B62F2F 0%, #B67042 200%);
 	background-image: linear-gradient(to top left, #B62F2F 0%, #B67042 200%);
 	
-	-webkit-transition: box-shadow 0.2s linear;
+/*	-webkit-transition: box-shadow 0.2s linear;
   	 -moz-transition: box-shadow 0.2s linear;
   		-ms-transition: box-shadow 0.2s linear;
   		 -o-transition: box-shadow 0.2s linear;
   			  transition: box-shadow 0.2s linear;
-
+*/
 }
 
 .circle:hover {

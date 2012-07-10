@@ -9,8 +9,30 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Handlee' rel='stylesheet' type='text/css'>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js'></script>
+  <script src="js/jquery_transit.js" type="text/javascript" charset="utf-8"></script>
   
   <script>
+    function update_size() {
+      var window_width = $(window).width();
+            
+      if (window_width < 855) {
+        if (is_horizontal == null || is_horizontal == false) {
+          console.log("HORIZONTAL")
+          $('.icons_column').transition({y: -153}, 500, 'out')
+          setTimeout("$('.horizontal_bar').transition({y: 55}, 500, 'out')", 200)
+          is_horizontal = true
+        } 
+      }
+      else {
+        if (is_horizontal == null || is_horizontal == true) {
+          console.log("VERTICAL")
+          $('.horizontal_bar').transition({y: -55}, 500, 'out')
+          setTimeout("$('.icons_column').transition({y: 153}, 500, 'out')", 200)
+          is_horizontal = false
+        }
+      }
+    }
+      
     $(document).ready(function() {
       $('.egg').click(function(){
         var KICKASSVERSION='2.0';
@@ -21,26 +43,62 @@
         console.log('kcik')
         void(0);
       })
+
+      // Hide in the margins initially
+      // $('.icons_column').removeClass('hide')
+      // $('.horizontal_bar').addClass('hide')
+      is_horizontal = null;
+      setTimeout(update_size, 300)
+      $(window).resize(function(){
+        update_size();
+      })
+      
+      if( !window.location.hash && window.addEventListener ){
+    		window.addEventListener("load",function() {
+    			setTimeout(function(){
+    				window.scrollTo(0, 0);
+    			}, 0);
+    		});
+    	}
+    	
     });
   </script>
 </head>
 <body>
   
-  <div class="icons2 horizontal">
+  <div class="horizontal_bar">
+    <div class='icons_row'>
+      <a target="_blank" href="https://www.facebook.com/pennapps">
+        <div class="social_scale_row" id="fb_social_scale">
+          <div id="facebook"></div>
+        </div>
+      </a>
+      <a target="_blank" href="http://twitter.com/pennapps">
+        <div class="social_scale_row">
+          <div id="twitter"></div>
+        </div>
+      </a>
+      <a target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
+        <div class="social_scale_row">
+          <div id="gmail"></div>
+        </div>
+      </a>
+    </div>
   </div>
-  <div class='icons horizontal'>
+  
+  <div class='icons_column'>
     <a class="end_opacity" target="_blank" href="https://www.facebook.com/pennapps">
-      <div class="social_scale end_opacity" id="fb_social_scale">
+      <div class="social_scale_col" id="fb_social_scale">
         <div id="facebook"></div>
       </div>
     </a>
     <a class="end_opacity" target="_blank" href="http://twitter.com/pennapps">
-      <div class="social_scale">
+      <div class="social_scale_col">
         <div id="twitter"></div>
       </div>
     </a>
     <a class="end_opacity" target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
-      <div class="social_scale end_opacity">
+      <div class="social_scale_col">
         <div id="gmail"></div>
       </div>
     </a>

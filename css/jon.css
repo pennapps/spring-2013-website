@@ -11,7 +11,7 @@ body {
 }
 
 .top {
-	margin-top: 4%;
+	margin-top: 8%;
 }
 
 .top h1 {
@@ -36,11 +36,30 @@ body {
 	font-family: "Lato";
 }
 
-.date {
+.row {
+	height:50px;
 }
 
 .signup {
 	margin-top:70px;
+}
+
+.row .date, .image_block {
+	display:inline-block;
+}
+
+.image_block {
+	margin-left:6px;
+	background-repeat:no-repeat;
+	width:23px;
+	height: 25px;
+	
+	background-image:url('../img/calendar.png');
+}
+
+.image_block:hover {
+	cursor: pointer;
+	background-image:url('../img/calendar_red.png');
 }
 
 .circle {	
@@ -76,7 +95,6 @@ body {
 	font-size: 30px;
 	letter-spacing:1px
 }
-
 
 
 .prev-container {
@@ -117,4 +135,7 @@ body {
 .sponsor:hover {
   background-color: #222;
   color: #eee;
+}
+.square {
+	padding-bottom:90px
 }

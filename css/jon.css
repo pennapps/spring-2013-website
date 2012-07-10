@@ -49,7 +49,17 @@ body {
 }
 
 .image_block {
-	padding-left:6px;
+	margin-left:6px;
+	background-repeat:no-repeat;
+	width:23px;
+	height: 25px;
+	
+	background-image:url('../img/calendar.png');
+}
+
+.image_block:hover {
+	cursor: pointer;
+	background-image:url('../img/calendar_red.png');
 }
 
 .circle {	
@@ -88,40 +98,4 @@ body {
 
 .square {
 	padding-bottom:90px
-}
-
-
-.prev-container {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 50px;
-}
-.heading h2 {
-  text-align:center;
-  border-bottom: 1px solid #000;
-  line-height:0.1em;
-  margin:10px 0 20px;
-}
-.heading span {
-  padding: 12px;
-  padding-right: 30px;
-  padding-left: 30px;
-  background-color: #eee;
-  border-radius:10px;
-  border: 1px solid #000;
-}
-.sponsors {
-  margin-top: 40px;
-}
-.sponsor {
-  display: inline-block;
-  padding: 20px;
-  font-size: 20pt;
-  background-color: #ccc;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.sponsor:hover {
-  background-color: #222;
-  color: #eee;
 }

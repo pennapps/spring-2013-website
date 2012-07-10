@@ -11,7 +11,7 @@ body {
 }
 
 .top {
-	margin-top: 8%;
+	margin-top: 5%;
 }
 
 .top h1 {
@@ -106,7 +106,7 @@ body {
 	height: 64px;
 }
 
-#facebook, #twitter {
+#gmail, #facebook, #twitter {
 	margin: 0 auto;
 	text-align:center;
 	background-repeat:no-repeat;
@@ -115,12 +115,16 @@ body {
 	height: 100%;	
 }
 
+#gmail {
+	background-image:url('../img/gmail_social.png');
+}
+
 #facebook {
-	
+	background-image:url('../img/facebook_social.png');
 }
 
 #twitter {
-	background-image:url('http://src.sencha.io/64/64/http://i.imgur.com/GGMYa.png');
+	background-image:url('../img/twitter_social.png');
 }
 
 

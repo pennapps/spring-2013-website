@@ -1,0 +1,19 @@
+.prev-container {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.heading h2 {
+  text-align:center;
+  border-bottom: 1px solid #000;
+  line-height:0.1em;
+  margin:10px 0 20px;
+}
+.heading span {
+  padding: 12px;
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color: #eee;
+  border-radius:10px;
+  border: 1px solid #000;
+}

@@ -21,7 +21,7 @@ body {
 }
 
 .subtext {
-	margin-top:30px;
+	margin-top:20px;
 }
 
 .subtext h3 {
@@ -99,3 +99,70 @@ body {
 .square {
 	padding-bottom:90px
 }
+
+#facebook {
+}
+
+#twitter {
+	margin: 0 auto;
+	text-align:center;
+	background-repeat:no-repeat;	
+	background-image:url('http://src.sencha.io/64/64/http://i.imgur.com/GGMYa.png');
+	width:64px;
+	height: 64px;
+/*	background-color: green;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

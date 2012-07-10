@@ -11,25 +11,63 @@ body {
 /*	margin-bottom: 100px;*/
 }
 
+/*-----------------------------------------------------*/
+/*- social media*/
+
 .social_media {
 	display: inline-block;
 }
 
 .social_scale {
 	margin: 0 auto;
-	margin-left:10px;
-	margin-right:10px;
+	margin-left:12px;
+	margin-right:12px;
 	display: inline-block;
 	
 	width:30px;
 	height: 30px;
 }
+#fb_social_scale {
+	width: 28px;
+	height: 28px;
+}
 
 .icons {
 	position: fixed;
-	right: -90px;
+	right: -70px;
 	top: -30px;
 }
+
+#gmail, #facebook, #twitter {
+	margin: 0 auto;
+	text-align:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+	width:100%;
+	height: 100%;
+}
+
+#gmail 			 {background-image:url('../img/gmail_social.png');}
+#gmail:hover {background-image:url('../img/gmail_social_active.png');}
+
+#facebook 			{background-image:url('../img/facebook_social.png');}
+#facebook:hover {background-image:url('../img/facebook_social_active.png');}
+
+#twitter 			 {background-image:url('../img/twitter_social.png');}
+#twitter:hover {background-image:url('../img/twitter_social_active.png');}
+
+#gmail, #facebook, #twitter {
+	opacity:.8 !important;
+	filter:alpha(opacity=80) !important; /* For IE8 and earlier */
+}
+
+#gmail:hover, #facebook:hover, #twitter:hover {
+	opacity:1 !important;
+	filter:alpha(opacity=100) !important; /* For IE8 and earlier */
+}
+
+/*-----------------------------------------------------*/
+/*- top */
 
 .top {
 	margin-top: 2%;
@@ -121,25 +159,6 @@ body {
 	letter-spacing:1px
 }
 
-#gmail, #facebook, #twitter {
-	margin: 0 auto;
-	text-align:center;
-	background-repeat:no-repeat;
-	background-size: 100%;
-	width:100%;
-	height: 100%;	
-
-}
-
-#gmail 			 {background-image:url('../img/gmail_social.png');}
-#gmail:hover {background-image:url('../img/gmail_social_active.png');}
-
-#facebook 			{background-image:url('../img/facebook_social.png');}
-#facebook:hover {background-image:url('../img/facebook_social_active.png');}
-
-#twitter 			 {background-image:url('../img/twitter_social.png');}
-#twitter:hover {background-image:url('../img/twitter_social_active.png');}
-
 .egg {
 	cursor: pointer;
 	bottom: 10px;
@@ -147,8 +166,8 @@ body {
 	padding: 16px;
 	position: fixed;
 	background-image:url('../img/egg_light.png');
-	opacity:0.3;
-	filter:alpha(opacity=30); /* For IE8 and earlier */
+	opacity:0.5;
+	filter:alpha(opacity=50); /* For IE8 and earlier */
 }
 
 .egg:hover {

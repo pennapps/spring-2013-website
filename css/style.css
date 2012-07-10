@@ -7,7 +7,6 @@
 body {
 	text-align: center;
 	background-image: url(http://www.kerem.co/i/noise.png);
-	max-width: 700px;
 	margin: 0 auto;
 }
 
@@ -87,6 +86,9 @@ body {
 	letter-spacing:1px
 }
 
+.square {
+	padding-bottom:90px
+}
 
 
 .prev-container {

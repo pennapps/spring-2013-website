@@ -164,14 +164,22 @@ body {
 	background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #B62F2F), color-stop(2, #B67042));
 	background-image: -webkit-linear-gradient(bottom right, #B62F2F 0%, #B67042 200%);
 	background-image: linear-gradient(to top left, #B62F2F 0%, #B67042 200%);
+	
+	-webkit-transition: box-shadow 0.2s linear;
+  	 -moz-transition: box-shadow 0.2s linear;
+  		-ms-transition: box-shadow 0.2s linear;
+  		 -o-transition: box-shadow 0.2s linear;
+  			  transition: box-shadow 0.2s linear;
+
 }
 
 .circle:hover {
 	cursor: pointer;
 	
-	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 0.92);
-	-moz-box-shadow:    0px 0px 30px rgba(50, 50, 50, 0.92);
-	box-shadow:         0px 0px 30px rgba(50, 50, 50, 0.92);
+     -moz-box-shadow: 0px 0px 25px #B62F2F;
+  -webkit-box-shadow: 0px 0px 25px #B62F2F;
+          box-shadow: 0px 0px 25px #B62F2F;
+
 }
 
 #signup_now {

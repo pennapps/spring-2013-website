@@ -17,7 +17,7 @@
             
       if (window_width < 855) {
         if (is_horizontal == null || is_horizontal == false) {
-          console.log("HORIZONTAL")
+          // console.log("HORIZONTAL")
           $('.icons_column').transition({y: -153}, 500, 'out', function(){
             $(this).hide()
           })
@@ -28,7 +28,7 @@
       }
       else {
         if (is_horizontal == null || is_horizontal == true) {
-          console.log("VERTICAL")
+          // console.log("VERTICAL")
           $('.horizontal_bar').transition({y: -55}, 500, 'out', function(){
             $(this.hide())
           })
@@ -46,7 +46,6 @@
         s.type='text/javascript';
         document.body.appendChild(s);
         s.src='./js/kickass.js';
-        console.log('kcik')
         void(0);
       })
 
@@ -171,7 +170,7 @@
           window.location = $(this).data('link');
         });
         $('.pennapps_container').on('mouseenter touchstart', function() {
-          console.log($(this).attr('id'));
+          // console.log($(this).attr('id'));
           $(this).css('background-image', "url(img/"+$(this).attr('id')+"_active.png)");
         });
         $('.pennapps_container').on('mouseout touchend', function() {

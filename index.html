@@ -18,9 +18,9 @@
       if (window_width < 855) {
         if (is_horizontal == null || is_horizontal == false) {
           console.log("HORIZONTAL")
-          $('.icons_column').transition({y: -153}, 500, 'out')
-          setTimeout("$('.icons_column').hide()", 600)
-          
+          $('.icons_column').transition({y: -153}, 500, 'out', function(){
+            $(this).hide()
+          })
           $('.horizontal_bar').show()
           setTimeout("$('.horizontal_bar').transition({y: 55}, 500, 'out')", 200)
           is_horizontal = true
@@ -29,9 +29,9 @@
       else {
         if (is_horizontal == null || is_horizontal == true) {
           console.log("VERTICAL")
-          $('.horizontal_bar').transition({y: -55}, 500, 'out')
-          setTimeout("$('.horizontal_bar').hide();")
-          
+          $('.horizontal_bar').transition({y: -55}, 500, 'out', function(){
+            $(this.hide())
+          })
           $('.icons_column').show()
           setTimeout("$('.icons_column').transition({y: 153}, 500, 'out')", 200)
           is_horizontal = false
@@ -53,6 +53,10 @@
       // Hide in the margins initially
       // $('.icons_column').removeClass('hide')
       // $('.horizontal_bar').addClass('hide')
+      
+      $('.icons_column').hide()
+      $('.horizontal_bar').hide()
+      
       is_horizontal = null;
       setTimeout(update_size, 300)
       $(window).resize(function(){

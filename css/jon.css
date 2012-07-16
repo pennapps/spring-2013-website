@@ -126,13 +126,21 @@ body {
 /* top */
 
 .top {
-	margin-top:90px;
+	margin-top:50px;
 }
 
 .top h1 {
 	font-size: 90px;
 	color: #424242;
 	font-family: 'Coolvetica', 'Helvetica Neue', sans-serif;
+}
+
+.blue {
+	color: #0060D5;
+}
+
+.red {
+	color: #EC0000;
 }
 
 .subtext {
@@ -192,7 +200,6 @@ body {
 	background-image: -moz-linear-gradient(bottom right, #B62F2F 0%, #B67042 200%);
 	background-image: -o-linear-gradient(bottom right, #B62F2F 0%, #B67042 200%);
 	background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #B62F2F), color-stop(2, #B67042));
-	background-image: -webkit-linear-gradient(bottom right, #B62F2F 0%, #B67042 200%);
 	background-image: linear-gradient(to top left, #B62F2F 0%, #B67042 200%);
 	
 /*	-webkit-transition: box-shadow 0.2s linear;

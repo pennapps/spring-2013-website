@@ -6,8 +6,9 @@
   <meta property="og:description" content="PennApps is a 48-hour hackathon @ The University of Pennsylvania | Fri Sept 14 - Sun Sept 16th"/>
   <meta property="og:image" content="thumbnail_image" />
 
-  <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/html5_boiler.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
   <link rel="stylesheet" href="css/jon.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/geoff.css" type="text/css" media="screen" title="no title" charset="utf-8">
   
@@ -16,6 +17,7 @@
   <script src="js/jquery_transit.js" type="text/javascript" charset="utf-8"></script>
   
   <script>
+
     function update_size() {
       var window_width = $(window).width();
             
@@ -24,9 +26,9 @@
           // console.log("HORIZONTAL")
           $('.icons_column').transition({y: -153}, 500, 'out', function(){
             $(this).hide()
+            $('.horizontal_bar').show()
+            setTimeout("$('.horizontal_bar').transition({y: 55}, 500, 'out');", 0)
           })
-          $('.horizontal_bar').show()
-          setTimeout("$('.horizontal_bar').transition({y: 55}, 500, 'out')", 200)
           is_horizontal = true
         } 
       }
@@ -35,9 +37,9 @@
           // console.log("VERTICAL")
           $('.horizontal_bar').transition({y: -55}, 500, 'out', function(){
             $(this.hide())
+            $('.icons_column').show()
+            setTimeout("$('.icons_column').transition({y: 153}, 500, 'out');", 0)
           })
-          $('.icons_column').show()
-          setTimeout("$('.icons_column').transition({y: 153}, 500, 'out')", 200)
           is_horizontal = false
         }
       }
@@ -52,9 +54,9 @@
         s.src='./js/kickass.js';
         void(0);
       })
-
-      $('.icons_column').hide()
-      $('.horizontal_bar').hide()
+      
+      // $('.icons_column').hide()
+      // $('.horizontal_bar').hide()
       
       is_horizontal = null;
       setTimeout(update_size, 300)
@@ -63,12 +65,12 @@
       })
       
       if( !window.location.hash && window.addEventListener ){
-    		window.addEventListener("load",function() {
-    			setTimeout(function(){
-    				window.scrollTo(0, 0);
-    			}, 0);
-    		});
-    	}
+        window.addEventListener("load",function() {
+          setTimeout(function(){
+            window.scrollTo(0, 0);
+          }, 0);
+        });
+      }
     	
     });
   </script>
@@ -114,7 +116,7 @@
   </div>
   
   <div class="top">
-    <h1>PennApps 2012</h1>
+    <h1><span class="blue">penn</span><span class="red">apps</span></h1>
     <div class="subtext">
       <h3 class="tagline">A 48-hour Hackathon <a href="http://www.upenn.edu" target="_blank" class="upenn">@ The University of Pennsylvania</a></h2>
       <div class="row">
@@ -167,7 +169,7 @@
         });
         document.write(html);
         $('.pennapps_container').on('click', function() {
-          window.location = $(this).data('link');
+          window.open($(this).data('link'),'_blank');
         });
         $('.pennapps_container').on('mouseenter touchstart', function() {
           // console.log($(this).attr('id'));

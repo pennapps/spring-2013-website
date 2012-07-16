@@ -20,5 +20,6 @@ time, mark, audio, video {
 }
 
 a:link, a:visited, a:active, a:hover {
-	text-decoration: none
+	text-decoration: none;
+  color: #5C5C5C;
 }

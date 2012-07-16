@@ -167,7 +167,7 @@
         });
         document.write(html);
         $('.pennapps_container').on('click', function() {
-          window.location = $(this).data('link');
+          window.open($(this).data('link'));
         });
         $('.pennapps_container').on('mouseenter touchstart', function() {
           // console.log($(this).attr('id'));
@@ -214,7 +214,7 @@
             $(this).css('background-color', $(this).data('loadcolor'));
           });
           $('.sponsor').on('click', function() {
-            window.location = $(this).data('link');
+            window.open($(this).data('link'));
           });
           $('.sponsor').on('mouseenter touchstart', function() {
             $(this).css('background-color', $(this).data('bgcolor'));

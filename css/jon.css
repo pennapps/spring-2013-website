@@ -154,6 +154,9 @@ body {
 .upenn {
 	color: #5C5C5C;
 }
+.upenn:visited {
+  color: #5C5C5C;
+}
 
 .row {
 	height:50px;

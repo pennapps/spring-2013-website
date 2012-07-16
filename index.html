@@ -2,13 +2,17 @@
 <html>
 <head>
   <title>PennApps</title>
+  <meta property="og:title" content="PennApps" />
+  <meta property="og:description" content="PennApps is a 48-hour hackathon @ The University of Pennsylvania | Fri Sept 14 - Sun Sept 16th"/>
+  <meta property="og:image" content="thumbnail_image" />
+
   <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/html5_boiler.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/jon.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/geoff.css" type="text/css" media="screen" title="no title" charset="utf-8">
   
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Handlee' rel='stylesheet' type='text/css'>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js'></script>
   <script src="js/jquery_transit.js" type="text/javascript" charset="utf-8"></script>
   
   <script>
@@ -49,10 +53,6 @@
         void(0);
       })
 
-      // Hide in the margins initially
-      // $('.icons_column').removeClass('hide')
-      // $('.horizontal_bar').addClass('hide')
-      
       $('.icons_column').hide()
       $('.horizontal_bar').hide()
       
@@ -116,7 +116,7 @@
   <div class="top">
     <h1>PennApps 2012</h1>
     <div class="subtext">
-      <h3 class="tagline">A 48-hour Hackathon <a href="http://upenn.edu" target="_blank" class="upenn">@ The University of Pennsylvania</a></h2>
+      <h3 class="tagline">A 48-hour Hackathon <a href="http://www.upenn.edu" target="_blank" class="upenn">@ The University of Pennsylvania</a></h2>
       <div class="row">
         <h3 class="date">Fri Sept 14 - Sun Sept 16
           <div style="height:1px; font-size:1px">&nbsp;</div>
@@ -132,7 +132,7 @@
         <div class="circle">
           <a target="_blank" href="http://launchrock.com/">          
             <div class="square">
-              <div id="signup_now">Signup Now</div>
+              <div id="signup_now">Sign Up Now</div>
             </div>
           </a>
         </div>
@@ -273,8 +273,19 @@
       <img src="img/venmo_color.png">
       <img src="img/venmo_white.png">
     </div>
-    
-    
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33300151-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     
     <div class="love">
       Made lovingly in Philadelphia.

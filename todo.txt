@@ -11,6 +11,14 @@ Mobilize
 #------------------------------------------------------
 # Jon
 
+Android Problems
+Not centered bar problems when changing
+Not centered circlular text
+
+Google Analytics
+
+Facebook Meta Tags
+
 Learn more
 
 The launchrock needs to actually be the right launchrock

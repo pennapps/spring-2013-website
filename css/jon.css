@@ -157,6 +157,9 @@ body {
 .upenn:visited {
   color: #5C5C5C;
 }
+.upenn:hover {
+  color: #06E;
+}
 
 .row {
 	height:50px;

@@ -8,6 +8,11 @@
 	     url('coolvetica.eot');
 }
 
+@font-face {
+	font-family: HelveticaNueueLight;
+	src: url('HelveticaNeueLTPro-Lt.otf');
+}
+
 body {
 	text-align: center;
 	background-image: url(../img/noise.png);
@@ -137,10 +142,13 @@ body {
 
 .blue {
 	color: #0060D5;
+	text-shadow: 0 0 0.1em #AAA
 }
 
 .red {
-	color: #EC0000;
+	color: #D80000;
+	text-shadow: 0 0 0.1em #BEBEBE
+
 }
 
 .subtext {
@@ -192,17 +200,22 @@ body {
 	background-image:url('../img/calendar_red.png');  
 }
 
+#video_image {
+	opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+
 .circle {	
 	margin: 0 auto;
-	width: 200px;
-	height: 200px;
+	width: 205px;
+	height: 205px;
 	border-radius: 50%;
 		
 	/*http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.html*/
 	background-image: -ms-linear-gradient(bottom right, #B62F2F 0%, #B67042 200%);
 	background-image: -moz-linear-gradient(bottom right, #B62F2F 0%, #B67042 200%);
 	background-image: -o-linear-gradient(bottom right, #B62F2F 0%, #B67042 200%);
-	background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #B62F2F), color-stop(2, #B67042));
+	background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #A92929), color-stop(2, #D20000));
 	background-image: linear-gradient(to top left, #B62F2F 0%, #B67042 200%);
 	
 /*	-webkit-transition: box-shadow 0.2s linear;
@@ -221,8 +234,13 @@ body {
 
 }
 
+.square {
+	padding-bottom:90px
+}
+
+
 #signup_now {
-	padding-top: 80px;
+	padding-top: 85px;
 	color:white;
 	font-family: "Coolvetica";
 	font-weight: 300;

@@ -13,6 +13,11 @@
 	src: url('HelveticaNeueLTPro-Lt.otf');
 }
 
+@font-face {
+	font-family: HelveticaNueueRegular;
+	src: url('HelveticaNeueLTPro-Roman.otf');
+}
+
 body {
 	text-align: center;
 	background-image: url(../img/noise.png);
@@ -48,6 +53,7 @@ body {
 		position:fixed;
 		width: 100%;
 		height:50px;
+		z-index: 1
 	}
 
 	.icons_row {
@@ -76,7 +82,7 @@ body {
 		
 		position: fixed;
 		right: 0;
-		margin-right:30px;
+		margin-right:5%;
 		padding-bottom:9px;
 	
 	}
@@ -105,7 +111,6 @@ body {
 		background-size: 100%;
 		width:100%;
 		height: 100%;
-		z-index:100;
 	}
 
 	#gmail 			 {background-image:url('../img/gmail_social.png');}
@@ -202,6 +207,28 @@ body {
 	cursor: pointer;
 	background-image:url('../img/calendar_red.png');  
 }
+
+.about {
+	margin-top: 40px;
+  font-family: "HelveticaNueueLight";
+  line-height: 1.4;
+  font-weight: 300;
+  font-size:19px;
+  color: #8C8C8C;
+}
+
+.bold {
+	font-family: "HelveticaNueueRegular";
+	color: #555;
+}
+.dark {
+	color: #555;
+}
+
+.video {
+	cursor: pointer;
+}
+
 
 #video_image {
 	opacity:0.8;

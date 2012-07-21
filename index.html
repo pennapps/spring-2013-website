@@ -18,7 +18,6 @@
   <script src="js/jquery_transit.js" type="text/javascript" charset="utf-8"></script>
 
   <script>
-
     function update_size() {
       var window_width = $(window).width();
             
@@ -26,7 +25,6 @@
         if (is_horizontal == null || is_horizontal == false) {
           // console.log("HORIZONTAL")
           $('.icons_column').transition({y: -153}, 500, 'out', function(){
-            $(this).hide()
             $('.horizontal_bar').show()
             setTimeout("$('.horizontal_bar').transition({y: 55}, 500, 'out');", 0)
           })
@@ -37,7 +35,6 @@
         if (is_horizontal == null || is_horizontal == true) {
           // console.log("VERTICAL")
           $('.horizontal_bar').transition({y: -55}, 500, 'out', function(){
-            $(this.hide())
             $('.icons_column').show()
             setTimeout("$('.icons_column').transition({y: 153}, 500, 'out');", 0)
           })
@@ -56,8 +53,27 @@
         void(0);
       })
       
-      // $('.icons_column').hide()
-      // $('.horizontal_bar').hide()
+      $('.sponsors').find('*[data-sponsor=sponsorpennapps]').css({
+        "height": "76px",
+        "width": "300px",
+        "margin-top": "20px"
+      })
+
+
+      // $('.pennapps_container').on('click', function() {
+      //   window.open($(this).data('link'),'_blank');
+      // });
+      $('#video_image').click(function() {
+        $(this).hide()
+        $('#youtube').append('<iframe id="youtube" width="640" height="390" src="http://www.youtube.com/embed/e7lY-OXZu-I?rel=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>')
+      });
+      $('#video_image').on('mouseenter touchstart', function() {
+        $(this).attr("src", "img/video_color.png");
+      });
+      $('#video_image').on('mouseout touchend', function() {
+        $(this).attr("src", "img/video_gray.png");
+      });
+
       
       is_horizontal = null;
       setTimeout(update_size, 300)
@@ -141,20 +157,97 @@
         </div>
     </div>
   </div>
-
+<p></p>
   <div id="previous_sponsors" class='prev-container'>
     <div class='heading'>
       <h2><span>What is PennApps?</span></h2>
     </div>
 
-    <img id="video_image" src="img/video.png">
+    <div class="video">
+      <img id="video_image" src="img/video_gray.png">
+      <div id="youtube"></div>
+    </div>
 
     <div class='about'>
-      PennApps is the University of Pennsylvania's biannual, weekend-long hackathon. Talented student programmers team up in groups of up to four to build amazing applications. The weekend culminates in a demo session, where an impressive panel of judges awards prizes to the top hacks. Over the course of the hackathon, students are exposed to new technologies and have a chance to take their skills outside the classroom-- not to mention the free food and giveaways. PennApps is open to all current undergraduate and graduate students, and attracts participants from across the east coast.
-Curious? Check out our video.
+      <p>PennApps is a The University of Pennsylvania's 48-hour long hackathon.</p>
+      </br>
+      <p>Students have trecked to PennApps from all over including</p>
+      <p>Carnegie Mellon, Princeton, Brown to build awesome hacks.</p>
+      </br>
+
+      <p>Are there prizes?</span>&mdash;<span class="dark"><span class="dark">Duh.</span></p>
+
+      </br>
+
+      <p>First Place:  <span class="dark">$3,500</span></p>
+      <p>Second Place: <span class="dark">$2,500</span></p>
+      <p>Third Place:  <span class="dark">$1,500</span></p>
+      <p>Something Clever: <span class="dark">$500</span></p>
+
+      </br>
+
+      <p>Oh yeah, there are also <span class="dark">$6,000</span> in sponsored cash prizes.</p>
     </div>
+
   </div>
   
+    
+  <div id="previous_sponsors" class='prev-container'>
+    <div class='heading'>
+      <h2><span>Previous Sponsors Include</span></h2>
+    </div>
+    <div class='sponsors'>
+      <script type='text/javascript'>
+        // sponsors go ['name', 'background-color', 'link', 'default-bg-color', 'additonal classes']
+        var sponsors = [
+          ['facebook', '#2B579E', 'http://facebook.com'],
+          ['github', 'white', 'http://github.com'],
+          ['twitter', 'white', 'http://twitter.com'],
+          ['twilio','white', 'http://twilio.com'],
+          ['google', 'white', 'http://google.com'],
+          ['mongodb', '#3C2919', 'http://mongodb.com'],
+          ['a16z', 'white', 'http://a16z.com'],
+          ['venmo', 'white', 'http://venmo.com'],
+          ['hunch', 'white', 'http://hunch.com'],
+          ['microsoft', 'white', 'http://microsoft.com'],
+          ['cloudmine', 'white', 'http://cloudmine.me'],
+          // ['monetate', 'white', 'http://monetate.com'],
+          // ['color', '#93b9b1', 'http://color.com'],
+          ['zynga', 'white', 'http://zynga.com'],
+          ['tumblr', '#2C4762', 'http://tumblr.com'],
+          ['allsponsors', 'white', 'sponsors.html'],
+          ['sponsorpennapps', '#B62F2F', 'http://pennapps.com/sponsorship.pdf', '#B62F2F', 'no-opacity']
+        ];
+        var html = "";
+        $.each(sponsors, function(index, sponsor) {
+          html += "<div "+
+            "data-link='"+sponsor[2]+"' "+
+            "data-bgcolor='"+sponsor[1]+"' "+
+            "data-sponsor='"+sponsor[0]+"' "+
+            "data-loadcolor='"+(sponsor[3] || '#515151')+"' "+ //#515151 is the default
+            "style='background-image: url(img/"+sponsor[0]+"_white.png)' "+
+            "class='sponsor "+sponsor[4]+"'></div>";
+        });
+        document.write(html);
+        $('.sponsor').each(function() {
+          $(this).css('background-color', $(this).data('loadcolor'));
+        });
+        $('.sponsor').on('click', function() {
+          window.open($(this).data('link'));
+        });
+        $('.sponsor').on('mouseenter touchstart', function() {
+          $(this).css('background-color', $(this).data('bgcolor'));
+          $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_color.png)");
+          });
+        $('.sponsor').on('mouseout touchend', function() {
+          $(this).css('background-color', $(this).data('loadcolor'));
+          $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_white.png)");
+        });
+      </script>
+      <!-- TODO: and more... -->
+    </div>
+  </div>
+
   <div class='prev-container'>
     <div class='heading'>
       <h2><span>Time Machine</span></h2>
@@ -192,132 +285,97 @@ Curious? Check out our video.
         $('.pennapps_container').on('mouseout touchend', function() {
           $(this).css('background-image', "url(img/"+$(this).attr('id')+".png)");
         });
-
       </script>
+    </div>
+  </div><!--END PenAppses-->
+  
+  <div id="preload">
+    <img src="img/a16z_color.jpeg">
+    <img src="img/a16z_color.png">
+    <img src="img/a16z_white.png">
+    <img src="img/allsponsors_color.png">
+    <img src="img/allsponsors_white.png">
+    <img src="img/calendar.png">
+    <img src="img/calendar_red.png">
+    <img src="img/cloudmine_color.png">
+    <img src="img/cloudmine_white.png">
+    <img src="img/color_color.png">
+    <img src="img/color_white.png">
+    <img src="img/egg.png">
+    <img src="img/egg_light.png">
+    <img src="img/facebook_color.png">
+    <img src="img/facebook_social.png">
+    <img src="img/facebook_social_active.png">
+    <img src="img/facebook_white.png">
+    <img src="img/Fall2009.png">
+    <img src="img/Fall2009_active.png">
+    <img src="img/Fall2010.png">
+    <img src="img/Fall2010_active.png">
+    <img src="img/Fall2011.png">
+    <img src="img/Fall2011_active.png">
+    <img src="img/favicon.png">
+    <img src="img/github_color.png">
+    <img src="img/github_white.png">
+    <img src="img/gmail_social.png">
+    <img src="img/gmail_social_active.png">
+    <img src="img/google_color.png">
+    <img src="img/google_white.png">
+    <img src="img/hunch_color.png">
+    <img src="img/hunch_white.png">
+    <img src="img/microsoft_color.png">
+    <img src="img/microsoft_white.png">
+    <img src="img/monetate_color.png">
+    <img src="img/monetate_white.png">
+    <img src="img/mongodb_color.png">
+    <img src="img/mongodb_white.png">
+    <img src="img/noise.png">
+    <img src="img/redbull_color.png">
+    <img src="img/redbull_white.png">
+    <img src="img/separator.png">
+    <img src="img/sponsorpennapps_color.png">
+    <img src="img/sponsorpennapps_white.png">
+    <img src="img/sponsors.png">
+    <img src="img/Spring2011.png">
+    <img src="img/Spring2011_active.png">
+    <img src="img/Spring2012.png">
+    <img src="img/Spring2012_active.png">
+    <img src="img/tumblr_color.png">
+    <img src="img/tumblr_white.png">
+    <img src="img/twilio_color.png">
+    <img src="img/twilio_white.png">
+    <img src="img/twitter_color.png">
+    <img src="img/twitter_social.png">
+    <img src="img/twitter_social_active.png">
+    <img src="img/twitter_social_gray.png">
+    <img src="img/twitter_white.png">
+    <img src="img/venmo_color.png">
+    <img src="img/venmo_white.png">
+    <img src="img/video.png">
+    <img src="img/video_color.png">
+    <img src="img/video_gray.png">
+    <img src="img/zynga_color.png">
+    <img src="img/zynga_white.png">
+  </div>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33300151-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  
+  <div class="love">
+    Made lovingly in Philadelphia.
+  </div>  
       
-    </div><!--END PenAppses-->
-    
-    <div id="previous_sponsors" class='prev-container'>
-      <div class='heading'>
-        <h2><span>Previous Sponsors</span></h2>
-      </div>
-      <div class='sponsors'>
-        <script type='text/javascript'>
-          // sponsors go ['name', 'background-color', 'link', 'default-bg-color', 'additonal classes']
-          var sponsors = [
-            ['venmo', 'white', 'http://venmo.com'],
-            ['facebook', '#2B579E', 'http://facebook.com'],
-            ['twilio','white', 'http://twilio.com'],
-            ['google', 'white', 'http://google.com'],
-            ['github', 'white', 'http://github.com'],
-            ['a16z', 'white', 'http://a16z.com'],
-            ['mongodb', '#3C2919', 'http://mongodb.com'],
-            ['twitter', 'white', 'http://twitter.com'],
-            ['monetate', 'white', 'http://monetate.com'],
-            ['microsoft', 'white', 'http://microsoft.com'],
-            ['tumblr', '#2C4762', 'http://tumblr.com'],
-            ['color', '#93b9b1', 'http://color.com'],
-            ['cloudmine', 'white', 'http://cloudmine.me'],
-            ['zynga', 'white', 'http://zynga.com'],
-            ['hunch', 'white', 'http://hunch.com'],
-            ['allsponsors', 'white', 'sponsors.html'],
-            ['sponsorpennapps', '#B62F2F', 'http://pennapps.com/sponsorship.pdf', '#B62F2F', 'no-opacity']
-          ];
-          var html = "";
-          $.each(sponsors, function(index, sponsor) {
-            html += "<div "+
-              "data-link='"+sponsor[2]+"' "+
-              "data-bgcolor='"+sponsor[1]+"' "+
-              "data-sponsor='"+sponsor[0]+"' "+
-              "data-loadcolor='"+(sponsor[3] || '#515151')+"' "+ //#515151 is the default
-              "style='background-image: url(img/"+sponsor[0]+"_white.png)' "+
-              "class='sponsor "+sponsor[4]+"'></div>";
-          });
-          document.write(html);
-          $('.sponsor').each(function() {
-            $(this).css('background-color', $(this).data('loadcolor'));
-          });
-          $('.sponsor').on('click', function() {
-            window.open($(this).data('link'));
-          });
-          $('.sponsor').on('mouseenter touchstart', function() {
-            $(this).css('background-color', $(this).data('bgcolor'));
-            $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_color.png)");
-            });
-          $('.sponsor').on('mouseout touchend', function() {
-            $(this).css('background-color', $(this).data('loadcolor'));
-            $(this).css('background-image', "url(img/"+$(this).data('sponsor')+"_white.png)");
-          });
-        </script>
-        <!-- TODO: and more... -->
-      </div>
-    </div>
-    
-    <div id="preload">
-      <img src="img/a16z_color.jpeg">
-      <img src="img/a16z_color.png">
-      <img src="img/a16z_white.png">
-      <img src="img/allsponsors_color.png">
-      <img src="img/allsponsors_white.png">
-      <img src="img/calendar.png">
-      <img src="img/calendar_red.png">
-      <img src="img/egg.png">
-      <img src="img/egg_light.png">
-      <img src="img/facebook_color.png">
-      <img src="img/facebook_social.png">
-      <img src="img/facebook_social_active.png">
-      <img src="img/facebook_white.png">
-      <img src="img/Fall2009.png">
-      <img src="img/Fall2009_active.png">
-      <img src="img/Fall2010.png">
-      <img src="img/Fall2010_active.png">
-      <img src="img/Fall2011.png">
-      <img src="img/Fall2011_active.png">
-      <img src="img/github_color.png">
-      <img src="img/github_white.png">
-      <img src="img/gmail_social.png">
-      <img src="img/gmail_social_active.png">
-      <img src="img/google_color.png">
-      <img src="img/google_white.png">
-      <img src="img/mongodb_color.png">
-      <img src="img/mongodb_white.png">
-      <img src="img/noise.png">
-      <img src="img/separator.png">
-      <img src="img/sponsorpennapps_color.png">
-      <img src="img/sponsorpennapps_white.png">
-      <img src="img/Spring2011.png">
-      <img src="img/Spring2011_active.png">
-      <img src="img/Spring2012.png">
-      <img src="img/Spring2012_active.png">
-      <img src="img/twilio_color.png">
-      <img src="img/twilio_white.png">
-      <img src="img/twitter_social.png">
-      <img src="img/twitter_social_active.png">
-      <img src="img/twitter_social_gray.png">
-      <img src="img/video.png">
-      <img src="img/venmo_color.png">
-      <img src="img/venmo_white.png">
-    </div>
-
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-33300151-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-    
-    <div class="love">
-      Made lovingly in Philadelphia.
-    </div>  
-        
-    <div class="egg">
-    </div>
+  <div class="egg">
+  </div>
     
 </body>
 </html>

@@ -1,3 +1,34 @@
-<body style='background: url("img/noise.png")'>
-  <div style='width: 100%; height: 100%; background: url("img/sponsors.png") no-repeat center; background-size: 97%;'></div>
+<html>
+<head>  
+    <style>
+        body {
+            background: url("img/noise.png");
+            background-repeat:repeat;
+            font-family:Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -300;
+            margin-left: -480px;
+        }
+    </style>
+    <script type="text/javascript" src="js/d3.v2.min.js"></script>
+    <script type="text/javascript" src="js/d3.layout.cloud.js"></script>
+</head>
+<body>
+    <script>
+        wordlist = ['AGI', 'Ampush Media', 'Arkitech', 'Bloomberg', 'Bump', 
+            'Goldman Sachs', 'Hulu', 'Hunch', 'Indy Hall', 'Leadnomics', 'Lore',
+            'Mashery', 'Mediatemple', 'MentorTech Ventures', 'Mozilla', 
+            'Palantir', 'Rackspace', 'Red Bull', 'Sencha', 'Squarespace', 
+            'TicketLeap', 'Tropo', 'Wikimedia', 'Zynga', '10gen', 'APT', 
+            'Cloudmine', 'Color', 'Comcast', 'Facebook', 'Github', 'Tumblr', 
+            'Twitter', 'Wharton Entrepreneurial Programs', 
+            'Twilio', 'Yahoo', 'First Round Capital', 'Google', 'Microsoft', 
+            'Monetate', 'Venmo', 'Andreessen Horowitz'];
+    </script>    
+
+    <object type="image/svg+xml" data="img/sponsors.svg" style=body><span>full sponsor list</span></object>
+
 </body>
+</html>

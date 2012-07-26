@@ -224,6 +224,9 @@ body {
 .dark {
 	color: #555;
 }
+a.dark:hover {
+  color: #08C;
+}
 
 .video {
 	cursor: pointer;

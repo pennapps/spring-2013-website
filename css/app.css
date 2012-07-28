@@ -356,9 +356,7 @@ a.dark:hover {
   height: 120px;
   /* everything else is taken care of */
   display: inline-block;
-  background-color: #515151;
-  opacity:0.2;
-  filter:alpha(opacity=20); /* For IE8 and earlier */
+  background-color: white;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 3px;

@@ -4,3 +4,4 @@ pennapps_edit
 .DS_Store
 
 *.swp
+.sass-cache

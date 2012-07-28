@@ -117,57 +117,12 @@
                 <h2><span>Previous Sponsors Include</span></h2>
             </div>
             <div class='sponsors'>
-                
-                <a href="http://facebook.com">
-                <div class="sponsor facebook">
+                {% for sponsor in sponsors %}
+                <a href="{{ sponsor.href }}">
+                <div class="sponsor {{ sponsor.name }}">
                 </div>
                 </a>
-                
-                <a href="http://google.com">
-                <div class="sponsor google">
-                </div>
-                </a>
-                
-                <a href="http://mongodb.com">
-                <div class="sponsor mongodb">
-                </div>
-                </a>
-                
-                <a href="http://venmo.com">
-                <div class="sponsor venmo">
-                </div>
-                </a>
-                
-                <a href="http://hunch.com">
-                <div class="sponsor hunch">
-                </div>
-                </a>
-                
-                <a href="http://tumblr.com">
-                <div class="sponsor tumblr">
-                </div>
-                </a>
-                
-                <a href="http://palantir.com">
-                <div class="sponsor palantir">
-                </div>
-                </a>
-                
-                <a href="http://mashery.com">
-                <div class="sponsor mashery">
-                </div>
-                </a>
-                
-                <a href="http://yahoo.com">
-                <div class="sponsor yahoo">
-                </div>
-                </a>
-                
-                <a href="http://lore.com">
-                <div class="sponsor lore">
-                </div>
-                </a>
-                
+                {% endfor %}
             </div>
         </div>
         <div class='prev-container'>

@@ -2,9 +2,11 @@ from collections import namedtuple
 
 from jinja2 import Environment, FileSystemLoader
 
+
 Sponsor = namedtuple('Sponsor', ['name', 'href'])
 
 
+# TODO: Figure out a good way to show the other sponsors
 SPONSORS = [
       Sponsor('facebook', 'http://facebook.com'),
       Sponsor('google', 'http://google.com'),
@@ -20,13 +22,26 @@ SPONSORS = [
       #Sponsor('sponsorpennapps', '#B62F2F', 'http://pennapps.com/sponsorship.pdf', '#B62F2F', 'no-opacity')
 ]
 
-ENV = Environment(loader=FileSystemLoader(searchpath="./templates"))
+
+Competition = namedtuple('Competition', ['season', 'year', 'href'])
+
+COMPETITIONS = [
+    Competition('Spring', '2012', 'http://2012s.pennapps.com/'),
+    Competition('Fall', '2011', 'http://2011f.pennapps.com/'),
+    Competition('Spring', '2011', 'http://pennapps.com/spring2011/'),
+    Competition('Fall', '2010', 'http://pennapps.com/2010'),
+    Competition('Fall', '2009', 'http://pennapps.com/2009'),
+]
 
 
 def build():
-    template = ENV.get_template('index.html')
+    env = Environment(loader=FileSystemLoader(searchpath="./templates"))
+    template = env.get_template('index.html')
     with open("index.html", "w") as f:
-        f.write(template.render(sponsors=SPONSORS))
+        f.write(template.render(
+            sponsors=SPONSORS,
+            competitions=COMPETITIONS,
+        ))
 
 
 def main():

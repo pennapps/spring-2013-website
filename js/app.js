@@ -28,15 +28,6 @@ function update_size() {
 }
   
 $(document).ready(function() {
-  $('.egg').click(function(){
-    var KICKASSVERSION='2.0';
-    var s = document.createElement('script');
-    s.type='text/javascript';
-    document.body.appendChild(s);
-    s.src='./js/kickass.js';
-    void(0);
-  })
-  
   $('.sponsors').find('*[data-sponsor=sponsorpennapps]').css({
     "height": "76px",
     "width": "300px",

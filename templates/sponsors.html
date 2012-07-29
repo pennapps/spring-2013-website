@@ -1,3 +1,60 @@
-{% for sponsor in sponsors %}
-    <li><a href="{{ sponsor.href }}">{{ sponsor.name }}</a></li>
-{% endfor %}
+<section id="ipo" class="sponsors">
+    <div class="page-header">
+        <h1>IPO</h1>
+    </div>
+    <div class="row">
+        {% for sponsor in ipo %}
+        <div class="span6">
+            <a href="{{ sponsor.href }}">
+            <div class="sponsor {{ sponsor.name }}">
+            </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section id="mezzanine" class="sponsors">
+    <div class="page-header">
+        <h1>Mezzanine</h1>
+    </div>
+    <div class="row">
+        {% for sponsor in mezzanine %}
+        <div class="span4">
+            <a href="{{ sponsor.href }}">
+            <div class="sponsor {{ sponsor.name }}">
+            </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section id="series-a" class="sponsors">
+    <div class="page-header">
+        <h1>Series A</h1>
+    </div>
+    <div class="row">
+        {% for sponsor in series_a %}
+        <div class="span3">
+            <a href="{{ sponsor.href }}">
+            <div class="sponsor {{ sponsor.name }}">
+            </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section id="seed" class="sponsors">
+    <div class="page-header">
+        <h1>Seed</h1>
+    </div>
+    <div class="row">
+        {% for sponsor in seed %}
+        <div class="span2">
+            <a href="{{ sponsor.href }}">
+            <div class="sponsor {{ sponsor.name }}">
+            </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>

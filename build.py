@@ -6,7 +6,29 @@ from jinja2 import Environment, FileSystemLoader
 Sponsor = namedtuple('Sponsor', ['name', 'href'])
 
 
-# TODO: Figure out a good way to show the other sponsors
+IPO = [
+      Sponsor('venmo', 'http://venmo.com'),
+]
+
+# TODO: Mailchimp
+MEZZANINE = [
+      Sponsor('facebook', 'http://facebook.com'),
+      Sponsor('lore', 'http://lore.com'),
+      Sponsor('mongodb', 'http://mongodb.com'),
+      Sponsor('yahoo', 'http://yahoo.com'),
+]
+
+# TODO: Codeacademy
+SERIES_A = [
+      Sponsor('hunch', 'http://hunch.com'),
+      Sponsor('mashery', 'http://mashery.com'),
+      Sponsor('palantir', 'http://palantir.com'),
+]
+
+SEED = [
+      Sponsor('google', 'http://google.com'),
+]
+
 SPONSORS = [
       Sponsor('facebook', 'http://facebook.com'),
       Sponsor('google', 'http://google.com'),
@@ -40,6 +62,10 @@ def build():
     with open("index.html", "w") as f:
         f.write(template.render(
             sponsors=SPONSORS,
+            ipo=IPO,
+            mezzanine=MEZZANINE,
+            series_a=SERIES_A,
+            seed=SEED,
             competitions=COMPETITIONS,
         ))
 

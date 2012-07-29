@@ -36,3 +36,15 @@
   vertical-align: top;
   font-size: 22px;
   font-weight: 300; }
+
+#ipo .sponsor {
+  height: 230px; }
+
+#mezzanine .sponsor {
+  height: 150px; }
+
+#series-a .sponsor {
+  height: 110px; }
+
+#seed .sponsor {
+  height: 70px; }

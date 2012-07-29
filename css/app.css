@@ -351,7 +351,7 @@ a.dark:hover {
 
 .sponsor {
   /* set height and width here */
-  width: 240px;
+  width: 100%;
   height: 120px;
   /* everything else is taken care of */
   display: inline-block;

@@ -85,7 +85,21 @@
                 </div>
             </div>
         </div>
+        <section id="ipo" class="sponsors">
+            <div class="page-header"></div>
+            <div class="row">
+                {% for sponsor in ipo %}
+                <div class="span6">
+                    <a href="{{ sponsor.href }}">
+                    <div class="sponsor {{ sponsor.name }}">
+                    </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
         <section id="reasons">
+            <div class="page-header"></div>
             <h1>Eat. Sleep. Code.</h1>
             <p>Need a reason to come to PennApps? Look no futher.</p>
             <div class="row">
@@ -140,6 +154,19 @@
                 </div>
             </div>
         </section>
+        <section id="mezzanine" class="sponsors">
+            <div class="page-header"></div>
+            <div class="row">
+                {% for sponsor in mezzanine %}
+                <div class="span4">
+                    <a href="{{ sponsor.href }}">
+                    <div class="sponsor {{ sponsor.name }}">
+                    </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
         <div id="about" class='prev-container'>
             <div class='heading'>
                 <h2><span>What is PennApps?</span></h2>
@@ -171,6 +198,19 @@
 
             </div>
         </div>
+        <section id="series-a" class="sponsors">
+            <div class="page-header"></div>
+            <div class="row">
+                {% for sponsor in series_a %}
+                <div class="span3">
+                    <a href="{{ sponsor.href }}">
+                    <div class="sponsor {{ sponsor.name }}">
+                    </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
         <section id="logistics">
             <div class="page-header">
             </div>
@@ -342,60 +382,33 @@
                     </div>
                 </div>
             </div>
-        <section id="prizes">
-            <div class="page-header">
-                <h1>Prizes</h1>
-            </div>
+        </section>
+        <section id="seed" class="sponsors">
+            <div class="page-header"></div>
             <div class="row">
-                <div class="span4">
-                    <h2>Third place</h2>
-                    <li>$1,000</li>
+                {% for sponsor in seed %}
+                <div class="span2">
+                    <a href="{{ sponsor.href }}">
+                    <div class="sponsor {{ sponsor.name }}">
+                    </div>
+                    </a>
                 </div>
-                <div class="span4">
-                    <h2>Second place</h2>
-                    <li>$2,000</li>
-                </div>
-                <div class="span4">
-                    <h2>First place</h2>
-                    <li>$4,000</li>
-                    <li>Trip to Google NYC</li>
+                {% endfor %}
+            </div>
+        </section>
+        <section id"signup">
+            <div class="signup">
+                <div class="circle">
+                    <a target="_blank" href="http://launchrock.com/">          
+                        <div class="square">
+                            <div id="signup_now">Sign Up Now</div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
-        <div id="previous_sponsors" class='prev-container'>
-            <div class='heading'>
-                <h2><span>Previous Sponsors Include</span></h2>
-            </div>
-            <div class='sponsors'>
-                {% for sponsor in sponsors %}
-                <a href="{{ sponsor.href }}">
-                <div class="sponsor {{ sponsor.name }}">
-                </div>
-                </a>
-                {% endfor %}
-            </div>
-        </div>
-        <div class='prev-container'>
-            <div class='heading'>
-                <h2><span>Time Machine</span></h2>
-            </div>
-            <div class="pennapses">
-                {% for competition in competitions %}
-                <a href="{{ competition.href }}">
-                    <div class="pennapps_container">
-                        <div class="pennapps" id="{{ competition.season }}{{ competition.year }}">
-                            <div class="left">
-                                <span class="season">{{ competition.season }}</span>
-                                <span class="year">{{ competition.year }}</span>
-                            </div>
-                            <div class="right">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-            </div>
-        </div><!--END PenAppses-->
+        <footer class="footer">
+        </footer>
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-33300151-1']);

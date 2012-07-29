@@ -55,23 +55,28 @@ COMPETITIONS = [
     Competition('Fall', '2009', 'http://pennapps.com/2009'),
 ]
 
+def build_template(env, template_name, **kwargs):
+    template = env.get_template(template_name)
+    with open(template_name, "w") as f:
+        f.write(template.render(**kwargs))
 
-def build():
-    env = Environment(loader=FileSystemLoader(searchpath="./templates"))
-    template = env.get_template('index.html')
-    with open("index.html", "w") as f:
-        f.write(template.render(
+def build_index(env):
+    build_template(env, 'index.html',
             sponsors=SPONSORS,
             ipo=IPO,
             mezzanine=MEZZANINE,
             series_a=SERIES_A,
             seed=SEED,
             competitions=COMPETITIONS,
-        ))
+    )
 
+def build_schedule(env):
+    build_template(env, 'schedule.html')
 
 def main():
-    build()
+    env = Environment(loader=FileSystemLoader(searchpath="./templates"))
+    build_index(env)
+    build_schedule(env)
 
 
 if __name__ == "__main__":

@@ -1,377 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>PennApps</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <meta property="og:title" content="PennApps" />
-        <meta property="og:description" content="PennApps is a 48-hour hackathon @ The University of Pennsylvania | Fri Sept 14 - Sun Sept 16th"/>
-        <meta property="og:image" content="thumbnail_image" />
-
-        <link rel="stylesheet" href="css/html5_boiler.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
-
-        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="css/app.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="css/scaffolding.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="css/scaffolding.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="css/sponsors.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="css/pretty.css" type="text/css" media="screen" title="no title" charset="utf-8">
-
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Handlee|Habibi' rel='stylesheet' type='text/css'>
-        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-        <script src="js/jquery_transit.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/app.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <div class="container">
-        <div class="horizontal_bar">
-            <div class='icons_row'>
-                <a target="_blank" href="https://www.facebook.com/pennapps">
-                    <div class="social_scale_row" id="fb_social_scale">
-                        <div id="facebook"></div>
-                    </div>
-                </a>
-                <a target="_blank" href="http://twitter.com/pennapps">
-                    <div class="social_scale_row">
-                        <div id="twitter"></div>
-                    </div>
-                </a>
-                <a target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
-                    <div class="social_scale_row">
-                        <div id="gmail"></div>
-                    </div>
-                </a>
+{% extends "base.html" %}
+{% block body %}
+<div class="horizontal_bar">
+    <div class='icons_row'>
+        <a target="_blank" href="https://www.facebook.com/pennapps">
+            <div class="social_scale_row" id="fb_social_scale">
+                <div id="facebook"></div>
             </div>
-        </div>
-        <div class='icons_column'>
-            <a class="end_opacity" target="_blank" href="https://www.facebook.com/pennapps">
-                <div class="social_scale_col" id="fb_social_scale">
-                    <div id="facebook"></div>
-                </div>
-            </a>
-            <a class="end_opacity" target="_blank" href="http://twitter.com/pennapps">
-                <div class="social_scale_col">
-                    <div id="twitter"></div>
-                </div>
-            </a>
-            <a class="end_opacity" target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
-                <div class="social_scale_col">
-                    <div id="gmail"></div>
-                </div>
-            </a>
-        </div>
-        <div id="masthead">
-            <h1><a href="#"><span class="blue">penn</span><span class="red">apps</span></a></h1>
-            <div class="subtext">
-                <h3 class="tagline">A 48-hour Hackathon at The University of Pennsylvania</h2>
-                <div class="row">
-                    <h3 class="date">Fri Sept 14 - Sun Sept 16
-                        <div style="height:1px; font-size:1px">&nbsp;</div>
-                    </h3>
-                    <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=PennApps%20Fall%202012&dates=20120914T190000Z/20120916T200000Z&details=DESCRIPTION&location=The%20University%20of%20Pennsylvania&trp=true&sprop=http%3A%2F%2Fpennapps.com&sprop=name:PennApps" target="_blank">
-                        <div class="image_block">
-                        </div>
-                    </a>
-                </div>
-                <!-- http://support.google.com/calendar/bin/answer.py?hl=en&answer=1186917 -->
+        </a>
+        <a target="_blank" href="http://twitter.com/pennapps">
+            <div class="social_scale_row">
+                <div id="twitter"></div>
             </div>
-            <div class="signup">
-                <div class="circle">
-                    <a target="_blank" href="http://launchrock.com/">          
-                        <div class="square">
-                            <div id="signup_now">Sign Up Now</div>
-                        </div>
-                    </a>
-                </div>
+        </a>
+        <a target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
+            <div class="social_scale_row">
+                <div id="gmail"></div>
             </div>
-        </div>
-        <section id="ipo" class="sponsors">
-            <div class="page-header"></div>
-            <div class="row">
-                {% for sponsor in ipo %}
-                <div class="span6">
-                    <a href="{{ sponsor.href }}">
-                    <div class="sponsor {{ sponsor.name }}">
-                    </div>
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
-        <section id="reasons">
-            <div class="page-header"></div>
-            <h1>Eat. <span class="not">Sleep.</span> Code.</h1>
-            <p>Need a reason to come to PennApps? Look no futher.</p>
-            <div class="row">
-                <div class="span4">
-                    <img class="bs-icon" src="img/glyphicons/glyphicons_043_group.png">
-                    <h2>Huge</h2>
-                    <p>Over 40 teams and 180 participants from school all across the east coast.<p>
-                </div>
-                <div class="span4">
-                    <img class="bs-icon" src="img/glyphicons/glyphicons_275_fast_food.png">
-                    <h2>Food</h2>
-                    <p>We spend more money on food than prizes.</p>
-                </div>
-                <div class="span4">
-                    <img class="bs-icon" src="img/glyphicons/glyphicons_289_podium.png">
-                    <h2>Win awesome prizes</h2>
-                    <p>Over $12,000 in prizes. $7000 total to top three hacks, and $5000 in sponsor prizes.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="span4">
-                    <img class="bs-icon" src="img/glyphicons/glyphicons_209_cart_in.png">
-                    <h2>Swag</h2>
-                    <p>Including, but not limited to, free T-shirt, water bottle, and stickers. Plus, raffles every hour from 12am to 6am.</p>
-                </div>
-                <div class="span4">
-                    <img class="bs-icon" src="img/glyphicons/glyphicons_294_coffe_cup.png">
-                    <h2>Drinks</h2>
-                    <p>Unlimited caffeine. Coffee, red bull, monster-- Sleep is a thing of the past.</p>
-                </div>
-                <div class="span4">
-                    <img class="bs-icon" src="img/glyphicons/glyphicons_031_bus.png">
-                    <h2>Bus-fare included</h2>
-                    <p>Need a ride? We got you covered.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="span4">
-                    <img class="bs-icon" src="img/glyphicons/glyphicons_081_refresh.png">
-                    <h2>Traditions</h2>
-                    <p>Midnight right, midnight cheesesteaks, and the return of the nerf guns.</p>
-                </div>
-                <div class="span4">
-                    <img class="bs-icon" src="img/glyphicons/glyphicons_280_settings.png">
-                    <h2>Build</h2>
-                    <p>Build something awesome.</p>
-                </div>
-                <div class="span4">
-                    <img class="bs-icon" src="img/glyphicons/glyphicons_324_tie.png">
-                    <h2>Impress</h2>
-                    <p>Sponsors need interns.</p>
-                </div>
-            </div>
-        </section>
-        <section id="mezzanine" class="sponsors">
-            <div class="page-header"></div>
-            <div class="row">
-                {% for sponsor in mezzanine %}
-                <div class="span4">
-                    <a href="{{ sponsor.href }}">
-                    <div class="sponsor {{ sponsor.name }}">
-                    </div>
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
-        <div id="about" class='prev-container'>
-            <div class='heading'>
-                <h2><span>What is PennApps?</span></h2>
-            </div>
-
-            <div class='about'>
-                <p><span class='dark'>PennApps is the University of Pennsylvania's 48-hour long hackathon,
-                    <br>open to all current students regardless of university or year.</span></p>
-                <br>
-            </div>
-
-            <div class="video">
-                <img id="video_image" src="img/video_gray.png">
-                <div id="youtube"></div>
-            </div>
-
-            <div class='about'>
-                <p>"I think this is my sixteenth or seventeenth [hackathon], 
-                <br>and this is definitely the best one yet."
-                <br>- Sameem, Rutgers University '13 </p>
-                <br>
-                <p>First Place:  <span class="dark">$4,000, a trip to Google NYC, and more</span></p>
-                <p>Second Place: <span class="dark">$2,000</span></p>
-                <p>Third Place:  <span class="dark">$1,000</span></p>
-                <p>And over <span class="dark">$5000</span> in additional prizes.</p>
-                <br>
-                <p>Coming from out of town? We'll reimburse your bus tickets.</p>
-                <p>Questions? Check the <a class='dark' href='faq.html'>FAQ</a>.</p>
-
-            </div>
-        </div>
-        <section id="series-a" class="sponsors">
-            <div class="page-header"></div>
-            <div class="row">
-                {% for sponsor in series_a %}
-                <div class="span3">
-                    <a href="{{ sponsor.href }}">
-                    <div class="sponsor {{ sponsor.name }}">
-                    </div>
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
-        <section id="logistics">
-            <div class="page-header">
-            </div>
-            <div class="row">
-                <div class="span9">
-                    <h1 class="highlight">September 14-16 2012</h1>
-                    <h2 class="">Schedule</h2>
-                    <div class="row">
-                        <div class="span3">
-                            <h3 class="">Friday</h3>
-                            <table class="table table-bordered table-striped">
-                                <thead>
-                                    <th>Time</th>
-                                    <th>What</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>6pm</td><td>Kickoff</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8pm</td><td>Dumplings</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10pm</td><td>Popsicles</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12am</td><td>Raffles, Insomnia Cookies</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="span3">
-                            <h3 class="">Saturday</h3>
-                            <table class="table table-bordered table-striped">
-                                <thead>
-                                    <th>Time</th>
-                                    <th>What</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>3am</td><td>Jimmy John's</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7am</td><td>Coffee + Breakfast</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10am</td><td>Dunkin Donuts</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1pm</td><td>Tacos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5pm</td><td>Bubble Tea + Fruit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8pm</td><td>Hummus</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12am</td><td>Begin Raffles, Fruit + Pretzels</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="span3">
-                            <h3 class="">Sunday</h3>
-                            <table class="table table-bordered table-striped">
-                                <thead>
-                                    <th>Time</th>
-                                    <th>What</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>3am</td><td>Cheese steaks</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7am</td><td>Coffee + Breakfast</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10am</td><td>Dunkin Donuts</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12pm</td><td>Stop hacking!, Gia</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2pm</td><td>Demos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4pm</td><td>Awards</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5pm</td><td>Sleep</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="span3">
-                    <div class="location">
-                        <h1 class=" highlight small">Philadelphia</h1>
-                        <div class="map-wrapper">
-                            <div class="map">
-                                <a href="http://maps.google.com/?q=220 S. 33rd St Philadelphia PA 19104">
-                                    <img src="http://maps.google.com/maps/api/staticmap?center=39.951773,-75.190195&zoom=15&markers=220+S. 33rd Street  Philadelphia, PA 19104$&size=180x180&sensor=false" alt="http://maps.google.com/maps/api/staticmap?center=39.951773,-75.190195&zoom=13&markers=220+S. 33rd Street Philadelphia, PA 19104&size=180x180&sensor=TRUE_OR_FALSE">
-                                </a>
-                            </div>
-                        </div>
-                        <h2 class="">University of Pennsylvania</h2>
-                        <address>
-                            <strong>Towne Building</strong>
-                            <br>
-                            220 S. 33rd Street
-                            <br>
-                            Philadelphia, PA 19104
-                        </address>
-                        <i class="icon-map-marker"></i>
-                        <a href="http://maps.google.com/?q=220 S. 33rd Street Philadelphia PA 19104" class="title">Directions</a>
-                        <br>
-                        <h3 class="highlight">Need a ride?</h3>
-                        <p>We'll reimburse your bus tickets</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="seed" class="sponsors">
-            <div class="page-header"></div>
-            <div class="row">
-                {% for sponsor in seed %}
-                <div class="span2">
-                    <a href="{{ sponsor.href }}">
-                    <div class="sponsor {{ sponsor.name }}">
-                    </div>
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
-        <section id"signup">
-            <div class="signup">
-                <div class="circle">
-                    <a target="_blank" href="http://launchrock.com/">          
-                        <div class="square">
-                            <div id="signup_now">Sign Up Now</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <footer class="footer">
-        </footer>
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-33300151-1']);
-            _gaq.push(['_trackPageview']);
-
-            (function() {
-             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-             })();
-        </script>
+        </a>
     </div>
-    </body>
-</html>
+</div>
+<div class='icons_column'>
+    <a class="end_opacity" target="_blank" href="https://www.facebook.com/pennapps">
+        <div class="social_scale_col" id="fb_social_scale">
+            <div id="facebook"></div>
+        </div>
+    </a>
+    <a class="end_opacity" target="_blank" href="http://twitter.com/pennapps">
+        <div class="social_scale_col">
+            <div id="twitter"></div>
+        </div>
+    </a>
+    <a class="end_opacity" target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
+        <div class="social_scale_col">
+            <div id="gmail"></div>
+        </div>
+    </a>
+</div>
+<div id="masthead">
+    <h1><a href="#"><span class="blue">penn</span><span class="red">apps</span></a></h1>
+    <div class="subtext">
+        <h3 class="tagline">A 48-hour Hackathon at The University of Pennsylvania</h2>
+        <div class="row">
+            <h3 class="date">Fri Sept 14 - Sun Sept 16
+                <div style="height:1px; font-size:1px">&nbsp;</div>
+            </h3>
+            <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=PennApps%20Fall%202012&dates=20120914T190000Z/20120916T200000Z&details=DESCRIPTION&location=The%20University%20of%20Pennsylvania&trp=true&sprop=http%3A%2F%2Fpennapps.com&sprop=name:PennApps" target="_blank">
+                <div class="image_block">
+                </div>
+            </a>
+        </div>
+        <!-- http://support.google.com/calendar/bin/answer.py?hl=en&answer=1186917 -->
+    </div>
+    <div class="signup">
+        <div class="circle">
+            <a target="_blank" href="http://launchrock.com/">          
+                <div class="square">
+                    <div id="signup_now">Sign Up Now</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<section id="ipo" class="sponsors">
+    <div class="page-header"></div>
+    <div class="row">
+        {% for sponsor in ipo %}
+        <div class="span6">
+            <a href="{{ sponsor.href }}">
+            <div class="sponsor {{ sponsor.name }}">
+            </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section id="reasons">
+    <div class="page-header"></div>
+    <h1>Eat. <span class="not">Sleep.</span> Code.</h1>
+    <p>Need a reason to come to PennApps? Look no futher.</p>
+    <div class="row">
+        <div class="span4">
+            <img class="bs-icon" src="img/glyphicons/glyphicons_043_group.png">
+            <h2>Huge</h2>
+            <p>Over 40 teams and 180 participants from school all across the east coast.<p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="img/glyphicons/glyphicons_275_fast_food.png">
+            <h2>Food</h2>
+            <p>We spend more money on food than prizes.</p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="img/glyphicons/glyphicons_289_podium.png">
+            <h2>Win awesome prizes</h2>
+            <p>Over $12,000 in prizes. $7000 total to top three hacks, and $5000 in sponsor prizes.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <img class="bs-icon" src="img/glyphicons/glyphicons_209_cart_in.png">
+            <h2>Swag</h2>
+            <p>Including, but not limited to, free T-shirt, water bottle, and stickers. Plus, raffles every hour from 12am to 6am.</p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="img/glyphicons/glyphicons_294_coffe_cup.png">
+            <h2>Drinks</h2>
+            <p>Unlimited caffeine. Coffee, red bull, monster-- Sleep is a thing of the past.</p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="img/glyphicons/glyphicons_031_bus.png">
+            <h2>Bus-fare included</h2>
+            <p>Need a ride? We got you covered.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <img class="bs-icon" src="img/glyphicons/glyphicons_081_refresh.png">
+            <h2>Traditions</h2>
+            <p>Midnight right, midnight cheesesteaks, and the return of the nerf guns.</p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="img/glyphicons/glyphicons_280_settings.png">
+            <h2>Build</h2>
+            <p>Build something awesome.</p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="img/glyphicons/glyphicons_324_tie.png">
+            <h2>Impress</h2>
+            <p>Sponsors need interns.</p>
+        </div>
+    </div>
+</section>
+<section id="mezzanine" class="sponsors">
+    <div class="page-header"></div>
+    <div class="row">
+        {% for sponsor in mezzanine %}
+        <div class="span4">
+            <a href="{{ sponsor.href }}">
+            <div class="sponsor {{ sponsor.name }}">
+            </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<div id="about" class='prev-container'>
+    <div class='heading'>
+        <h2><span>What is PennApps?</span></h2>
+    </div>
+
+    <div class='about'>
+        <p><span class='dark'>PennApps is the University of Pennsylvania's 48-hour long hackathon,
+            <br>open to all current students regardless of university or year.</span></p>
+        <br>
+    </div>
+
+    <div class="video">
+        <img id="video_image" src="img/video_gray.png">
+        <div id="youtube"></div>
+    </div>
+
+    <div class='about'>
+        <p>"I think this is my sixteenth or seventeenth [hackathon], 
+        <br>and this is definitely the best one yet."
+        <br>- Sameem, Rutgers University '13 </p>
+        <br>
+        <p>First Place:  <span class="dark">$4,000, a trip to Google NYC, and more</span></p>
+        <p>Second Place: <span class="dark">$2,000</span></p>
+        <p>Third Place:  <span class="dark">$1,000</span></p>
+        <p>And over <span class="dark">$5000</span> in additional prizes.</p>
+        <br>
+        <p>Coming from out of town? We'll reimburse your bus tickets.</p>
+        <p>Questions? Check the <a class='dark' href='faq.html'>FAQ</a>.</p>
+
+    </div>
+</div>
+<section id="series-a" class="sponsors">
+    <div class="page-header"></div>
+    <div class="row">
+        {% for sponsor in series_a %}
+        <div class="span3">
+            <a href="{{ sponsor.href }}">
+            <div class="sponsor {{ sponsor.name }}">
+            </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section id="seed" class="sponsors">
+    <div class="page-header"></div>
+    <div class="row">
+        {% for sponsor in seed %}
+        <div class="span2">
+            <a href="{{ sponsor.href }}">
+            <div class="sponsor {{ sponsor.name }}">
+            </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section id"signup">
+    <div class="signup">
+        <div class="circle">
+            <a target="_blank" href="http://launchrock.com/">          
+                <div class="square">
+                    <div id="signup_now">Sign Up Now</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+</footer>
+{% endblock %}

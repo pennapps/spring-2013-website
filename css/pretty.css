@@ -51,3 +51,6 @@
 
 .not {
   text-decoration: line-through; }
+
+.undecorated:hover {
+  text-decoration: none; }

@@ -1,41 +1,6 @@
 {% extends "base.html" %}
 {% block body %}
-<div class="horizontal_bar">
-    <div class='icons_row'>
-        <a target="_blank" href="https://www.facebook.com/pennapps">
-            <div class="social_scale_row" id="fb_social_scale">
-                <div id="facebook"></div>
-            </div>
-        </a>
-        <a target="_blank" href="http://twitter.com/pennapps">
-            <div class="social_scale_row">
-                <div id="twitter"></div>
-            </div>
-        </a>
-        <a target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
-            <div class="social_scale_row">
-                <div id="gmail"></div>
-            </div>
-        </a>
-    </div>
-</div>
-<div class='icons_column'>
-    <a class="end_opacity" target="_blank" href="https://www.facebook.com/pennapps">
-        <div class="social_scale_col" id="fb_social_scale">
-            <div id="facebook"></div>
-        </div>
-    </a>
-    <a class="end_opacity" target="_blank" href="http://twitter.com/pennapps">
-        <div class="social_scale_col">
-            <div id="twitter"></div>
-        </div>
-    </a>
-    <a class="end_opacity" target="_blank" href="mailto:contact@pennapps.com?Subject=Hi%21">
-        <div class="social_scale_col">
-            <div id="gmail"></div>
-        </div>
-    </a>
-</div>
+{% include "social.html" %}
 <div id="masthead">
     <h1><a href="#"><span class="blue">penn</span><span class="red">apps</span></a></h1>
     <div class="subtext">

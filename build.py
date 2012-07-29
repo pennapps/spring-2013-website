@@ -74,10 +74,21 @@ def build_index(env):
 def build_schedule(env):
     build_template(env, 'schedule.html')
 
+def build_sponsors(env):
+    build_template(env, 'sponsors.html',
+            sponsors=SPONSORS,
+            ipo=IPO,
+            mezzanine=MEZZANINE,
+            series_a=SERIES_A,
+            seed=SEED,
+            competitions=COMPETITIONS,
+    )
+
 def main():
     env = Environment(loader=FileSystemLoader(searchpath="./templates"))
     build_index(env)
     build_schedule(env)
+    build_sponsors(env)
     print "Templates built."
 
 

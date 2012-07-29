@@ -48,3 +48,6 @@
 
 #seed .sponsor {
   height: 70px; }
+
+.not {
+  text-decoration: line-through; }

@@ -20,13 +20,6 @@ body {
 /*    margin-bottom: 100px;*/
 }
 
-::selection {
-    background: #70CBE2; /* Safari */
-    }
-::-moz-selection {
-    background: #70CBE2; /* Firefox */
-}
-
 
 /*-----------------------------------------------------*/
 /* Icons                                                                                          */

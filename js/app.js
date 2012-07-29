@@ -42,12 +42,6 @@ $(document).ready(function() {
     $(this).hide()
     $('#youtube').append('<iframe id="youtube" width="640" height="390" src="http://www.youtube.com/embed/e7lY-OXZu-I?rel=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>')
   });
-  $('#video_image').on('mouseenter touchstart', function() {
-    $(this).attr("src", "img/video_color.png");
-  });
-  $('#video_image').on('mouseout touchend', function() {
-    $(this).attr("src", "img/video_gray.png");
-  });
 
   
   is_horizontal = null;

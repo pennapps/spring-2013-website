@@ -7,14 +7,17 @@ Being the main landing site for [pennapps.com](http://pennapps.com) and subsidar
 Requirements
 ============
 
-*   SASS
-*   jinja2
+*   SASS (gem install sass)
+*   jinja2 (pip install jinja2)
+*   (optional) watchdog (pip install watchdog)
 
 Setup
 =====
 
 To build the jinja templates, simply run 'python build.py'. This will locate the
-templates inside of `/templates` and compile them into `./`.
+templates inside of `/templates` and compile them into `./`. If you install
+watchdog, you can also run 'python build.py --watch' to automatically recompile
+templates on change.
 
 To build the sass run `sass --watch sass:css`. This will watch the `./sass` folder
 for changes and automatically recompile the sass files into `./css`.

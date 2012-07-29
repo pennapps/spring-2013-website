@@ -1,3 +1,4 @@
+import sys
 from collections import namedtuple
 
 from jinja2 import Environment, FileSystemLoader
@@ -77,7 +78,41 @@ def main():
     env = Environment(loader=FileSystemLoader(searchpath="./templates"))
     build_index(env)
     build_schedule(env)
+    print "Templates built."
 
 
 if __name__ == "__main__":
     main()
+
+    if len(sys.argv) > 1 and sys.argv[1] == '--watch':
+        import time
+
+        from watchdog.observers import Observer
+        from watchdog.events import FileSystemEventHandler
+
+
+        class JinjaEventHandler(FileSystemEventHandler):
+            """
+            Naive recompiler.
+            Rebuilds all templates if anything changes in /templates.
+            """
+            def on_modified(self, event):
+                print "Recompiling templates..."
+                super(JinjaEventHandler, self).on_created(event)
+                if event.src_path.endswith("/templates"):
+                    main()
+
+        # Start watching for any changes
+        event_handler = JinjaEventHandler()
+        observer = Observer()
+        observer.schedule(event_handler, path="./templates")
+        observer.start()
+        print "Watching ./templates for changes..."
+        print "Press Ctrl+C to stop."
+        try:
+            while True:
+                time.sleep(1)
+        except KeyboardInterrupt:
+            observer.stop()
+        print "Process killed"
+        observer.join()

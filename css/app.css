@@ -123,24 +123,6 @@ body {
 /*-----------------------------------------------------*/
 /* top */
 
-#masthead {
-    padding-top: 100px;
-    background: white url(http://images.apple.com/v/macbook-pro/a/images/hero_gradient.jpg) repeat-x 0 bottom;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,white), color-stop(100%,whiteSmoke));
-    background: -moz-linear-gradient(top, white 0%, whiteSmoke 100%);
-    padding-bottom: 100px;
-}
-
-#masthead h1 {
-    font-size: 90px;
-    color: #424242;
-    font-family: 'Coolvetica', 'Helvetica Neue', sans-serif;
-}
-
-#masthead h1 :hover {
-    text-decoration: none
-}
-
 .blue {
     color: #0060D5;
     text-shadow: 0 0 0.1em #AAA

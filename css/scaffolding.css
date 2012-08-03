@@ -13,3 +13,16 @@
 
 footer {
   height: 100px; }
+
+.subnav {
+  width: 100%;
+  height: 36px;
+  background-color: #eeeeee;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px; }
+
+.subnav-fixed {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1; }

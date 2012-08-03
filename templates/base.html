@@ -22,10 +22,14 @@
         <script src="js/app.js" type="text/javascript"></script>
     </head>
     <body>
+        {% block header %}
+        {% endblock %}
         <div class="container">
-            {% block body %}
+            {% block container %}
             {% endblock %}
         </div>
+        {% block footer %}
+        {% endblock %}
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-33300151-1']);

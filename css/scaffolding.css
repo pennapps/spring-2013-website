@@ -1,14 +1,15 @@
-.container {
-  background-color: white; }
-
-footer {
-  height: 100px; }
-
 #masthead {
   width: 100%;
-  height: 600px; }
+  height: 600px;
+  text-align: center; }
 
 #sign_up {
   position: absolute;
   top: 250px;
   right: 100px; }
+
+.container {
+  background-color: white; }
+
+footer {
+  height: 100px; }

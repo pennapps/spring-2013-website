@@ -1,8 +1,17 @@
 {% extends "base.html" %}
-{% include "masthead.html" %}
-{% block body %}
+
+{% block header %}
 {% include "social.html" %}
+{% include "masthead.html" %}
+{% endblock header %}
+
+{% block container %}
 {% include "what.html" %}
+{% include "media.html" %}
+{% include "winners.html" %}
 {% include "why.html" %}
+{% endblock container %}
+
+{% block footer %}
 {% include "footer.html" %}
-{% endblock %}
+{% endblock footer %}

@@ -8,6 +8,5 @@ pennapps_edit
 
 # Built files
 #############
-./index.html
-./schedule.html
+/*.html
 css/*.css

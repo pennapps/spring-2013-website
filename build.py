@@ -82,6 +82,9 @@ def build_index(env):
             stories=STORIES,
     )
 
+def build_history(env):
+    build_template(env, 'history.html')
+
 def build_about(env):
     build_template(env, 'about.html')
 
@@ -106,6 +109,7 @@ def main():
     env = Environment(loader=FileSystemLoader(searchpath="./templates"))
     build_index(env)
     build_about(env)
+    build_history(env)
     build_schedule(env)
     build_sponsorship(env)
     print "Templates built."

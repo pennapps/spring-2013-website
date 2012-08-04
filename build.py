@@ -99,7 +99,6 @@ def main():
     env = Environment(loader=FileSystemLoader(searchpath="./templates"))
     build_index(env)
     build_schedule(env)
-    build_sponsors(env)
     print "Templates built."
 
 

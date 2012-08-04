@@ -65,6 +65,7 @@ STORIES = [
 
 
 def build_template(env, template_name, **kwargs):
+    print "Building %s..." % template_name
     template = env.get_template(template_name)
     with open(template_name, "w") as f:
         f.write(template.render(**kwargs))

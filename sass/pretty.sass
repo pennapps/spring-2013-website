@@ -121,3 +121,23 @@ $highlight-color: #00b4ee
     background-position: center
     border-radius: 3px
     background-size: 70%
+
+#footer-nav
+    // A bit hackish. The items by default float left instead of center, so
+    // I'm shrinking the container to make it reasonably centered. Highly
+    // inflexible though
+    width: 500px
+    margin: 0 auto
+    padding: 30px 0 60px
+
+    .navbar-inner
+        background-color: inherit
+        background-image: none
+
+    .nav
+        li
+            a
+                text-shadow: none
+
+                &:hover
+                    color: black

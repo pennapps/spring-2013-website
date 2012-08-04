@@ -23,7 +23,7 @@ body {
 /*-----------------------------------------------------*/
 /* Icons                                                                                          */
     .icons_row, .icons_column {
-        background-color: rgba(70,70,70, 0.2); /* use rgba here */-
+        background-color: rgba(70,70,70, 0.2);
 
         -webkit-border-bottom-right-radius: 7px;
         -webkit-border-bottom-left-radius: 7px;
@@ -108,11 +108,6 @@ body {
 
     #twitter              {background-image:url('../img/twitter_social.png');}
     #twitter:hover {background-image:url('../img/twitter_social_active.png');}
-
-    #gmail, #facebook, #twitter {
-/*        opacity:.95;
-        filter:alpha(opacity=95) !important; /* For IE8 and earlier */
-*/    }
 
     #gmail:hover, #facebook:hover, #twitter:hover {
         opacity:1 !important;

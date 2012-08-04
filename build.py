@@ -85,6 +85,9 @@ def build_index(env):
 def build_history(env):
     build_template(env, 'history.html')
 
+def build_faq(env):
+    build_template(env, 'faq.html')
+
 def build_about(env):
     build_template(env, 'about.html')
 
@@ -112,6 +115,7 @@ def main():
     build_history(env)
     build_schedule(env)
     build_sponsorship(env)
+    build_faq(env)
     print "Templates built."
 
 

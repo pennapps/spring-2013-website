@@ -1,12 +1,22 @@
 {% extends "base.html" %}
 
+{% block nav %}
+<li><a href="#masthead">Sign Up</a></li>
+<li><a href="#what">About</a></li>
+<li><a href="#media">Media</a></li>
+<li><a href="#winners">Past Winners</a></li>
+<li><a href="#reasons">Why</a></li>
+<li><a href="#">Prizes</a></li>
+<li><a href="#">Sponsors</a></li>
+{% endblock %}
+
 {% block header %}
+{{ super() }}
 {% include "social.html" %}
 {% include "masthead.html" %}
 {% endblock header %}
 
 {% block container %}
-{% include "components/subnav.html" %}
 {% include "what.html" %}
 {% include "media.html" %}
 {% include "winners.html" %}

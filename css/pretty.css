@@ -94,3 +94,12 @@
   .story .source {
     font-weight: normal;
     color: #999999; }
+
+.sponsor {
+  height: 70px;
+  display: inline-block;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 3px;
+  background-size: 70%; }

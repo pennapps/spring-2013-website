@@ -1,63 +1,11 @@
-{% extends "base.html" %}
-{% block body %}
-<section id="ipo" class="sponsors">
+<section id="sponsors" class="sponsors">
     <div class="page-header">
-        <h1>IPO</h1>
+        <h1>Sponsors</h1>
     </div>
     <div class="row">
-        {% for sponsor in ipo %}
-        <div class="span6">
-            <a href="{{ sponsor.href }}">
-            <div class="sponsor {{ sponsor.name }}">
-            </div>
-            </a>
+        {% for sponsor in sponsors %}
+        <div class="span2 sponsor {{ sponsor.name }}">
         </div>
         {% endfor %}
     </div>
 </section>
-<section id="mezzanine" class="sponsors">
-    <div class="page-header">
-        <h1>Mezzanine</h1>
-    </div>
-    <div class="row">
-        {% for sponsor in mezzanine %}
-        <div class="span4">
-            <a href="{{ sponsor.href }}">
-            <div class="sponsor {{ sponsor.name }}">
-            </div>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-</section>
-<section id="series-a" class="sponsors">
-    <div class="page-header">
-        <h1>Series A</h1>
-    </div>
-    <div class="row">
-        {% for sponsor in series_a %}
-        <div class="span3">
-            <a href="{{ sponsor.href }}">
-            <div class="sponsor {{ sponsor.name }}">
-            </div>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-</section>
-<section id="seed" class="sponsors">
-    <div class="page-header">
-        <h1>Seed</h1>
-    </div>
-    <div class="row">
-        {% for sponsor in seed %}
-        <div class="span2">
-            <a href="{{ sponsor.href }}">
-            <div class="sponsor {{ sponsor.name }}">
-            </div>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-</section>
-{% endblock %}

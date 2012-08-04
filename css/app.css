@@ -323,25 +323,6 @@ a.dark:hover {
     box-shadow:         0px 3px 8px rgba(50, 50, 50, 0.25);
 }
 
-.sponsor {
-  /* set height and width here */
-  width: 100%;
-  height: 120px;
-  /* everything else is taken care of */
-  display: inline-block;
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 3px;
-  margin: 10px;
-  cursor: pointer;
-  background-size: 70%;
-}
-
-.sponsor:hover {
-    opacity:1.0;
-    filter:alpha(opacity=100); /* For IE8 and earlier */
-}
 .no-opacity {
   opacity: 1.0;
   filter:alpha(opacity=100); /* For IE8 and earlier */

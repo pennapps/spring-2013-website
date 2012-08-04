@@ -13,3 +13,8 @@
 {% include "why.html" %}
 {% include "sponsors.html" %}
 {% endblock container %}
+
+{% block js %}
+{{ super() }}
+<script src="js/subnav.js" type="text/javascript"></script>
+{% endblock %}

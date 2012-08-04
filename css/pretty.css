@@ -76,3 +76,21 @@
 
 .tagline span {
   text-decoration: line-through; }
+
+.publication {
+  color: gray; }
+
+.story {
+  list-style: none;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 10px 0px; }
+  .story a {
+    color: #333333;
+    text-decoration: none; }
+    .story a:hover {
+      color: black;
+      text-decoration: underline; }
+  .story .source {
+    font-weight: normal;
+    color: #999999; }

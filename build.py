@@ -56,10 +56,30 @@ COMPETITIONS = [
     Competition('Fall', '2009', 'http://pennapps.com/2009'),
 ]
 
+
+Story = namedtuple('Story', ['headline', 'source', 'href'])
+
+STORIES = [
+    Story('Best Mashups from PennApps 2012 Hackathon',
+          'programmableweb',
+          'http://blog.programmableweb.com/2012/01/18/best-mashups-from-pennapps-2012-hackathon/'
+          ),
+    Story('Undergrad Doers Take Aim At SOPA and PIPA at PennApps',
+          'Twilio',
+          'http://www.twilio.com/blog/2012/01/undergrad-doers-take-aim-at-sopa-and-pipa-at-pennapps.html'
+          ),
+    Story('Guest Post: 2012 Spring PennApps Hackathon - Simplicity',
+          'HACKCOLLEGE',
+          'http://www.hackcollege.com/blog/2012/01/19/guest-post-2012-spring-pennapps-hackathon-simplicity.html'
+          ),
+]
+
+
 def build_template(env, template_name, **kwargs):
     template = env.get_template(template_name)
     with open(template_name, "w") as f:
         f.write(template.render(**kwargs))
+
 
 def build_index(env):
     build_template(env, 'index.html',
@@ -69,6 +89,7 @@ def build_index(env):
             series_a=SERIES_A,
             seed=SEED,
             competitions=COMPETITIONS,
+            stories=STORIES,
     )
 
 def build_schedule(env):
@@ -83,6 +104,7 @@ def build_sponsors(env):
             seed=SEED,
             competitions=COMPETITIONS,
     )
+
 
 def main():
     env = Environment(loader=FileSystemLoader(searchpath="./templates"))

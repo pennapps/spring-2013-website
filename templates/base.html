@@ -38,9 +38,12 @@
                     <a class="brand" href="index.html">
                         {% include "components/brand.html" %}
                     </a>
-                    <ul class="nav nav-pills">
+                    <ul class="nav nav-pills pull-left">
                         {% block nav %}
                         {% endblock %}
+                    </ul>
+                    <ul class="nav nav-pills pull-right signup">
+                        <li>{% include "components/sign_up_button.html" %}</li>
                     </ul>
                 </div>
             </div>

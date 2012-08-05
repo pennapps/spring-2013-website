@@ -94,6 +94,9 @@ def build_about(env):
 def build_schedule(env):
     build_template(env, 'schedule.html')
 
+def build_venue(env):
+    build_template(env, 'venue.html')
+
 def build_sponsorship(env):
     build_template(env, 'sponsorship.html')
 
@@ -114,6 +117,7 @@ def main():
     build_about(env)
     build_history(env)
     build_schedule(env)
+    build_venue(env)
     build_sponsorship(env)
     build_faq(env)
     print "Templates built."

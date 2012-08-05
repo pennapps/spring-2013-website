@@ -1,0 +1,21 @@
+<section id="sponsors">
+    <div class="page-header">
+        <h1>Sponsors</h1>
+    </div>
+    <div class="row">
+        <div class="span12 sponsors">
+        {% for sponsor in ipo %}
+        <a class="sponsor ipo {{ sponsor.name }}" href="{{ sponsor.href }}"><img src="img/{{ sponsor.name }}_color.png"></img></a>
+        {% endfor %}
+        {% for sponsor in mezzanine %}
+        <a class="sponsor mezzanine {{ sponsor.name }}" href="{{ sponsor.href }}"><img src="img/{{ sponsor.name }}_color.png"></img></a>
+        {% endfor %}
+        {% for sponsor in series_a %}
+        <a class="sponsor series-a {{ sponsor.name }}" href="{{ sponsor.href }}" ><img src="img/{{ sponsor.name }}_color.png"></img></a>
+        {% endfor %}
+        {% for sponsor in seed %}
+        <a class="sponsor seed {{ sponsor.name }}" href="{{ sponsor.href }}"><img src="img/{{ sponsor.name }}_color.png"></img></a>
+        {% endfor %}
+        </div>
+    </div>
+</section>

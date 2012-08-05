@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="css/sponsors.css" type="text/css" media="screen" title="no title" charset="utf-8">
         {% endblock %}
     </head>
-    <body data-spy="scroll">
+    <body data-spy="scroll" data-target="#global-nav">
         <header>
         {% block header %}
         {% endblock %}
@@ -32,7 +32,7 @@
         {% include "footer.html" %}
         {% endblock %}
         </footer>
-        <div class="navbar global-nav navbar-fixed-top">
+        <div id="global-nav" class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="index.html">
@@ -49,6 +49,7 @@
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
         <script src="js/jquery_transit.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/js/bootstrap-tab.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/app.js" type="text/javascript"></script>
         {% endblock %}
     </body>

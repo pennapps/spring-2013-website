@@ -2,7 +2,6 @@
 
 {% block nav %}
 <li><a href="#masthead">Sign Up</a></li>
-<li><a href="#about">About</a></li>
 <li><a href="#prizes">Prizes</a></li>
 <li><a href="#sponsors">Sponsors</a></li>
 {% endblock %}
@@ -15,14 +14,7 @@
 
 {% block container %}
 {% include "what.html" %}
-{% include "description.html" %}
-{% include "background.html" %}
 {% include "_winners.html" %}
 {% include "_prizes.html" %}
 {% include "_sponsors.html" %}
 {% endblock container %}
-
-{% block js %}
-{{ super() }}
-<script src="js/subnav.js" type="text/javascript"></script>
-{% endblock %}

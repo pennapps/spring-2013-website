@@ -2,12 +2,9 @@
 
 {% block nav %}
 <li><a href="#masthead">Sign Up</a></li>
-<li><a href="#what">About</a></li>
-<li><a href="#media">Media</a></li>
-<li><a href="#winners">Past Winners</a></li>
-<li><a href="#reasons">Why</a></li>
-<li><a href="#">Prizes</a></li>
+<li><a href="#about">About</a></li>
 <li><a href="#">Sponsors</a></li>
+<li><a href="#schedule">Schedule</a></li>
 {% endblock %}
 
 {% block header %}
@@ -18,10 +15,12 @@
 
 {% block container %}
 {% include "what.html" %}
-{% include "media.html" %}
+{% include "description.html" %}
+{% include "background.html" %}
 {% include "winners.html" %}
 {% include "why.html" %}
 {% include "sponsors.html" %}
+{% include "_schedule.html" %}
 {% endblock container %}
 
 {% block js %}

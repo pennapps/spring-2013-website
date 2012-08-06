@@ -4,8 +4,6 @@
 <li><a href="#masthead">Sign Up</a></li>
 <li><a href="#prizes">Prizes</a></li>
 <li><a href="#sponsors">Sponsors</a></li>
-<li><a href="#venue">Venue</a></li>
-<li><a href="#directions">Directions</a></li>
 {% endblock %}
 
 {% block header %}
@@ -16,8 +14,7 @@
 
 {% block container %}
 {% include "what.html" %}
+{% include "_winners.html" %}
 {% include "_prizes.html" %}
 {% include "_sponsors.html" %}
-{% include "_venue.html" %}
-{% include "_directions.html" %}
 {% endblock container %}

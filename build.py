@@ -1,39 +1,9 @@
+import csv
 import sys
 from collections import namedtuple
 
 from jinja2 import Environment, FileSystemLoader
 
-
-Sponsor = namedtuple('Sponsor', ['name', 'href'])
-
-
-IPO = [
-      Sponsor('venmo', 'http://venmo.com'),
-]
-
-# TODO: Mailchimp
-MEZZANINE = [
-      Sponsor('facebook', 'http://facebook.com'),
-      Sponsor('lore', 'http://lore.com'),
-      Sponsor('mongodb', 'http://mongodb.com'),
-      Sponsor('yahoo', 'http://yahoo.com'),
-]
-
-# TODO: Codeacademy
-SERIES_A = [
-      Sponsor('hunch', 'http://hunch.com'),
-      Sponsor('mashery', 'http://mashery.com'),
-      Sponsor('palantir', 'http://palantir.com'),
-]
-
-SEED = [
-      Sponsor('google', 'http://google.com'),
-]
-
-SPONSORS = IPO + MEZZANINE + SERIES_A + SEED
-
-#Sponsor('allsponsors', '/sponsors'),
-#Sponsor('sponsorpennapps', '#B62F2F', 'http://pennapps.com/sponsorship.pdf', '#B62F2F', 'no-opacity')
 
 Competition = namedtuple('Competition', ['season', 'year', 'href'])
 
@@ -71,43 +41,48 @@ def build_template(env, template_name, **kwargs):
         f.write(template.render(**kwargs))
 
 
+def get_sponsors():
+    with open("data/sponsors.csv", 'rb') as f:
+        return list(csv.DictReader(f))
+
+
 def build_index(env):
+    sponsors = get_sponsors()
     build_template(env, 'index.html',
-            sponsors=SPONSORS,
-            ipo=IPO,
-            mezzanine=MEZZANINE,
-            series_a=SERIES_A,
-            seed=SEED,
+            sponsors=sponsors,
             competitions=COMPETITIONS,
             stories=STORIES,
     )
 
+
 def build_history(env):
     build_template(env, 'history.html')
+
 
 def build_faq(env):
     build_template(env, 'faq.html')
 
+
 def build_about(env):
     build_template(env, 'about.html')
+
 
 def build_schedule(env):
     build_template(env, 'schedule.html')
 
+
 def build_venue(env):
     build_template(env, 'venue.html')
+
 
 def build_sponsorship(env):
     build_template(env, 'sponsorship.html')
 
+
 def build_sponsors(env):
+    sponsors = get_sponsors()
     build_template(env, 'sponsors.html',
-            sponsors=SPONSORS,
-            ipo=IPO,
-            mezzanine=MEZZANINE,
-            series_a=SERIES_A,
-            seed=SEED,
-            competitions=COMPETITIONS,
+            sponsors=sponsors,
     )
 
 
@@ -131,7 +106,6 @@ if __name__ == "__main__":
 
         from watchdog.observers import Observer
         from watchdog.events import FileSystemEventHandler
-
 
         class JinjaEventHandler(FileSystemEventHandler):
             """

@@ -4,17 +4,8 @@
     </div>
     <div class="row">
         <div class="span12 sponsors">
-        {% for sponsor in ipo %}
-        <a class="sponsor ipo {{ sponsor.name }}" href="{{ sponsor.href }}"><img src="img/{{ sponsor.name }}_color.png"></img></a>
-        {% endfor %}
-        {% for sponsor in mezzanine %}
-        <a class="sponsor mezzanine {{ sponsor.name }}" href="{{ sponsor.href }}"><img src="img/{{ sponsor.name }}_color.png"></img></a>
-        {% endfor %}
-        {% for sponsor in series_a %}
-        <a class="sponsor series-a {{ sponsor.name }}" href="{{ sponsor.href }}" ><img src="img/{{ sponsor.name }}_color.png"></img></a>
-        {% endfor %}
-        {% for sponsor in seed %}
-        <a class="sponsor seed {{ sponsor.name }}" href="{{ sponsor.href }}"><img src="img/{{ sponsor.name }}_color.png"></img></a>
+        {% for sponsor in sponsors %}
+        <a class="sponsor {{ sponsor.class }} {{ sponsor.name|lower }}" href="{{ sponsor.href }}"><img src="img/{{ sponsor.name }}_color.png"></img></a>
         {% endfor %}
         </div>
     </div>

@@ -79,13 +79,6 @@ def build_sponsorship(env):
     build_template(env, 'sponsorship.html')
 
 
-def build_sponsors(env):
-    sponsors = get_sponsors()
-    build_template(env, 'sponsors.html',
-            sponsors=sponsors,
-    )
-
-
 def main():
     env = Environment(loader=FileSystemLoader(searchpath="./templates"))
     build_index(env)

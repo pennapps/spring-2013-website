@@ -1,26 +1,7 @@
 import csv
 import sys
-from collections import namedtuple
 
 from jinja2 import Environment, FileSystemLoader
-
-
-Story = namedtuple('Story', ['headline', 'source', 'href'])
-
-STORIES = [
-    Story('Best Mashups from PennApps 2012 Hackathon',
-          'programmableweb',
-          'http://blog.programmableweb.com/2012/01/18/best-mashups-from-pennapps-2012-hackathon/'
-          ),
-    Story('Undergrad Doers Take Aim At SOPA and PIPA at PennApps',
-          'Twilio',
-          'http://www.twilio.com/blog/2012/01/undergrad-doers-take-aim-at-sopa-and-pipa-at-pennapps.html'
-          ),
-    Story('Guest Post: 2012 Spring PennApps Hackathon - Simplicity',
-          'HACKCOLLEGE',
-          'http://www.hackcollege.com/blog/2012/01/19/guest-post-2012-spring-pennapps-hackathon-simplicity.html'
-          ),
-]
 
 
 def build_template(env, template_name, **kwargs):
@@ -38,10 +19,11 @@ def parse_csv(filename):
 def build_index(env):
     sponsors = parse_csv("data/sponsors.csv")
     competitions = parse_csv("data/competitions.csv")
+    stories = parse_csv("data/press.csv")
     build_template(env, 'index.html',
             sponsors=sponsors,
             competitions=competitions,
-            stories=STORIES,
+            stories=stories,
     )
 
 

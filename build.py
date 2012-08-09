@@ -5,17 +5,6 @@ from collections import namedtuple
 from jinja2 import Environment, FileSystemLoader
 
 
-Competition = namedtuple('Competition', ['season', 'year', 'href'])
-
-COMPETITIONS = [
-    Competition('Spring', '2012', 'http://2012s.pennapps.com/'),
-    Competition('Fall', '2011', 'http://2011f.pennapps.com/'),
-    Competition('Spring', '2011', 'http://pennapps.com/spring2011/'),
-    Competition('Fall', '2010', 'http://pennapps.com/2010'),
-    Competition('Fall', '2009', 'http://pennapps.com/2009'),
-]
-
-
 Story = namedtuple('Story', ['headline', 'source', 'href'])
 
 STORIES = [
@@ -41,16 +30,17 @@ def build_template(env, template_name, **kwargs):
         f.write(template.render(**kwargs))
 
 
-def get_sponsors():
-    with open("data/sponsors.csv", 'rb') as f:
+def parse_csv(filename):
+    with open(filename, 'rb') as f:
         return list(csv.DictReader(f))
 
 
 def build_index(env):
-    sponsors = get_sponsors()
+    sponsors = parse_csv("data/sponsors.csv")
+    competitions = parse_csv("data/competitions.csv")
     build_template(env, 'index.html',
             sponsors=sponsors,
-            competitions=COMPETITIONS,
+            competitions=competitions,
             stories=STORIES,
     )
 

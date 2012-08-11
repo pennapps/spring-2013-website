@@ -34,11 +34,20 @@ def build_history(env):
 def build_faq(env):
     build_template(env, 'faq.html')
 
+
 def build_rules(env):
     build_template(env, 'rules.html')
 
+
 def build_about(env):
     build_template(env, 'about.html')
+
+
+def build_press(env):
+    stories = parse_csv("data/press.csv")
+    build_template(env, 'press.html',
+                   stories=stories,
+     )
 
 
 def build_schedule(env):
@@ -56,6 +65,7 @@ def build_sponsorship(env):
 def main():
     env = Environment(loader=FileSystemLoader(searchpath="./templates"))
     build_index(env)
+    build_press(env)
     build_about(env)
     build_history(env)
     build_schedule(env)

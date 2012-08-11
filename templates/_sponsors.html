@@ -5,7 +5,7 @@
     <div class="row">
         <div class="span12 sponsors">
         {% for sponsor in sponsors %}
-        <a class="sponsor {{ sponsor.class }} {{ sponsor.name|lower }}" href="{{ sponsor.href }}"><img src="img/{{ sponsor.name }}_color.png"></img></a>
+        <a class="sponsor {{ sponsor.class }} {{ sponsor.name|lower }}" href="{{ sponsor.href }}"><img src="img/sponsors/{{ sponsor.name|lower }}_color.png"></img></a>
         {% endfor %}
         </div>
     </div>

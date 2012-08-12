@@ -4,8 +4,13 @@
     </div>
     <div class="row">
         <div class="span12">
-        {% for story in stories %}
-        <li><a href="{{ story.href }}">{{ story.headline }} <small>- {{ story.source }}</small></a></li>
+        {% for group in stories|groupby('competition')|reverse %}
+        <h2>{{ group.grouper }}</h2>
+        <ul>
+            {% for story in group.list %}
+            <li><a href="{{ story.href }}">{{ story.headline }} <small>- {{ story.source }}</small></a></li>
+            {% endfor %}
+        </ul>
         {% endfor %}
         </div>
     </div>

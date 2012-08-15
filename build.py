@@ -1,67 +1,7 @@
+import csv
 import sys
-from collections import namedtuple
 
 from jinja2 import Environment, FileSystemLoader
-
-
-Sponsor = namedtuple('Sponsor', ['name', 'href'])
-
-
-IPO = [
-      Sponsor('venmo', 'http://venmo.com'),
-]
-
-# TODO: Mailchimp
-MEZZANINE = [
-      Sponsor('facebook', 'http://facebook.com'),
-      Sponsor('lore', 'http://lore.com'),
-      Sponsor('mongodb', 'http://mongodb.com'),
-      Sponsor('yahoo', 'http://yahoo.com'),
-]
-
-# TODO: Codeacademy
-SERIES_A = [
-      Sponsor('hunch', 'http://hunch.com'),
-      Sponsor('mashery', 'http://mashery.com'),
-      Sponsor('palantir', 'http://palantir.com'),
-]
-
-SEED = [
-      Sponsor('google', 'http://google.com'),
-]
-
-SPONSORS = IPO + MEZZANINE + SERIES_A + SEED
-
-#Sponsor('allsponsors', '/sponsors'),
-#Sponsor('sponsorpennapps', '#B62F2F', 'http://pennapps.com/sponsorship.pdf', '#B62F2F', 'no-opacity')
-
-Competition = namedtuple('Competition', ['season', 'year', 'href'])
-
-COMPETITIONS = [
-    Competition('Spring', '2012', 'http://2012s.pennapps.com/'),
-    Competition('Fall', '2011', 'http://2011f.pennapps.com/'),
-    Competition('Spring', '2011', 'http://pennapps.com/spring2011/'),
-    Competition('Fall', '2010', 'http://pennapps.com/2010'),
-    Competition('Fall', '2009', 'http://pennapps.com/2009'),
-]
-
-
-Story = namedtuple('Story', ['headline', 'source', 'href'])
-
-STORIES = [
-    Story('Best Mashups from PennApps 2012 Hackathon',
-          'programmableweb',
-          'http://blog.programmableweb.com/2012/01/18/best-mashups-from-pennapps-2012-hackathon/'
-          ),
-    Story('Undergrad Doers Take Aim At SOPA and PIPA at PennApps',
-          'Twilio',
-          'http://www.twilio.com/blog/2012/01/undergrad-doers-take-aim-at-sopa-and-pipa-at-pennapps.html'
-          ),
-    Story('Guest Post: 2012 Spring PennApps Hackathon - Simplicity',
-          'HACKCOLLEGE',
-          'http://www.hackcollege.com/blog/2012/01/19/guest-post-2012-spring-pennapps-hackathon-simplicity.html'
-          ),
-]
 
 
 def build_template(env, template_name, **kwargs):
@@ -71,52 +11,61 @@ def build_template(env, template_name, **kwargs):
         f.write(template.render(**kwargs))
 
 
+def parse_csv(filename):
+    with open(filename, 'rb') as f:
+        return list(csv.DictReader(f))
+
+
 def build_index(env):
+    sponsors = parse_csv("data/sponsors.csv")
+    competitions = parse_csv("data/competitions.csv")
+    stories = parse_csv("data/press.csv")
     build_template(env, 'index.html',
-            sponsors=SPONSORS,
-            ipo=IPO,
-            mezzanine=MEZZANINE,
-            series_a=SERIES_A,
-            seed=SEED,
-            competitions=COMPETITIONS,
-            stories=STORIES,
+            sponsors=sponsors,
+            competitions=competitions,
+            stories=stories,
     )
+
 
 def build_history(env):
     build_template(env, 'history.html')
 
+
 def build_faq(env):
     build_template(env, 'faq.html')
+
 
 def build_rules(env):
     build_template(env, 'rules.html')
 
+
 def build_about(env):
     build_template(env, 'about.html')
+
+
+def build_press(env):
+    stories = parse_csv("data/press.csv")
+    build_template(env, 'press.html',
+                   stories=stories,
+     )
+
 
 def build_schedule(env):
     build_template(env, 'schedule.html')
 
+
 def build_venue(env):
     build_template(env, 'venue.html')
 
+
 def build_sponsorship(env):
     build_template(env, 'sponsorship.html')
-
-def build_sponsors(env):
-    build_template(env, 'sponsors.html',
-            sponsors=SPONSORS,
-            ipo=IPO,
-            mezzanine=MEZZANINE,
-            series_a=SERIES_A,
-            seed=SEED,
-            competitions=COMPETITIONS,
-    )
 
 
 def main():
     env = Environment(loader=FileSystemLoader(searchpath="./templates"))
     build_index(env)
+    build_press(env)
     build_about(env)
     build_history(env)
     build_schedule(env)
@@ -135,7 +84,6 @@ if __name__ == "__main__":
 
         from watchdog.observers import Observer
         from watchdog.events import FileSystemEventHandler
-
 
         class JinjaEventHandler(FileSystemEventHandler):
             """

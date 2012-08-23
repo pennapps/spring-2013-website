@@ -18,10 +18,23 @@ def parse_csv(filename):
 
 def build_index(env):
     sponsors = parse_csv("data/sponsors.csv")
+    level_order = dict()
+    level_order['ipo'] = 0
+    level_order['mezzanine'] = 1
+    level_order['series-a'] = 2
+    level_order['seed'] = 3
+    sponsor_classes = dict()
+    sponsor_classes[0] = []
+    sponsor_classes[1] = []
+    sponsor_classes[2] = []
+    sponsor_classes[3] = []
+    for sponsor in sponsors:
+      sponsor_classes[level_order[sponsor['level']]].append(sponsor)
+    print sponsor_classes
     competitions = parse_csv("data/competitions.csv")
     stories = parse_csv("data/press.csv")
     build_template(env, 'index.html',
-            sponsors=sponsors,
+            sponsor_classes=sponsor_classes,
             competitions=competitions,
             stories=stories,
     )

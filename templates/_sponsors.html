@@ -3,10 +3,15 @@
         <h1>Sponsors</h1>
     </div>
     <div class="row">
+      <center>
         <div class="span12 sponsors">
-        {% for sponsor in sponsors %}
-        <a class="sponsor {{ sponsor.class }} {{ sponsor.name|lower }}" href="{{ sponsor.href }}"><img src="img/sponsors/{{ sponsor.name|lower }}_color.png"></img></a>
+        {% for sponsor_class in sponsor_classes %}
+        {% for sponsor in sponsor_classes[sponsor_class] %}
+        <a class="sponsor {{ sponsor.level }} {{ sponsor.name|lower }}" href="{{ sponsor.href }}"><img src="img/sponsors/{{ sponsor.name|lower }}_color.png"></img></a>
+        {% endfor %}
+        <br />
         {% endfor %}
         </div>
+      </center>
     </div>
 </section>

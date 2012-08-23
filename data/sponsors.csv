@@ -1,4 +1,4 @@
-name,class,href
+name,level,href
 KPCBFellows,ipo,http://kpcbfellows.com
 Venmo,ipo,http://venmo.com
 a16z,mezzanine,http://a16z.com
@@ -6,6 +6,7 @@ Facebook,mezzanine,http://facebook.com
 Lore,mezzanine,http://lore.com
 MailChimp,mezzanine,http://mailchimp.com
 MongoDB,mezzanine,http://mongodb.com
+NextDocs,mezzanine,http://www.nextdocs.com/
 Yahoo,mezzanine,http://yahoo.com
 APT,series-a,http://www.predictivetechnologies.com
 Cloudmine,series-a,http://cloudmine.me

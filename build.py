@@ -30,7 +30,6 @@ def build_index(env):
     sponsor_classes[3] = []
     for sponsor in sponsors:
       sponsor_classes[level_order[sponsor['level']]].append(sponsor)
-    print sponsor_classes
     competitions = parse_csv("data/competitions.csv")
     stories = parse_csv("data/press.csv")
     build_template(env, 'index.html',

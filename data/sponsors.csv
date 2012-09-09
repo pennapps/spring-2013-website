@@ -29,7 +29,6 @@ NYT,series-a,http://nytimes.com
 Palantir,series-a,http://palantir.com
 Quora,series-a,http://quora.com
 QuotidianVentures,series-a,http://quotidianventures.com/
-SendGrid,series-a,http://sendgrid.com
 SolveMedia,series-a,http://solvemedia.com
 Twilio,series-a,http://twilio.com
 Twitter,series-a,http://twitter.com
@@ -37,6 +36,7 @@ Zappos,series-a,http://zappos.com
 Zynga,series-a,http://zynga.com
 EA,seed,http://ea.com/
 Github,seed,https://github.com/
+SendGrid,seed,http://sendgrid.com
 Tumblr,seed,http://tumblr.com
 VistarMedia,seed,http://www.vistarmedia.com/
 StickerMule,seed,http://stickermule.com

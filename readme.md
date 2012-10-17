@@ -27,6 +27,6 @@ Pushing to Production
 
 * `ssh-copy-id pennapps@pennapps.com` (passwordless ssh)
 
-* `git remote add production ssh://pennapps@pennapps.com/home/pennapps/2012f/site.git` (adds new endpoint for pushing`
+* `git remote add production ssh://pennapps@pennapps.com/home/pennapps/2012f/site.git` (adds new endpoint for pushing)
 
 * `git push -u web master`

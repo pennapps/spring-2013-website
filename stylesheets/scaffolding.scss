@@ -1,3 +1,7 @@
+.container {
+  width: 960px;
+}
+
 #masthead {
   min-width: 960px;
   width: 100%;
@@ -12,11 +16,6 @@
   position: absolute;
   top: 125px;
   left: 480px; }
-
-body {
-  margin-top: 40px;
-  > .container {
-    background-color: white; } }
 
 footer {
   margin-top: 100px;

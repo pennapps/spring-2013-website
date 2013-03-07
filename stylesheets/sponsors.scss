@@ -1,0 +1,16 @@
+.sponsor {
+  text-align: center;
+  display: inline-block;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  padding: 10px;
+  &.ipo {
+    width: 350px; }
+  &.mezzanine {
+    width: 250px; }
+  &.series-a {
+    width: 150px; }
+  &.seed {
+    width: 100px; } }

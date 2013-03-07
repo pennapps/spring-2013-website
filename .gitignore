@@ -5,6 +5,7 @@ pennapps_edit
 
 *.swp
 .sass-cache
+stylesheets/*.css
 
 # Built files
 #############

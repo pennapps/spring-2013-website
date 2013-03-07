@@ -1,0 +1,138 @@
+.location {
+  text-align: center; }
+
+.map-wrapper {
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 1px #c2c2c2 solid;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box; }
+
+.map {
+  border: 1px #c2c2c2 solid;
+  overflow: hidden; }
+
+.title {
+  font-weight: bold;
+  text-transform: uppercase; }
+  .title .small {
+    font-size: 20px; }
+
+.highlight {
+  margin: 20px auto; }
+
+.bs-icon {
+  display: inline-block;
+  margin: 7px 10px 0 0;
+  opacity: 0.8; }
+
+#reasons h2 {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 22px;
+  font-weight: 300; }
+
+.not {
+  text-decoration: line-through; }
+
+.undecorated:hover {
+  text-decoration: none; }
+
+#masthead {
+  background-image: url("../img/masthead_1.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat; }
+  #masthead a:visited {
+    color: #0088cc; }
+
+#sign_up {
+  color: white;
+  width: 480px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 -1px 1px rgba(0, 0, 0, 0.6);
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(40, 40, 40, 0.7);
+  -moz-box-shadow: 0 0 20px #141414;
+  -webkit-box-shadow: 0 0 20px #141414;
+  box-shadow: 0 0 20px #141414; }
+  #sign_up h1 {
+    font-size: 7em;
+    line-height: 80px; }
+  #sign_up h2 {
+    margin-top: 1em;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: normal; }
+  #sign_up h3 {
+    font-weight: lighter;
+    margin-top: 1em; }
+  #sign_up h4 {
+    margin-top: 0.5em;
+    font-weight: lighter; }
+    #sign_up h4 a {
+      text-decoration: underline; }
+  #sign_up button {
+    margin: 0.5em 0;
+    border: 1px solid #5e5e5e;
+    padding: 15px;
+    height: 50px;
+    width: 210px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0px; }
+
+.signup {
+  text-align: center; }
+
+.tagline span {
+  text-decoration: line-through; }
+
+.publication {
+  color: gray; }
+
+.story {
+  list-style: none;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 10px 0px; }
+  .story a {
+    color: #333333;
+    text-decoration: none; }
+    .story a:hover {
+      color: black;
+      text-decoration: underline; }
+  .story .source {
+    font-weight: normal;
+    color: #999999; }
+
+#footer-nav {
+  width: 621px;
+  margin: 0 auto;
+  padding: 30px 0 60px; }
+  #footer-nav .navbar-inner {
+    background-color: inherit;
+    background-image: none; }
+  #footer-nav .nav li a {
+    text-shadow: none; }
+    #footer-nav .nav li a:hover {
+      color: black; }
+
+#prizes li {
+  font-size: 20px;
+  line-height: 30px;
+  list-style: none;
+  margin-left: 0;
+  padding: 10px; }
+
+.navbar .signup > li > a {
+  padding: 0px; }
+
+#prizes .details {
+  text-align: center; }
+  #prizes .details h1 {
+    font-size: 4em;
+    line-height: 1em; }

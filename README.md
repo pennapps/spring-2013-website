@@ -1,4 +1,4 @@
-PennApps 2012 Main Landing Site 
+PennApps Main Landing Site 
 ------------------------------------
 
 Being the main landing site for [pennapps.com](http://pennapps.com) and subsidary sites. 
@@ -19,8 +19,8 @@ templates inside of `/templates` and compile them into `./`. If you install
 watchdog, you can also run 'python build.py --watch' to automatically recompile
 templates on change.
 
-To build the sass run `sass --watch sass:css`. This will watch the `./sass` folder
-for changes and automatically recompile the sass files into `./css`.
+To build the sass run `sass --watch stylesheets`. This will watch the `./stylesheets` folder
+for changes and automatically recompile the .scss files.
 
 Pushing to Production
 =====================

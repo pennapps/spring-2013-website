@@ -136,3 +136,31 @@
   h1 {
     font-size: 4em;
     line-height: 1em; } }
+
+footer {
+  padding: 18px 0;
+  border-top: 1px solid #eee;
+  width: 960px;
+  margin: 0 auto;
+  li {
+    list-style: none;
+    display: inline;
+    border-right: 1px solid #e1e1e1;
+    padding: 0 10px;
+    color: #969696;
+  }
+  li:first-child {
+    margin-left: 0;
+  }
+  li:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+  a {
+    color: #969696;
+  }
+  a:hover, a:visited {
+    color: #444;
+    text-decoration: none;
+  }
+}

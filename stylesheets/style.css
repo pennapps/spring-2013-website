@@ -1,22 +1,3 @@
-body {
-  background-color: #f0f2f2; }
-
-a {
-  color: #5ebd76; }
-
-a:hover {
-  color: #358048; }
-
-.top-bar, .contain-to-grid {
-  background-color: #5ebd76; }
-
-.top-bar-section ul > li:not(.name) a {
-  background-color: #5ebd76; }
-.top-bar-section ul > li:hover:not(.name) a,
-.top-bar-section ul > li.active:not(.name) a,
-.top-bar-section ul > li:focus:not(.name) a {
-  background-color: #358048; }
-
 #masthead-description {
   color: #fff;
   margin-top: -420px;

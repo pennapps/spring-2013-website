@@ -4,10 +4,25 @@
 #masthead-description {
   h1, h3 {
     color: $secondary;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
   }
-  color: #fff;
+  h1 {
+    margin-top: 10px;
+    font-size: 34pt;
+  }
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  color: $light-gray;
   margin-top: -420px;
-  background-color: rgba(40, 40, 40, 0.7);
+  background-color: rgba(40, 40, 40, 0.9);
   border-radius: 10px;
 }
 

@@ -5,3 +5,25 @@
   border-radius: 10px; }
   #masthead-description h1, #masthead-description h3 {
     color: #c7e68a; }
+
+#footer {
+  padding: 18px 0;
+  border-top: 1px solid #eeeeee;
+  width: 960px;
+  margin: 0 auto; }
+  #footer li {
+    list-style: none;
+    display: inline;
+    border-right: 1px solid #e1e1e1;
+    padding: 0 10px;
+    color: #969696; }
+  #footer li:first-child {
+    margin-left: 0; }
+  #footer li:last-child {
+    padding-right: 0;
+    border-right: none; }
+  #footer a {
+    color: #969696; }
+  #footer a:hover, #footer a:visited {
+    color: #444;
+    text-decoration: none; }

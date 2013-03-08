@@ -1,25 +1,25 @@
 @import "_variables";
 
-// desktop
-@media (min-width : 960px) {
+@media only screen and (min-width: 48em) {
   #masthead-description {
     h1, h3 {
       color: $secondary;
     }
-    margin-top: -420px;
+    margin-top: -340px;
     background-color: rgba(40, 40, 40, 0.9);
     border-radius: 10px;
     color: $light-gray;
   }
 }
 
-// tablet
-@media (min-width: 481px) and (max-width: 959px) {
+
+// desktop
+@media only screen and (min-width: 80em) {
   #masthead-description {
     h1, h3 {
       color: $secondary;
     }
-    margin-top: -340px;
+    margin-top: -420px;
     background-color: rgba(40, 40, 40, 0.9);
     border-radius: 10px;
     color: $light-gray;

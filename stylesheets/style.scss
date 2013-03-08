@@ -1,9 +1,33 @@
 @import "_variables";
 
-// wrap in media query
+// desktop
+@media (min-width : 960px) {
+  #masthead-description {
+    h1, h3 {
+      color: $secondary;
+    }
+    margin-top: -420px;
+    background-color: rgba(40, 40, 40, 0.9);
+    border-radius: 10px;
+    color: $light-gray;
+  }
+}
+
+// tablet
+@media (min-width: 481px) and (max-width: 959px) {
+  #masthead-description {
+    h1, h3 {
+      color: $secondary;
+    }
+    margin-top: -340px;
+    background-color: rgba(40, 40, 40, 0.9);
+    border-radius: 10px;
+    color: $light-gray;
+  }
+}
+
 #masthead-description {
   h1, h3 {
-    color: $secondary;
     font-weight: normal;
     margin: 0;
     padding: 0;
@@ -20,10 +44,6 @@
     margin: 0;
     padding: 0;
   }
-  color: $light-gray;
-  margin-top: -420px;
-  background-color: rgba(40, 40, 40, 0.9);
-  border-radius: 10px;
 }
 
 // push first row below the fixed navbar

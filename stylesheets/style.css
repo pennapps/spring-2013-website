@@ -18,6 +18,9 @@
     margin: 0;
     padding: 0; }
 
+.row:first-child {
+  padding-top: 30px; }
+
 #footer {
   padding: 18px 0;
   border-top: 1px solid #eeeeee;

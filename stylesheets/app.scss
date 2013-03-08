@@ -16,12 +16,13 @@ a:hover {
 }
 
 .top-bar-section {
-  ul > li:not(.name) a {
+  ul,
+  ul > li:not(.name) a:not(.button) {
     background-color: $primary;
   }
-  ul > li:hover:not(.name) a,
-  ul > li.active:not(.name) a,
-  ul > li:focus:not(.name) a {
+  ul > li:hover:not(.name) a:not(.button),
+  ul > li.active:not(.name) a:not(.button),
+  ul > li:focus:not(.name) a:not(.button) {
     background-color: darken($primary, 20%);
   }
 }

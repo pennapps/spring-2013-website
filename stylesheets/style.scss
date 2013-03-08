@@ -26,6 +26,11 @@
   border-radius: 10px;
 }
 
+// push first row below the fixed navbar
+.row:first-child {
+  padding-top: 30px;
+}
+
 #footer {
   padding: 18px 0;
   border-top: 1px solid #eee;

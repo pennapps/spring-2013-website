@@ -1,17 +1,15 @@
 <div class='row'>
-  <div class="page-header">
-    <h1>Recent Stories</h1>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      {% for class in story_classes %}
-      <h2>{{ story_classes[class][0].competition }}</h2>
-      <ul>
-        {% for story in story_classes[class]%}
-        <li><a href="{{ story.href }}">{{ story.headline }} <small>- {{ story.source }}</small></a></li>
-        {% endfor %}
-      </ul>
-      {% endfor %}
+  <div class='large-12 columns'>
+    <div class="page-header">
+      <h1>Recent Stories</h1>
     </div>
+    {% for class in story_classes %}
+    <h1>{{ story_classes[class][0].competition }}</h1>
+    <ul>
+      {% for story in story_classes[class]%}
+      <li><a href="{{ story.href }}">{{ story.headline }} <small>- {{ story.source }}</small></a></li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
   </div>
 </div>

@@ -7,9 +7,10 @@ a:hover {
 .top-bar, .contain-to-grid {
   background-color: #5ebd76; }
 
-.top-bar-section ul > li:not(.name) a {
+.top-bar-section ul,
+.top-bar-section ul > li:not(.name) a:not(.button) {
   background-color: #5ebd76; }
-.top-bar-section ul > li:hover:not(.name) a,
-.top-bar-section ul > li.active:not(.name) a,
-.top-bar-section ul > li:focus:not(.name) a {
+.top-bar-section ul > li:hover:not(.name) a:not(.button),
+.top-bar-section ul > li.active:not(.name) a:not(.button),
+.top-bar-section ul > li:focus:not(.name) a:not(.button) {
   background-color: #358048; }

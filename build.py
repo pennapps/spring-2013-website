@@ -29,12 +29,12 @@ def build_index(env):
     sponsor_classes[2] = []
     sponsor_classes[3] = []
     for sponsor in sponsors:
-      sponsor_classes[level_order[sponsor['level']]].append(sponsor)
+        sponsor_classes[level_order[sponsor['level']]].append(sponsor)
     competitions = parse_csv("data/competitions.csv")
     build_template(env, 'index.html',
-            sponsor_classes=sponsor_classes,
-            competitions=competitions,
-    )
+                   sponsor_classes=sponsor_classes,
+                   competitions=competitions,
+                   )
 
 
 def build_history(env):
@@ -56,22 +56,24 @@ def build_about(env):
 def build_press(env):
     stories = parse_csv("data/press.csv")
     level_order = dict()
-    level_order['2010 Fall'] = 4
-    level_order['2011 Fall'] = 2
-    level_order['2012 Fall'] = 0
-    level_order['2011 Spring'] = 3
-    level_order['2012 Spring'] = 1
+    level_order['2010 Fall'] = 5
+    level_order['2011 Spring'] = 4
+    level_order['2011 Fall'] = 3
+    level_order['2012 Spring'] = 2
+    level_order['2012 Fall'] = 1
+    level_order['2013 Spring'] = 0
     story_classes = dict()
     story_classes[0] = []
     story_classes[1] = []
     story_classes[2] = []
     story_classes[3] = []
     story_classes[4] = []
+    story_classes[5] = []
     for story in stories:
-      story_classes[level_order[story['competition']]].append(story)
+        story_classes[level_order[story['competition']]].append(story)
     build_template(env, 'press.html',
                    story_classes=story_classes,
-     )
+                   )
 
 
 def build_schedule(env):

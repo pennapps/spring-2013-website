@@ -47,11 +47,6 @@
   #footer li:last-child {
     padding-right: 0;
     border-right: none; }
-  #footer a {
-    color: #969696; }
-  #footer a:hover, #footer a:visited {
-    color: #444;
-    text-decoration: none; }
 
 #rules li {
   margin-bottom: 10px; }

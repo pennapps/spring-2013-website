@@ -32,10 +32,8 @@
   padding-top: 30px; }
 
 #footer {
-  padding: 18px 0;
-  border-top: 1px solid #eeeeee;
-  width: 960px;
-  margin: 0 auto; }
+  padding-top: 18px;
+  border-top: 1px solid #eeeeee; }
   #footer li {
     list-style: none;
     display: inline;

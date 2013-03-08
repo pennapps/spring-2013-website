@@ -1,0 +1,39 @@
+@import "_variables";
+
+body {
+  background-color: $light-gray;
+}
+
+a {
+  color: $primary;
+}
+
+a:hover {
+  color: darken($primary, 20%);
+}
+
+.top-bar, .contain-to-grid {
+  background-color: $primary;
+}
+
+.top-bar-section {
+  ul > li:not(.name) a {
+    background-color: $primary;
+  }
+  ul > li:hover:not(.name) a,
+  ul > li.active:not(.name) a,
+  ul > li:focus:not(.name) a {
+    background-color: darken($primary, 20%);
+  }
+}
+
+// wrap in media query
+#masthead-description {
+  h1, h3 {
+    color: $secondary;
+  }
+  color: #fff;
+  margin-top: -420px;
+  background-color: rgba(40, 40, 40, 0.7);
+  border-radius: 10px;
+}

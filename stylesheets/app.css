@@ -1,16 +1,26 @@
 a {
-  color: #5ebd76; }
+  color: #1abc9c; }
 
 a:hover {
-  color: #358048; }
+  color: #0e6252; }
 
 .top-bar, .contain-to-grid {
-  background-color: #5ebd76; }
+  background-color: #1abc9c; }
 
 .top-bar-section ul,
 .top-bar-section ul > li:not(.name) a:not(.button) {
-  background-color: #5ebd76; }
+  background-color: #1abc9c; }
 .top-bar-section ul > li:hover:not(.name) a:not(.button),
 .top-bar-section ul > li.active:not(.name) a:not(.button),
 .top-bar-section ul > li:focus:not(.name) a:not(.button) {
-  background-color: #358048; }
+  background-color: #0e6252; }
+
+.button {
+  background-color: #1abc9c;
+  border-width: 0px;
+  border-color: transparent;
+  transition: none;
+  box-shadow: none; }
+
+.button:hover {
+  background-color: #0e6252; }

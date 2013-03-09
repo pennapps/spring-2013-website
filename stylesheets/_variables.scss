@@ -1,5 +1,4 @@
-$primary: rgb(94, 189, 118);
-$secondary: rgb(199, 230, 138);
-$third: rgb(191, 242, 211);
+$primary: #1abc9c;
+$secondary: lighten($primary, 50%);
 
 $light-gray: #f0f2f2;

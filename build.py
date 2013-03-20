@@ -41,6 +41,10 @@ def build_history(env):
     build_template(env, 'history.html')
 
 
+def build_sponsorship(env):
+    build_template(env, 'sponsorship.html')
+
+
 def build_faq(env):
     build_template(env, 'faq.html')
 
@@ -89,6 +93,7 @@ def main():
     build_venue(env)
     build_rules(env)
     build_faq(env)
+    build_sponsorship(env)
     print "Templates built."
 
 

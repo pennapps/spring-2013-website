@@ -32,7 +32,7 @@ def build_index(env):
         sponsor_classes[level_order[sponsor['level']]].append(sponsor)
     competitions = parse_csv("data/competitions.csv")
     build_template(env, 'index.html',
-                   sponsor_classes=sponsor_classes,
+                   sponsors=sponsors,
                    competitions=competitions,
                    )
 

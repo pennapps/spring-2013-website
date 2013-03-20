@@ -6,13 +6,11 @@
     <div class="row">
       <div class='large-12 columns'>
         <ul id='sponsors' class="large-block-grid-4 small-block-grid-2">
-          {% for sponsor_class in sponsor_classes %}
-            {% for sponsor in sponsor_classes[sponsor_class] %}
+          {% for sponsor in sponsors %}
             <li>
               <div style='background: url(img/sponsors/{{ sponsor.name|lower }}_color.png) no-repeat center center;background-size: contain;'>
               </div>
             </li>
-            {% endfor %}
           {% endfor %}
         </ul>
       </div>

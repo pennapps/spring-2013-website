@@ -8,8 +8,7 @@
         <ul id='sponsors' class="large-block-grid-4 small-block-grid-2">
           {% for sponsor in sponsors %}
             <li>
-              <div style='background: url(img/sponsors/{{ sponsor.name|lower }}_color.png) no-repeat center center;background-size: contain;'>
-              </div>
+            <a target='_blank' href='{{ sponsor.href }}'><div style='background: url(img/sponsors/{{ sponsor.name|lower }}_color.png) no-repeat center center;background-size: contain;'></div></a>
             </li>
           {% endfor %}
         </ul>

@@ -1,5 +1,11 @@
 @import "_variables";
 
+ul#sponsors {
+  li > div {
+    height: 50px;
+  }
+}
+
 @media only screen and (min-width: 48em) {
   #masthead-description {
     h1, h3 {
@@ -8,6 +14,11 @@
     margin-top: -340px;
     background-color: rgba(40, 40, 40, 0.9);
     color: $light-gray;
+  }
+  ul#sponsors {
+    li div {
+      height: 75px;
+    }
   }
 }
 
@@ -21,6 +32,11 @@
     margin-top: -420px;
     background-color: rgba(40, 40, 40, 0.9);
     color: $light-gray;
+  }
+  ul#sponsors {
+    li > div {
+      height: 100px;
+    }
   }
 }
 

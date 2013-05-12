@@ -32,13 +32,17 @@ def build_index(env):
         sponsor_classes[level_order[sponsor['level']]].append(sponsor)
     competitions = parse_csv("data/competitions.csv")
     build_template(env, 'index.html',
-                   sponsor_classes=sponsor_classes,
+                   sponsors=sponsors,
                    competitions=competitions,
                    )
 
 
 def build_history(env):
     build_template(env, 'history.html')
+
+
+def build_sponsorship(env):
+    build_template(env, 'sponsorship.html')
 
 
 def build_faq(env):
@@ -89,6 +93,7 @@ def main():
     build_venue(env)
     build_rules(env)
     build_faq(env)
+    build_sponsorship(env)
     print "Templates built."
 
 

@@ -1,17 +1,18 @@
-<section id="sponsors">
+<div class='row'>
+  <div class='large-12 columns'>
     <div class="page-header">
-        <h1>Sponsors</h1>
+      <h1>Previous Sponsors</h1>
     </div>
     <div class="row">
-      <center>
-        <div class="span12 sponsors">
-        {% for sponsor_class in sponsor_classes %}
-        {% for sponsor in sponsor_classes[sponsor_class] %}
-        <a class="sponsor {{ sponsor.level }} {{ sponsor.name|lower }}" href="{{ sponsor.href }}"><img src="img/sponsors/{{ sponsor.name|lower }}_color.png"></img></a>
-        {% endfor %}
-        <hr>
-        {% endfor %}
-        </div>
-      </center>
+      <div class='large-12 columns'>
+        <ul id='sponsors' class="large-block-grid-4 small-block-grid-2">
+          {% for sponsor in sponsors %}
+            <li>
+            <a target='_blank' href='{{ sponsor.href }}'><div style='background: url(img/sponsors/{{ sponsor.name|lower }}_color.png) no-repeat center center;background-size: contain;'></div></a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
-</section>
+  </div>
+</div>

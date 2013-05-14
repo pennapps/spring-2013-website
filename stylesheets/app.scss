@@ -38,3 +38,16 @@ a:hover {
 .button:hover {
   background-color: darken($primary, 20%);
 }
+
+.cta {
+  border: 1px solid #ae301e;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+  background-color: $cta;
+
+  transition: all 0.3s linear 0s;
+}
+
+.cta:hover {
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+  background-color: $cta-inverse;
+}

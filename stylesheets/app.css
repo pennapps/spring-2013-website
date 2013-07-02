@@ -1,1 +1,36 @@
-a{color:#1abc9c}a:hover{color:#0e6252}.top-bar,.contain-to-grid{background-color:#1abc9c}.top-bar-section ul,.top-bar-section ul>li:not(.name) a:not(.button){background-color:#1abc9c}.top-bar-section ul>li:hover:not(.name) a:not(.button),.top-bar-section ul>li.active:not(.name) a:not(.button),.top-bar-section ul>li:focus:not(.name) a:not(.button){background-color:#0e6252}.button{background-color:#1abc9c;border-width:0px;border-color:transparent;transition:none;box-shadow:none}.button:hover{background-color:#0e6252}
+a {
+  color: #45bcd2; }
+
+a:hover {
+  color: #227e8f; }
+
+.top-bar, .contain-to-grid {
+  background-color: #45bcd2; }
+
+.top-bar-section ul,
+.top-bar-section ul > li:not(.name) a:not(.button) {
+  background-color: #45bcd2; }
+.top-bar-section ul > li:hover:not(.name) a:not(.button),
+.top-bar-section ul > li.active:not(.name) a:not(.button),
+.top-bar-section ul > li:focus:not(.name) a:not(.button) {
+  background-color: #227e8f; }
+
+.button {
+  background-color: #45bcd2;
+  border-width: 0px;
+  border-color: transparent;
+  transition: none;
+  box-shadow: none; }
+
+.button:hover {
+  background-color: #227e8f; }
+
+.cta {
+  border: 1px solid #ae301e;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+  background-color: #da3c26;
+  transition: all 0.3s linear 0s; }
+
+.cta:hover {
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+  background-color: #e14c33; }

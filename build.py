@@ -12,7 +12,7 @@ def build_template(env, template_name, **kwargs):
 
 
 def parse_csv(filename):
-    with open(filename, 'rb') as f:
+    with open(filename, 'rU') as f:
         return list(csv.DictReader(f))
 
 

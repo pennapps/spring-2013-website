@@ -226,10 +226,16 @@
       </div>
     </div>
     
-    <script src="scripts/vendor/zepto.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js">
+        /* I had an issue with getting Zepto to load that I didn't feel like dealing with, so I switched to JQuery. It fixed it but, you know,
+        not a great solution. If anyone knows why zepto wasn't working let me know. -Ian
+         */
+    </script>
     <script src='scripts/vendor/foundation.min.js'></script>
     <script>
-      $(document).foundation();
+        $(function(){
+          $(document).foundation();
+        })
     </script>
     <script type="text/javascript">
       var _gaq = _gaq || [];

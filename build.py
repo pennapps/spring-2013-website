@@ -56,6 +56,8 @@ def build_rules(env):
 def build_about(env):
     build_template(env, 'about.html')
 
+def build_penn_registration(env):
+    build_template(env, 'penn-registration.html')
 
 def build_press(env):
     stories = parse_csv("data/press.csv")
@@ -94,6 +96,7 @@ def main():
     build_rules(env)
     build_faq(env)
     build_sponsorship(env)
+    build_penn_registration(env)
     print "Templates built."
 
 

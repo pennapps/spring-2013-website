@@ -1,3 +1,6 @@
+h1, h3, span {
+  display: block; }
+
 a {
   color: #45bcd2; }
 
@@ -34,3 +37,6 @@ a:hover {
 .cta:hover {
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
   background-color: #e14c33; }
+
+#masthead-description span {
+  margin-bottom: 14px; }

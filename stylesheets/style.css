@@ -1,4 +1,4 @@
-ul#sponsors li > div {
+ul.sponsors li div {
   height: 50px; }
 
 @media only screen and (min-width: 48em) {
@@ -9,7 +9,7 @@ ul#sponsors li > div {
     #masthead-description h1, #masthead-description h3 {
       color: white; }
 
-  ul#sponsors li div {
+  ul.sponsors li div {
     height: 75px; } }
 @media only screen and (min-width: 80em) {
   #masthead-description {
@@ -19,8 +19,11 @@ ul#sponsors li > div {
     #masthead-description h1, #masthead-description h3 {
       color: white; }
 
-  ul#sponsors li > div {
-    height: 100px; } }
+  ul.sponsors li div {
+    height: 100px;
+    opacity: 0.8; }
+  ul.sponsors li div:hover {
+    opacity: 1; } }
 #masthead-description h1, #masthead-description h3 {
   font-weight: normal;
   margin: 0;

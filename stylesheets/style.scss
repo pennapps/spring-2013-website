@@ -1,7 +1,7 @@
 @import "_variables";
 
-ul#sponsors {
-  li > div {
+ul.sponsors {
+  li div {
     height: 50px;
   }
 }
@@ -15,7 +15,7 @@ ul#sponsors {
     background-color: rgba(40, 40, 40, 0.9);
     color: $light-gray;
   }
-  ul#sponsors {
+  ul.sponsors {
     li div {
       height: 75px;
     }
@@ -33,9 +33,13 @@ ul#sponsors {
     background-color: rgba(40, 40, 40, 0.9);
     color: $light-gray;
   }
-  ul#sponsors {
-    li > div {
+  ul.sponsors {
+    li div {
       height: 100px;
+      opacity: 0.8;
+    }
+    li div:hover {
+      opacity: 1;
     }
   }
 }

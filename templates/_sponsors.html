@@ -5,13 +5,18 @@
     </div>
     <div class="row">
       <div class='large-12 columns'>
-        <ul id='sponsors' class="large-block-grid-4 small-block-grid-2">
-          {% for sponsor in sponsors %}
-            <li>
+        {% for level in levels %}
+          <h3>{{ level.name|upper }}</h3>
+          <ul class="sponsors large-block-grid-4 small-block-grid-4">
+          {% for sponsor in sponsor_classes[level.name] %}
+          <li>
             <a target='_blank' href='{{ sponsor.href }}'><div style='background: url(img/sponsors/{{ sponsor.name|lower }}_color.png) no-repeat center center;background-size: contain;'></div></a>
-            </li>
+          </li>
+          {% else %}
+          <p>Stay tuned...</p>
           {% endfor %}
-        </ul>
+          </ul>
+        {% endfor %}
       </div>
     </div>
   </div>

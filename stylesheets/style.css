@@ -21,9 +21,10 @@ ul.sponsors li div {
 
   ul.sponsors li div {
     height: 100px;
-    opacity: 0.8; }
-  ul.sponsors li div:hover {
-    opacity: 1; } }
+    position: relative; }
+  ul.sponsors li div:active {
+    top: 2px;
+    left: 2px; } }
 #masthead-description h1, #masthead-description h3 {
   font-weight: normal;
   margin: 0;

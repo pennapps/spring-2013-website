@@ -36,10 +36,13 @@ ul.sponsors {
   ul.sponsors {
     li div {
       height: 100px;
-      opacity: 0.8;
+      position: relative;
     }
     li div:hover {
-      opacity: 1;
+    }
+    li div:active {
+      top: 2px;
+      left: 2px;
     }
   }
 }

@@ -3,6 +3,10 @@
 body {
 }
 
+h1, h3, span {
+  display: block;
+}
+
 a {
   color: $primary;
 }
@@ -50,4 +54,10 @@ a:hover {
 .cta:hover {
   text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
   background-color: $cta-inverse;
+}
+
+#masthead-description {
+  span {
+    margin-bottom: 14px;
+  }
 }

@@ -19,10 +19,10 @@ def parse_csv(filename):
 def build_index(env):
     sponsors = parse_csv("data/sponsors.csv")
     level_order = dict()
-    level_order['ipo'] = 0
-    level_order['mezzanine'] = 1
-    level_order['series-a'] = 2
-    level_order['seed'] = 3
+    level_order['peta'] = 0
+    level_order['tera'] = 1
+    level_order['giga'] = 2
+    level_order['kilo'] = 3
     sponsor_classes = dict()
     sponsor_classes[0] = []
     sponsor_classes[1] = []

@@ -17,16 +17,14 @@ def parse_csv(filename):
 
 
 def build_index(env):
-    sponsors = parse_csv("data/sponsors.csv")
+    sponsors = parse_csv("data/prev_sponsors.csv")
     sponsor_classes = dict()
-    sponsor_classes['peta'] = []
-    sponsor_classes['tera'] = []
-    sponsor_classes['giga'] = []
-    sponsor_classes['kilo'] = []
-    levels = [{'name': 'kilo', 'h': 3},
-              {'name': 'giga', 'h': 4},
-              {'name': 'tera', 'h': 5},
-              {'name': 'peta', 'h': 6}]
+    sponsor_classes['mezzanine'] = []
+    sponsor_classes['series-a'] = []
+    sponsor_classes['ipo'] = []
+    levels = [{'name': 'mezzanine', 'h': 3},
+              {'name': 'series-a', 'h': 4},
+              {'name': 'ipo', 'h': 5}]
     for sponsor in sponsors:
         sponsor_classes[sponsor['level']].append(sponsor)
     competitions = parse_csv("data/competitions.csv")

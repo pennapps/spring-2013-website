@@ -1,0 +1,19 @@
+<section id="media">
+    <div class="page-header"></div>
+    <div class="row">
+        <div class="span8">
+            <div class="video">
+                <img id="video_image" alt="PennApps video" src="img/video_color.png">
+                <div id="youtube"></div>
+            </div>
+        </div>
+        <div class="span4">
+            <h2>In the news</h2>
+            <ul class="stories">
+            {% for story in stories %}
+                <li class="story"><a href="{{ story.href }}">{{ story.headline }}<span class="source"> - {{ story.source }}</span></a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

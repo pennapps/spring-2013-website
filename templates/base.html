@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PennApps</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta property="og:title" content="PennApps Fall 2013" />
+    <meta property="og:description" content="PennApps is a 48-hour hackathon @ The University of Pennsylvania"/>
+    <meta name="viewport" content="width=device-width" />
+
+    {% block css %}
+    <link rel="stylesheet" href="stylesheets/vendor/foundation.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/vendor/normalize.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/app.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    {% endblock %}
+  </head>
+  <body>
+    <div class='contain-to-grid fixed'>
+      <nav class='top-bar'>
+        <ul class='title-area'>
+          <li class='name'>
+            <h1><a href='index.html'>PennApps</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+        <section class='top-bar-section'>
+          <ul class='right'>
+            <li><a href="history.html">Past Competitions</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href='http://pennapps.com/sponsorship.pdf'>Sponsor PennApps!</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    <header>
+    {% block header %}
+    {% endblock %}
+    </header>
+    <div class="container">
+      {% block container %}
+      {% endblock %}
+    </div>
+    <div class='row'>
+      <div class='small-12 columns' id='footer'>
+        <ul>
+                   <li><a href='http://www.seas.upenn.edu'><img src='img/pennengineering.png' width='10%' height='10%' style='display: inline; vertical-align: middle' ></a></li>
+          <li>Crafted by <a href='http://yef.im'>Geoff</a></li>
+          <li>Photos by <a href='http://twitter.com/quietlykrazy'>Sam</a> and <a href='https://twitter.com/mdkragon'>Jiali</a></li>
+          <li>Follow <a href='http://twitter.com/PennApps'>@PennApps</a></li>
+          <li><a href='http://blog.pennapps.com/'>Blog</a></li>
+          <li>&copy; 2013 PennApps</li>
+         </ul>
+      </div>
+    </div>
+    {% block js %}
+    <script src="scripts/vendor/zepto.min.js"></script>
+    <script src='scripts/vendor/foundation.min.js'></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33300151-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+    </script>
+    {% endblock %}
+    </body>
+  </html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block header %}
+{{ super() }}
+{% include "_masthead.html" %}
+{% endblock header %}
+
+{% block container %}
+{% include "_what.html" %}
+{% include "_sponsors.html" %}
+{% endblock container %}

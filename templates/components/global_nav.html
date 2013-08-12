@@ -1,0 +1,13 @@
+<div id="global-nav" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="index.html">
+                {% include "components/brand.html" %}
+            </a>
+            <ul class="nav nav-pills">
+                {% block nav %}
+                {% endblock %}
+            </ul>
+        </div>
+    </div>
+</div>

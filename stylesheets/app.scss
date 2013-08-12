@@ -1,0 +1,63 @@
+@import "_variables";
+
+body {
+}
+
+h1, h3, span {
+  display: block;
+}
+
+a {
+  color: $primary;
+}
+
+a:hover {
+  color: darken($primary, 20%);
+}
+
+.top-bar, .contain-to-grid {
+  background-color: $primary;
+}
+
+.top-bar-section {
+  ul,
+  ul > li:not(.name) a:not(.button) {
+    background-color: $primary;
+  }
+  ul > li:hover:not(.name) a:not(.button),
+  ul > li.active:not(.name) a:not(.button),
+  ul > li:focus:not(.name) a:not(.button) {
+    background-color: darken($primary, 20%);
+  }
+}
+
+.button {
+  background-color: $primary;
+  border-width: 0px;
+  border-color: transparent;
+  transition: none;
+  box-shadow: none;
+}
+
+.button:hover {
+  background-color: darken($primary, 20%);
+}
+
+.cta {
+  border: 1px solid #ae301e;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+  background-color: $cta;
+
+  transition: all 0.3s linear 0s;
+}
+
+.cta:hover {
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+  background-color: $cta-inverse;
+}
+
+#masthead-description {
+  span {
+    margin-bottom: 14px;
+  }
+}

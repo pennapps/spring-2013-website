@@ -1,0 +1,122 @@
+@import "_variables";
+
+ul.sponsors {
+  li div {
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  #masthead-description {
+    h1, h3 {
+      color: $secondary;
+    }
+    margin-top: -340px;
+    background-color: rgba(40, 40, 40, 0.9);
+    color: $light-gray;
+   
+    span { display: block; }
+    .title {
+
+    }
+    .description,
+    .notice {
+      margin-bottom: 12px;
+      line-height: 1.0;
+    }
+    .description {
+      font-size: 24px;
+    }
+    .notice {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  ul.sponsors {
+    li div {
+      height: 75px;
+    }
+  }
+}
+
+
+// desktop
+@media only screen and (min-width: 80em) {
+  #masthead-description {
+    h1, h3 {
+      color: $secondary;
+    }
+    margin-top: -420px;
+    background-color: rgba(40, 40, 40, 0.9);
+    color: $light-gray;
+  }
+  ul.sponsors {
+    li div {
+      height: 100px;
+      position: relative;
+    }
+    li div:hover {
+    }
+    li div:active {
+      top: 2px;
+      left: 2px;
+    }
+  }
+}
+
+#masthead-description {
+  h1, h3 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    margin-top: 10px;
+    font-size: 34pt;
+  }
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// push first row below the fixed navbar
+.row:first-child {
+  padding-top: 10px;
+}
+
+#footer {
+  padding-top: 18px;
+  border-top: 1px solid #eee;
+  li {
+    list-style: none;
+    display: inline;
+    border-right: 1px solid #e1e1e1;
+    padding: 0 10px;
+    color: #969696;
+  }
+  li:first-child {
+    margin-left: 0;
+  }
+  li:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+}
+
+#rules {
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+#history {
+  .row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

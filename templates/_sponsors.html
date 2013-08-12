@@ -1,0 +1,18 @@
+<div class='row'>
+  <div class='large-12 columns'>
+    <div class="page-header">
+      <h1>Sponsors</h1>
+    </div>
+    <div class="row">
+      <div class='large-12 columns'>
+        <ul class="sponsors large-block-grid-4 small-block-grid-4">
+        {% for sponsor in sponsors %}
+        <li>
+          <a target='_blank' href='{{ sponsor.href }}'><div style='background: url(img/sponsors/{{ sponsor.name|lower }}_color.png) no-repeat center center;background-size: contain;'></div></a>
+        </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
